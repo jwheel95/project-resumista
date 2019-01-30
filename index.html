@@ -7,13 +7,13 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/all.min.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/work.css">
+  <link rel="stylesheet" href="css/styles.css">
   <title>Resumista work experience</title>
 </head>
 
 <body>
   <!--navbar start  ------------------->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg">
     <a class="navbar-brand" href="baseinfo.html">project resumista</a>
   </nav>
   <!--navbar end--------------->
@@ -29,7 +29,6 @@
         <!-- work history header-->
         <div class="container">
           <div class="py-5 text-center">
-            <h2>Project Resumista</h2>
             <h2>Work history</h2>
             <p class="lead">Please fill out to the best of your abilities</p>
           </div>
@@ -70,12 +69,12 @@
             <!-- Progress bar end -->
             <!-- Work History form -->
             <div class="col-md-8 order-md-1">
-              <h4 class="mb-3">company info</h4>
-              <form class="needs-validation was-validated" novalidate="">
+              <h4 class="mb-3">company's info</h4>
+              <form>
                 <div class="row">
                   <div class="col-md-6 mb-3">
                     <label for="jobTitle">Job field</label>
-                    <select class="custom-select d-block w-100" id="jobTitle" required>
+                    <select class="custom-select d-block w-100" id="jobTitle">
                       <option value="">Choose...</option>
                       <option value="true" for="inputGroupSelect1">student</option>
                       <option value="true" for="inputGroupSelect2">food service</option>
@@ -87,7 +86,7 @@
 
                   <div class="col-md-6 mb-3">
                     <label for="companyName">Company Name</label>
-                    <input type="text" class="form-control" id="companyName" placeholder="..." value="" required="">
+                    <input type="text" class="form-control" id="companyName" placeholder="..." value="">
                   </div>
                 </div>
 
@@ -156,7 +155,7 @@
           <hr class="mb-4">
           <!-- end of work form section-------------------------------------------------->
           <!-- carousel continue button-------------------------------------------------->
-          <a class=" col-md-12" href="#carouselExampleControls" role="button" data-slide="next"><button class="btn btn-primary btn-lg btn-block"
+          <a class=" col-md-12" href="#carouselExampleControls" role="button" data-slide="next"><button class="btn btn-warning btn-lg btn-block"
               type="submit">Continue</button></a>
           <!-- carousel continue button-------------------------------------------------->
 
@@ -181,7 +180,6 @@
         <div class="container">
           <!-- volunteer header -->
           <div class="py-5 text-center">
-            <h2>Project Resumista</h2>
             <h2>Volunteer History</h2>
             <p class="lead">Please fill out to be best of your abilities</p>
           </div>
@@ -222,12 +220,12 @@
             <!-- progress bar end ------------------------>
             <!--  volunteer form start-->
             <div class="col-md-8 order-md-1">
-              <h4 class="mb-3">company info</h4>
-              <form class="needs-validation was-validated" novalidate="">
+              <h4 class="mb-3">organization's info</h4>
+              <form>
                 <div class="row">
                   <div class="col-md-6 mb-3">
                     <label for="volunteerTitle">volunteer</label>
-                    <select class="custom-select d-block w-100" id="volunteerTitle" onchange="skillList();" required="">
+                    <select class="custom-select d-block w-100" id="volunteerTitle" onchange="skillList();">
                       <option value="">Choose...</option>
                       <option value="true" for="inputGroupSelect1">foodbank</option>
                       <option value="true" for="inputGroupSelect2">church</option>
@@ -239,7 +237,7 @@
                   </div>
                   <div class="col-md-6 mb-3">
                     <label for="organizationName">Organization's Name</label>
-                    <input type="text" class="form-control" id="organizationName" placeholder="..." value="" required="">
+                    <input type="text" class="form-control" id="organizationName" placeholder="..." value="">
                   </div>
                 </div>
                 <form class="card p-2">
@@ -283,7 +281,7 @@
           <hr class="mb-4">
           <!-- volunteer form end -->
           <!-- continue button -->
-          <a class=" col-md-12" href="#carouselExampleControls" role="button" data-slide="next"><button class="btn btn-primary btn-lg btn-block"
+          <a class=" col-md-12" href="#carouselExampleControls" role="button" data-slide="next"><button class="btn btn-warning btn-lg btn-block"
               type="submit">Continue</button></a>
           <!-- continue button end -->
           <!-- footer start -->
@@ -299,15 +297,130 @@
         </div>
         <!-- Volunteer contianer end------------------------>
       </div>
+      <!-- next form page  -->
+      <div class="carousel-item">
+        <!-- education history container ------------------------>
+        <div class="container">
+          <!-- education header -->
+          <div class="py-5 text-center">
+            <h2>Volunteer History</h2>
+            <p class="lead">Please fill out to be best of your abilities</p>
+          </div>
+          <!-- education header end -->
+          <!--  progress bar start-->
+          <div class="row">
+            <div class="col-md-4 order-md-2 mb-4">
+              <h4 class="d-flex justify-content-between align-items-center mb-3">
+                <span class="text-muted">Your Progress</span>
+                <span class="badge badge-secondary badge-pill">3</span>
+              </h4>
+              <ul class="list-group mb-3">
+                <li class="list-group-item d-flex justify-content-between lh-condensed">
+                  <div>
+                    <h6 class="my-0">work experience</h6>
+                  </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between lh-condensed">
+                  <div>
+                    <h6 class="my-0"><a href="#carouselExampleControls" role="button" data-slide="prev">volunteer</a></h6>
+                  </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between bg-light">
+                  <div class="text-success">
+                    <h6 class="my-0">education</h6>
+                  </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between lh-condensed">
+                  <div>
+                    <h6 class="my-0"><a href="#carouselExampleControls" role="button" data-slide="next">skills</a></h6>
+                  </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                  <span>View Resume</span>
+                </li>
+              </ul>
+            </div>
+            <!-- progress bar end ------------------------>
+            <!--  education form start-->
+            <div class="col-md-8 order-md-1">
+              <h4 class="mb-3">education info</h4>
+              <form>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="educationLevel">education level</label>
+                    <select class="custom-select d-block w-100" id="educationLevelForm" onchange="skillList();" required="">
+                      <option value="true" for="inputGroupSelect0">highschool</option>
+                      <option value="true" for="inputGroupSelect1">undergraduate</option>
+                      <option value="true" for="inputGroupSelect2">masters</option>
+                      <option value="true" for="inputGroupSelect3">doctorate</option>
+                      <option value="true" for="inputGroupSelect4">technical or trade school</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="institutionName">institution's name</label>
+                    <input type="text" class="form-control" id="institutionName" placeholder="..." value="">
+                  </div>
+                </div>
+                <form class="card p-2">
+                  <div class="input-group mb-3">
+                    <select class="custom-select" id="educationStatus">
+                      <option value="0">in progress</option>
+                      <option value="1">graduated</option>
+                    </select>
+                    <div class="input-group-append">
+                      <label class="input-group-text" for="inputVolunteerSkillSelect">skills</label>
+                    </div>
+                  </div>
+                </form>
+
+                <div class="mb-3">
+                  <label for="studyField">field of study</label>
+                  <input type="text" class="form-control" id="studyField" placeholder="e.g. computer science" required="">
+                  <div class="invalid-feedback">
+                    Please enter the field of study.
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <hr class="mb-4">
+          <!-- education form end -->
+          <!-- continue button -->
+          <a class=" col-md-12" href="#carouselExampleControls" role="button" data-slide="next"><button class="btn btn-warning btn-lg btn-block"
+              type="submit">Continue</button></a>
+          <!-- continue button end -->
+          <!-- footer start -->
+          <footer class="my-5 pt-5 text-muted text-center text-small">
+            <p class="mb-1">© Project Resumista</p>
+            <ul class="list-inline">
+              <li class="list-inline-item"><a href="#">Privacy</a></li>
+              <li class="list-inline-item"><a href="#">Terms</a></li>
+              <li class="list-inline-item"><a href="#">Support</a></li>
+            </ul>
+          </footer>
+          <!-- footer end -->
+        </div>
+        <!-- education contianer end------------------------>
+      </div>
+
+      <!--next form page end  -->
+  </div>
     </div>
     <!-- carousel inner end -->
-    <div class="carousel-item">
-      <!-- next form page  -->
-      <img class="d-block w-100" src="..." alt="Third slide">
-      <!--next form page end  -->
+
+
+
+    <div>
+
     </div>
-  </div>
-  <!--  body content ---------------------->
+
+
+      
+
+
+
+    
+    <!--  body content ---------------------->
   <!-- section cards end -------------------------------------->
   <script src="js/all.min.js"></script>
   <script src="js/jquery-3.3.1.min.js"></script>
