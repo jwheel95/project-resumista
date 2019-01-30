@@ -12,24 +12,121 @@
 </head>
 
 <body>
+  
   <!--navbar start  ------------------->
   <nav class="navbar navbar-expand-lg">
-    <a class="navbar-brand" href="baseinfo.html">project resumista</a>
+    <a class="navbar-brand" href="">project resumista</a>
   </nav>
   <!--navbar end--------------->
 
   <!-- body content ----------------------->
 
   <!-- carousel -->
-  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false">
-    <div class="carousel-inner">
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false">
+  <div class="carousel-inner">
       <div class="carousel-item active">
+
+          <!-- sign up form container ------------------------>
+          <!-- sign up header-->
+          <div class="container" id="SignUpContainer">
+            <div class="py-5 text-center">
+              <h2>Sign Up</h2>
+              <p class="lead">Please fill out to the best of your abilities</p>
+            </div>
+            <!-- sign-up header end -->
+            <div class="row">
+              <!-- sign up form -->
+              <div class="col-md-12" id="logInForm">
+                <h4 class="mb-3">Who are you?</h4>
+                <form>
+                  <div class="row">
+                    <div class="col-md-6 mb-36">
+                      <label for="jobTitle">First Name</label>
+                      <input type="text" class="form-control" id="firstName" placeholder="..." value="">
+                    </div>
+  
+                    <div class="col-md-6 mb-6">
+                      <label for="companyName">Last Name</label>
+                      <input type="text" class="form-control" id="lastName" placeholder="..." value="">
+                    </div>
+                    <div class="col-md-6 mb-6">
+                        <label for="phoneNumber">Phone Number</label>
+                        <input type="text" class="form-control" id="phoneNumber" placeholder="..." value="">
+                    </div>
+                    <div class="col-md-6 mb-6">
+                        <label for="email">E-mail</label>
+                        <input type="text" class="form-control" id="email" placeholder="..." value="">
+                    </div>
+                  </div>
+  
+                  <div class="mb-3">
+                    <label for="address">Address</label>
+                    <input type="text" class="form-control" id="workAddress" placeholder="1234 Main St" required="">
+                    <div class="invalid-feedback">Please enter the address.
+                    </div>
+                  </div>
+  
+                  <div class="row">
+                    <div class="col-md-5 mb-3">
+                      <label for="country">Country</label>
+                      <select class="custom-select d-block w-100" id="country" required="">
+                        <option value="">Choose...</option>
+                        <option>United States</option>
+                      </select>
+  
+                      <div class="invalid-feedback">
+                        Please select a valid country.
+                      </div>
+                    </div>
+  
+                    <div class="col-md-4 mb-3">
+                      <label for="state">State</label>
+                      <select class="custom-select d-block w-100" id="state" required="">
+                        <option value="">Choose...</option>
+                        <option>California</option>
+                      </select>
+  
+                      <div class="invalid-feedback">
+                        Please provide a valid state.
+                      </div>
+                    </div>
+  
+                    <div class="col-md-3 mb-3">
+                      <label for="zip">Zip</label>
+                      <input type="text" class="form-control" id="zip" placeholder="" required="">
+                      <div class="invalid-feedback">
+                        Zip code required.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="workingHere">
+                    <label class="form-check-label" for="exampleCheck1">I am currently working here</label>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <hr class="mb-4">
+            <!-- end of work form section-------------------------------------------------->
+            <!-- carousel continue button-------------------------------------------------->
+            <a class=" col-md-12" href="#carouselExampleControls" role="button" data-slide="next"><button class="btn btn-warning btn-lg btn-block"
+                type="submit">Sign Up</button></a>
+            <!-- carousel continue button----------------------------------------------->
+          
+          </div>
+  
+      </div>
+
+
+
+
+      <div class="carousel-item">
 
         <!-- work history form container ------------------------>
         <!-- work history header-->
-        <div class="container">
+        <div class="container" id="workContainer">
           <div class="py-5 text-center">
-            <h2>Work history</h2>
+            <h2>Work History</h2>
             <p class="lead">Please fill out to the best of your abilities</p>
           </div>
           <!-- work wistory header end -->
@@ -43,7 +140,7 @@
               <ul class="list-group mb-3">
                 <li class="list-group-item d-flex justify-content-between bg-light">
                   <div class="text-success">
-                    <h6 class="my-0">Work Experience</h6>
+                    <h6 class="my-0 active">Work Experience</h6>
                   </div>
                 </li>
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
@@ -56,26 +153,28 @@
                     <h6 class="my-0"><a href="#carouselExampleControls" data-slide-to="2">Education</a></h6>
                   </div>
                 </li>
-                <li class="list-group-item d-flex justify-content-between">
-                  <span>View Resume</span>
-                </li>
+                <li class="list-group-item d-flex justify-content-between lh-condensed">
+                    <div>
+                      <h6 class="my-0">View Resume</h6>
+                    </div>
+                  </li>
               </ul>
             </div>
             <!-- Progress bar end -->
             <!-- Work History form -->
-            <div class="col-md-8 order-md-1">
-              <h4 class="mb-3">company's info</h4>
+            <div class="col-md-8 order-md-1" id="workForm">
+              <h4 class="mb-3">Company's Info</h4>
               <form>
                 <div class="row">
                   <div class="col-md-6 mb-3">
-                    <label for="jobTitle">Job field</label>
+                    <label for="jobTitle">Job Field</label>
                     <select class="custom-select d-block w-100" id="jobTitle">
                       <option value="">Choose...</option>
-                      <option value="true" for="inputGroupSelect1">student</option>
-                      <option value="true" for="inputGroupSelect2">food service</option>
-                      <option value="true" for="inputGroupSelect3">custodial</option>
-                      <option value="true" for="inputGroupSelect4">landscaping/agricultural</option>
-                      <option value="true" for="inputGroupSelect2">factory/warehouse</option>
+                      <option value="true" for="inputGroupSelect1">Student</option>
+                      <option value="true" for="inputGroupSelect2">Food Service</option>
+                      <option value="true" for="inputGroupSelect3">Custodial</option>
+                      <option value="true" for="inputGroupSelect4">Landscaping/Agricultural</option>
+                      <option value="true" for="inputGroupSelect2">Factory/Warehouse</option>
                     </select>
                   </div>
 
@@ -95,7 +194,7 @@
                     </select>
 
                     <div class="input-group-append">
-                      <label class="input-group-text" for="inputSkillSelect">skills</label>
+                      <label class="input-group-text" for="inputSkillSelect">Skills</label>
                     </div>
                   </div>
                 </form>
@@ -140,31 +239,22 @@
                     </div>
                   </div>
                 </div>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="workingHere">
+                  <label class="form-check-label" for="exampleCheck1">I am currently working here</label>
+                </div>
               </form>
             </div>
-          </div>
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="workingHere">
-            <label class="form-check-label" for="exampleCheck1">I am currently working here</label>
           </div>
           <hr class="mb-4">
           <!-- end of work form section-------------------------------------------------->
           <!-- carousel continue button-------------------------------------------------->
           <a class=" col-md-12" href="#carouselExampleControls" role="button" data-slide="next"><button class="btn btn-warning btn-lg btn-block"
               type="submit">Continue</button></a>
-          <!-- carousel continue button-------------------------------------------------->
-
-          <!-- footer-------------------------------------------------->
-          <footer class="my-5 pt-5 text-muted text-center text-small">
-            <p class="mb-1">© Project Resumista</p>
-            <ul class="list-inline">
-              <li class="list-inline-item"><a href="#">Privacy</a></li>
-              <li class="list-inline-item"><a href="#">Terms</a></li>
-              <li class="list-inline-item"><a href="#">Support</a></li>
-            </ul>
-          </footer>
+              <button class="btn btn-primary btn-lg btn-block" onclick="addJob()">Add</button>
+          <!-- carousel continue button----------------------------------------------->
+        
         </div>
-        <!-- footer end ------------------------>
 
       </div>
       <!-- carousel end -------------------------------->
@@ -194,7 +284,7 @@
                 </li>
                 <li class="list-group-item d-flex justify-content-between bg-light">
                   <div class="text-success">
-                    <h6 class="my-0">Volunteer</h6>
+                    <h6 class="my-0 active">Volunteer</h6>
                   </div>
                 </li>
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
@@ -202,27 +292,29 @@
                     <h6 class="my-0"><a href="#carouselExampleControls" data-slide-to="2">Education</a></h6>
                   </div>
                 </li>
-                <li class="list-group-item d-flex justify-content-between">
-                  <span>View Resume</span>
-                </li>
+                <li class="list-group-item d-flex justify-content-between lh-condensed">
+                    <div>
+                      <h6 class="my-0">View Resume</h6>
+                    </div>
+                  </li>
               </ul>
             </div>
             <!-- progress bar end ------------------------>
             <!--  volunteer form start-->
             <div class="col-md-8 order-md-1">
-              <h4 class="mb-3">organization's info</h4>
+              <h4 class="mb-3">Organization's Info</h4>
               <form>
                 <div class="row">
                   <div class="col-md-6 mb-3">
-                    <label for="volunteerTitle">volunteer</label>
+                    <label for="volunteerTitle">Volunteer</label>
                     <select class="custom-select d-block w-100" id="volunteerTitle" onchange="skillList();">
                       <option value="">Choose...</option>
-                      <option value="true" for="inputGroupSelect1">foodbank</option>
-                      <option value="true" for="inputGroupSelect2">church</option>
-                      <option value="true" for="inputGroupSelect3">community service</option>
-                      <option value="true" for="inputGroupSelect4">mentoring</option>
-                      <option value="true" for="inputGroupSelect4">teaching, tutoring</option>
-                      <option value="true" for="inputGroupSelect4">youth work</option>
+                      <option value="true" for="inputGroupSelect1">Foodbank</option>
+                      <option value="true" for="inputGroupSelect2">Church</option>
+                      <option value="true" for="inputGroupSelect3">Community Service</option>
+                      <option value="true" for="inputGroupSelect4">Mentoring</option>
+                      <option value="true" for="inputGroupSelect4">Teaching, Tutoring</option>
+                      <option value="true" for="inputGroupSelect4">Youth Work</option>
                     </select>
                   </div>
                   <div class="col-md-6 mb-3">
@@ -233,13 +325,13 @@
                 <form class="card p-2">
                   <div class="input-group mb-3">
                     <select class="custom-select" id="inputSkillSelect">
-                      <option value="0">volunteer skills</option>
+                      <option value="0">Volunteer Skills</option>
                       <option value="1">One</option>
                       <option value="2">Two</option>
                       <option value="3">Three</option>
                     </select>
                     <div class="input-group-append">
-                      <label class="input-group-text" for="inputVolunteerSkillSelect">skills</label>
+                      <label class="input-group-text" for="inputVolunteerSkillSelect">Skills</label>
                     </div>
                   </div>
                 </form>
@@ -254,7 +346,7 @@
 
                 <div class="row">
                   <div class="col-md-5 mb-3">
-                    <label for="years">years there?</label>
+                    <label for="years">Years there?</label>
                     <select class="custom-select d-block w-100" id="years" required="">
                       <option value="">Choose...</option>
                       <option>1</option>
@@ -275,15 +367,6 @@
               type="submit">Continue</button></a>
           <!-- continue button end -->
           <!-- footer start -->
-          <footer class="my-5 pt-5 text-muted text-center text-small">
-            <p class="mb-1">© Project Resumista</p>
-            <ul class="list-inline">
-              <li class="list-inline-item"><a href="#">Privacy</a></li>
-              <li class="list-inline-item"><a href="#">Terms</a></li>
-              <li class="list-inline-item"><a href="#">Support</a></li>
-            </ul>
-          </footer>
-          <!-- footer end -->
         </div>
         <!-- Volunteer contianer end------------------------>
       </div>
@@ -307,42 +390,44 @@
               <ul class="list-group mb-3">
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
                   <div>
-                    <h6 class="my-0"><a href="#carouselExampleControls" data-slide-to="0">Work Experience</a></h6>
+                    <h6 class="my-0">Work Experience</h6>
                   </div>
                 </li>
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
-                  <div><a href="#carouselExampleControls" data-slide-to="1"></a>
+                  <div>
                     <h6 class="my-0"><a href="#carouselExampleControls" data-slide-to="1">Volunteer</a></h6>
                   </div>
                 </li>
                 <li class="list-group-item d-flex justify-content-between bg-light">
                   <div class="text-success">
-                    <h6 class="my-0">Education</h6>
+                    <h6 class="my-0 active">Education</h6>
                   </div>
                 </li>
-                <li class="list-group-item d-flex justify-content-between">
-                  <span>View Resume</span>
-                </li>
+                <li class="list-group-item d-flex justify-content-between lh-condensed">
+                    <div>
+                      <h6 class="my-0">View Resume</h6>
+                    </div>
+                  </li>
               </ul>
             </div>
             <!-- progress bar end ------------------------>
             <!--  education form start-->
             <div class="col-md-8 order-md-1">
-              <h4 class="mb-3">education info</h4>
+              <h4 class="mb-3">Education Info</h4>
               <form>
                 <div class="row">
                   <div class="col-md-6 mb-3">
-                    <label for="educationLevel">education level</label>
+                    <label for="educationLevel">Education Level</label>
                     <select class="custom-select d-block w-100" id="educationLevelForm" onchange="skillList();" required="">
-                      <option value="true" for="inputGroupSelect0">highschool</option>
-                      <option value="true" for="inputGroupSelect1">undergraduate</option>
-                      <option value="true" for="inputGroupSelect2">masters</option>
-                      <option value="true" for="inputGroupSelect3">doctorate</option>
-                      <option value="true" for="inputGroupSelect4">technical or trade school</option>
+                      <option value="true" for="inputGroupSelect0">Highschool</option>
+                      <option value="true" for="inputGroupSelect1">Undergraduate</option>
+                      <option value="true" for="inputGroupSelect2">Masters</option>
+                      <option value="true" for="inputGroupSelect3">Doctorate</option>
+                      <option value="true" for="inputGroupSelect4">Technical/Trade School</option>
                     </select>
                   </div>
                   <div class="col-md-6 mb-3">
-                    <label for="institutionName">institution's name</label>
+                    <label for="institutionName">Institution's Name</label>
                     <input type="text" class="form-control" id="institutionName" placeholder="..." value="">
                   </div>
                 </div>
@@ -353,13 +438,13 @@
                       <option value="1">graduated</option>
                     </select>
                     <div class="input-group-append">
-                      <label class="input-group-text" for="inputVolunteerSkillSelect">skills</label>
+                      <label class="input-group-text" for="inputVolunteerSkillSelect">Skills</label>
                     </div>
                   </div>
                 </form>
 
                 <div class="mb-3">
-                  <label for="studyField">field of study</label>
+                  <label for="studyField">Field of Study</label>
                   <input type="text" class="form-control" id="studyField" placeholder="e.g. computer science" required="">
                   <div class="invalid-feedback">
                     Please enter the field of study.
@@ -374,30 +459,18 @@
           <a class=" col-md-12" href="#carouselExampleControls" role="button" data-slide="next"><button class="btn btn-warning btn-lg btn-block"
               type="submit">Continue</button></a>
           <!-- continue button end -->
-          <!-- footer start -->
-          <footer class="my-5 pt-5 text-muted text-center text-small">
-            <p class="mb-1">© Project Resumista</p>
-            <ul class="list-inline">
-              <li class="list-inline-item"><a href="#">Privacy</a></li>
-              <li class="list-inline-item"><a href="#">Terms</a></li>
-              <li class="list-inline-item"><a href="#">Support</a></li>
-            </ul>
-          </footer>
-          <!-- footer end -->
         </div>
         <!-- education contianer end------------------------>
       </div>
 
       <!--next form page end  -->
   </div>
-    </div>
+</div>
     <!-- carousel inner end -->
+<footer class="my-5 pt-5 text-muted text-center text-small">
+  <p class="mb-1">© Project Resumista</p>
 
-
-
-    <div>
-
-    </div>
+</footer> 
 
 
       
