@@ -1,18 +1,20 @@
-function addJob(){
-    const form1 =document.getElementById('workForm');
-    const cln = form1.cloneNode(true); document.getElementById('workForm').appendChild(cln);
-}
-
+//JS object to store all resume info
 const finalResume = []
 
+//Query selectors for buttons
 const signUpSubmit = document.querySelector("#signUpSubmit");
 
+//Event Listeners on buttons to store info
 signUpSubmit.addEventListener('click', signUp);
 
+//Submit Functions
 function signUp() {
-    finalResume.firstName = firstName.value;
-    finalResume.lastName = lastName.value;
-    finalResume.phoneNumber = phoneNumber.value;
-    finalResume.email = email.value;
-    finalResume.address = address.value; 
+    finalResume.firstName = document.querySelector("#firstName").value;
+    finalResume.lastName = document.querySelector("#lastName").value;
+    finalResume.phoneNumber = document.querySelector("#phoneNumber").value;
+    finalResume.email = document.querySelector("#email").value;
+    finalResume.address = document.querySelector("#address").value; 
+    finalResume.country = document.querySelector("#country").value;
+    finalResume.state = document.querySelector("#state").value;
+    finalResume.zip = document.querySelector("#zip").value;
 }
