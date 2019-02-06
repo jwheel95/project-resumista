@@ -32,6 +32,7 @@ function workHistory() {
     finalResume.workAddress = document.querySelector("#workAddress").value;
     finalResume.workCountry = document.querySelector("#workCountry")[workCountry.selectedIndex].text;
     finalResume.workState = document.querySelector("#workState")[workState.selectedIndex].text;
+    finalResume.workCity = document.querySelector("#workCity").value;
     finalResume.workZip = document.querySelector("#workZip").value;
     finalResume.workingHere = document.querySelector("#workingHere").checked;
 }
