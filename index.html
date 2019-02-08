@@ -171,6 +171,15 @@
               <form>
                 <div class="row">
                   <div class="col-md-6 mb-3">
+                    <label for="workField1">Job Field</label>
+                    <select class="custom-select d-block w-100" id="workField1">
+                      <option value="">Choose...</option>
+                      <option value="true" for="inputGroupSelect1">Student</option>
+                      <option value="true" for="inputGroupSelect2">Food Service</option>
+                      <option value="true" for="inputGroupSelect3">Custodial</option>
+                      <option value="true" for="inputGroupSelect4">Landscaping/Agricultural</option>
+                      <option value="true" for="inputGroupSelect2">Factory/Warehouse</option>
+                    </select>
                     <label for="workTitle">Job Title</label>
                     <select class="custom-select d-block w-100" id="workTitle" onchange="ChangeExperienceList()"> 
                       <option value="">Job Title</option> 
@@ -180,24 +189,42 @@
                     </select> 
                   </div>
                   <div class="col-md-6 mb-3">
-                    <label for="workName">Company Name</label>
-                    <input type="text" class="form-control" id="workName" placeholder="..." value="">
+                    <label for="workName1">Company Name</label>
+                    <input type="text" class="form-control" id="workName1" placeholder="..." value="">
                   </div>
                 </div>
+<<<<<<< HEAD
                 <label for="workSkills">Skills and Abilities</label>
                 <select multiple class="custom-select d-block w-100" id="workSkills"></select> 
+=======
+
+                <form class="card p-2">
+                  <div class="input-group mb-3">
+                    <select class="custom-select" id="workSkills1">
+                      <option value="0">...</option>
+                      <option value="1">a student</option>
+                      <option value="2">b student</option>
+                      <option value="3">c student</option>
+                    </select>
+
+                    <div class="input-group-append">
+                      <label class="input-group-text" for="workSkills1">Skills</label>
+                    </div>
+                  </div>
+                </form>
+>>>>>>> 106e48f0c629b2f019ec3abf2eeba986bd5a7973
 
                 <div class="mb-3">
-                  <label for="workAddress">Address</label>
-                  <input type="text" class="form-control" id="workAddress" placeholder="1234 Main St" required="">
+                  <label for="workAddress1">Address</label>
+                  <input type="text" class="form-control" id="workAddress1" placeholder="1234 Main St" required="">
                   <div class="invalid-feedback">Please enter the asignUpAdress.
                   </div>
                 </div>
 
                 <div class="row">
                   <div class="col-md-5 mb-3">
-                    <label for="workCountry">Country</label>
-                    <select class="custom-select d-block w-100" id="workCountry" required="">
+                    <label for="workCountry1">Country</label>
+                    <select class="custom-select d-block w-100" id="workCountry1" required="">
                       <option value="">Choose...</option>
                       <option>United States</option>
                     </select>
@@ -206,8 +233,8 @@
                     </div>
                   </div>
                   <div class="col-md-2 mb-3">
-                    <label for="workState">State</label>
-                    <select class="custom-select d-block w-100" id="workState" required="">
+                    <label for="workState1">State</label>
+                    <select class="custom-select d-block w-100" id="workState1" required="">
                       <option value="">Choose...</option>
                       <option>California</option>
                     </select>
@@ -216,23 +243,25 @@
                     </div>
                   </div>
                   <div class="col-md-3 mb-3">
-                    <label for="city">City</label>
-                    <input type="text" class="form-control" id="workCity" placeholder="" required="">
+                    <label for="workCity1">City</label>
+                    <input type="text" class="form-control" id="workCity1" placeholder="" required="">
                     <div class="invalid-feedback">
                        City required.
                     </div>
                   </div>
                   <div class="col-md-2 mb-3">
-                    <label for="workZip">Zip</label>
-                    <input type="text" class="form-control" id="workZip" placeholder="" required="">
+                    <label for="workZip1">Zip</label>
+                    <input type="text" class="form-control" id="workZip1" placeholder="" required="">
                     <div class="invalid-feedback">
                       Zip code required.
                     </div>
                   </div>
                 </div>
-                <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="workingHere">
-                  <label class="form-check-label" for="workingHere">I am currently working here</label>
+                <div class="row">
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="workingHere1">
+                    <label class="form-check-label" for="workingHere">I am currently working here</label>
+                  </div>
                 </div>
               </form>
             </div>
@@ -297,8 +326,8 @@
               <form>
                 <div class="row">
                   <div class="col-md-6 mb-3">
-                    <label for="volunteerTitle">Volunteer</label>
-                    <select class="custom-select d-block w-100" id="volunteerTitle">
+                    <label for="volunteerTitle1">Volunteer</label>
+                    <select class="custom-select d-block w-100" id="volunteerTitle1">
                       <option value="">Choose...</option>
                       <option value="true" for="inputGroupSelect1">Foodbank</option>
                       <option value="true" for="inputGroupSelect2">Church</option>
@@ -309,27 +338,27 @@
                     </select>
                   </div>
                   <div class="col-md-6 mb-3">
-                    <label for="organizationName">Organization's Name</label>
-                    <input type="text" class="form-control" id="volunteerOrg" placeholder="..." value="">
+                    <label for="volunteerOrg1">Organization's Name</label>
+                    <input type="text" class="form-control" id="volunteerOrg1" placeholder="..." value="">
                   </div>
                 </div>
                 <form class="card p-2">
                   <div class="input-group mb-3">
-                    <select class="custom-select" id="volunteerSkills">
+                    <select class="custom-select" id="volunteerSkills1">
                       <option value="0">Volunteer Skills</option>
                       <option value="1">One</option>
                       <option value="2">Two</option>
                       <option value="3">Three</option>
                     </select>
                     <div class="input-group-append">
-                      <label class="input-group-text" for="volunteerSkills">Skills</label>
+                      <label class="input-group-text" for="volunteerSkills1">Skills</label>
                     </div>
                   </div>
                 </form>
 
                 <div class="mb-3">
-                  <label for="volunteerCity">City</label>
-                  <input type="text" class="form-control" id="volunteerCity" placeholder="Fresno" required="">
+                  <label for="volunteerCity1">City</label>
+                  <input type="text" class="form-control" id="volunteerCity1" placeholder="Fresno" required="">
                   <div class="invalid-feedback">
                     Please enter the city name.
                   </div>
@@ -337,8 +366,8 @@
 
                 <div class="row">
                   <div class="col-md-5 mb-3">
-                    <label for="volunterYears">Years volunteered there</label>
-                    <select class="custom-select d-block w-100" id="volunteerYears" required="">
+                    <label for="volunterYears1">Years volunteered there</label>
+                    <select class="custom-select d-block w-100" id="volunteerYears1" required="">
                       <option value="">Choose...</option>
                       <option>1</option>
                       <option>2</option>
@@ -408,8 +437,8 @@
               <form>
                 <div class="row">
                   <div class="col-md-6 mb-3">
-                    <label for="educationLevel">Education Level</label>
-                    <select class="custom-select d-block w-100" id="educationLevel" required="">
+                    <label for="educationLevel1">Education Level</label>
+                    <select class="custom-select d-block w-100" id="educationLevel1" required="">
                       <option value="true" for="inputGroupSelect0">Highschool</option>
                       <option value="true" for="inputGroupSelect1">Undergraduate</option>
                       <option value="true" for="inputGroupSelect2">Masters</option>
@@ -418,25 +447,26 @@
                     </select>
                   </div>
                   <div class="col-md-6 mb-3">
-                    <label for="educationSchool">Institution's Name</label>
-                    <input type="text" class="form-control" id="educationSchool" placeholder="..." value="">
+                    <label for="educationSchool1">Institution's Name</label>
+                    <input type="text" class="form-control" id="educationSchool1" placeholder="..." value="">
                   </div>
                 </div>
                 <form class="card p-2">
                   <div class="input-group mb-3">
-                    <select class="custom-select" id="educationStatus">
+                    <select class="custom-select" id="educationStatus1">
                       <option value="0">In Progress</option>
                       <option value="1">Graduated</option>
                     </select>
                     <div class="input-group-append">
-                      <label class="input-group-text" for="educationStatus">Status</label>
+                      <label class="input-group-text" for="educationStatus1">Status</label>
                     </div>
                   </div>
                 </form>
 
                 <div class="mb-3">
-                  <label for="educationField">Field of Study</label>
-                  <input type="text" class="form-control" id="educationField" placeholder="e.g. computer science" required="">
+                  <label for="educationField1">Field of Study</label>
+                  <input type="text" class="form-control" id="educationField1" placeholder="e.g. computer science"
+                    required="">
                   <div class="invalid-feedback">
                     Please enter the field of study.
                   </div>
