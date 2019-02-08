@@ -316,17 +316,17 @@ jobsAndSkills['inputGroupSelect4'] = ['','Lawn care', 'Irrigation', 'Ability to 
 jobsAndSkills['inputGroupSelect5'] = ['','Goal oriented', 'Effective interpersonal Communication', 'Hands on', 'Physical Stamina','Shipping and recieving','Catolog inventory', 'Operates heavy machinery','Reliable','Time mangement','Multitasking'];
 
 function changeSkillList(num) {
-  var workFieldList = document.getElementById("workField" + num);
-  var workSkillList = document.getElementById("workSkills" + num);
-  var jobTitles = workFieldList.options[workFieldList.selectedIndex].value;
+  const workFieldList = document.getElementById("workField" + num);
+  const workSkillList = document.getElementById("workSkills" + num);
+  const jobTitles = workFieldList.options[workFieldList.selectedIndex].value;
   while (workSkillList.options.length) {
     workSkillList.remove(0);
   }
-  var jobs = jobsAndSkills[jobTitles];
+  let jobs = jobsAndSkills[jobTitles];
   if (jobs) {
     var i;
     for (i = 0; i < jobs.length; i++) {
-      var workField = new Option(jobs[i], i);
+      let workField = new Option(jobs[i], i);
       workSkillList.options.add(workField);
     }
   }
