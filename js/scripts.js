@@ -154,6 +154,7 @@ function addVolunteer() {
 }
 
 function addEducation() {
+  
     // Checks number of duplicated/form sections
     let num = document.querySelectorAll(".edu-cloned-input").length;
     console.log(`Number of form sections: ${num}`);
@@ -183,6 +184,7 @@ function addEducation() {
         btnEducationAdd.disabled = true;
         btnEducationAdd.setAttribute("value", "You've reached the limit");
     }
+
 }
 
 // DELETE DUPLICATE FORM FUNCTIONS
