@@ -293,3 +293,32 @@ btnEducationDelete.addEventListener(
     "click",
     delEducation
 );
+
+var jobsAndSkills = {};
+// student
+jobsAndSkills['inputGroupSelect1'] = ['','Communication', 'Ability to work under pressure', 'Decision making', 'Time management','Self-motivating','Conflict resolution', 'Leadership','Adaptability','Teamwork','Creativity'];
+// food service
+jobsAndSkills['inputGroupSelect2'] = ['','Ability to learn quickly', 'Customer Service', 'Detail oriented', 'Flexible','Food Preparation','Handle cash and credit transactions', 'Multitasking','Adaptability','Team player','Upbeat'];
+// custodial
+jobsAndSkills['inputGroupSelect3'] = ['','Ability to work quickly', 'Safety Cautious', 'Excellent work ethic', 'Critical thinking','Proficient in using manual and power tools','Self starter', 'Organized','Stock management','Attention to Detail','Reliable'];
+// landscaping-Ag
+jobsAndSkills['inputGroupSelect4'] = ['','Lawn care', 'Irrigation', 'Ability to operate machinery', 'Livestock upkeep','Harvesting','Inventory control', 'Hard working','Flexible','Project management','Efficient'];
+// factory-warehouse
+jobsAndSkills['inputGroupSelect5'] = ['','Goal oriented', 'Effective interpersonal Communication', 'Hands on', 'Physical Stamina','Shipping and recieving','Catolog inventory', 'Operates heavy machinery','Reliable','Time mangement','Multitasking'];
+
+function ChangeSkillList() {
+  var workField1List = document.getElementById("workField1");
+  var workSkillList = document.getElementById("workSkills1");
+  var jobTitles = workField1List.options[workField1List.selectedIndex].value;
+  while (workSkillList.options.length) {
+    workSkillList.remove(0);
+  }
+  var jobs = jobsAndSkills[jobTitles];
+  if (jobs) {
+    var i;
+    for (i = 0; i < jobs.length; i++) {
+      var workField1 = new Option(jobs[i], i);
+      workSkillList.options.add(workField1);
+    }
+  }
+}
