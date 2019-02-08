@@ -33,30 +33,41 @@ function signUp() {
 }
 
 function workHistory() {
-    finalResume.workField = document.querySelector("#workField")[workField.selectedIndex].text;
-    finalResume.workName = document.querySelector("#workName").value;
-    finalResume.workSkills = document.querySelector("#workSkills")[workSkills.selectedIndex].text;
-    finalResume.workAddress = document.querySelector("#workAddress").value;
-    finalResume.workCountry = document.querySelector("#workCountry")[workCountry.selectedIndex].text;
-    finalResume.workState = document.querySelector("#workState")[workState.selectedIndex].text;
-    finalResume.workCity = document.querySelector("#workCity").value;
-    finalResume.workZip = document.querySelector("#workZip").value;
-    finalResume.workingHere = document.querySelector("#workingHere").checked;
+    finalResume.workField1 = document.querySelector("#workField1")[workField1.selectedIndex].text;
+    finalResume.workName1 = document.querySelector("#workName1").value;
+    finalResume.workSkills1 = document.querySelector("#workSkills1")[workSkills1.selectedIndex].text;
+    finalResume.workAddress1 = document.querySelector("#workAddress1").value;
+    finalResume.workCountry1 = document.querySelector("#workCountry1")[workCountry1.selectedIndex].text;
+    finalResume.workState1 = document.querySelector("#workState1")[workState1.selectedIndex].text;
+    finalResume.workCity1 = document.querySelector("#workCity1").value;
+    finalResume.workZip1 = document.querySelector("#workZip1").value;
+    finalResume.workingHere1 = document.querySelector("#workingHere1").checked;
 }
 
 function volunteerHistory() {
-    finalResume.volunteerTitle = document.querySelector("#volunteerTitle")[volunteerTitle.selectedIndex].text;
-    finalResume.volunteerOrg = document.querySelector("#volunteerOrg").value;
-    finalResume.volunteerSkills = document.querySelector("#volunteerSkills")[volunteerSkills.selectedIndex].text;
-    finalResume.volunteerCity = document.querySelector("#volunteerCity").value;
-    finalResume.volunteerYears = document.querySelector("#volunteerYears")[volunteerYears.selectedIndex].text;
+    finalResume.volunteerTitle1 = document.querySelector("#volunteerTitle1")[volunteerTitle1.selectedIndex].text;
+    finalResume.volunteerOrg1 = document.querySelector("#volunteerOrg1").value;
+    finalResume.volunteerSkills1 = document.querySelector("#volunteerSkills1")[volunteerSkills1.selectedIndex].text;
+    finalResume.volunteerCity1 = document.querySelector("#volunteerCity1").value;
+    finalResume.volunteerYears1 = document.querySelector("#volunteerYears1")[volunteerYears1.selectedIndex].text;
 }
 
 function educationHistory() {
-    finalResume.educationLevel = document.querySelector("#educationLevel")[educationLevel.selectedIndex].text;
-    finalResume.educationSchool = document.querySelector("#educationSchool").value;
-    finalResume.educationStatus = document.querySelector("#educationStatus")[educationStatus.selectedIndex].text;
-    finalResume.educationField = document.querySelector("#educationField").value;
+    finalResume.educationLevel1 = document.querySelector("#educationLevel1")[educationLevel1.selectedIndex].text;
+    finalResume.educationSchool1 = document.querySelector("#educationSchool1").value;
+    finalResume.educationStatus1 = document.querySelector("#educationStatus1")[educationStatus1.selectedIndex].text;
+    finalResume.educationField1 = document.querySelector("#educationField1").value;
+}
+
+//Function to Update Ids of all inputs when forms are cloned
+function updateIds(clone, newNum) {
+    let inputs = clone.querySelectorAll("*");
+    console.log(inputs);
+    inputs.forEach(function(input) {
+        if (input.id) {
+            input.setAttribute("id", input.id.slice(0, -1) + newNum);
+        }
+    });
 }
 
 // ----------------- ADD/DELETE DUPLICATE FORM FEATURE ------------------------
@@ -95,13 +106,14 @@ function addWork() {
     // create new clone and change its ID using the newNum value
     let newElemCloned = newElem.cloneNode(true);
     newElemCloned.setAttribute("id", `workEntry${newNum}`);
+    // update childrens' ids
+    updateIds(newElemCloned, newNum);
 
     // Header Change
     let header = newElemCloned.querySelector(".heading-ref");
     header.setAttribute("id", "ID" + newNum + "_workRef");
     header.setAttribute("name", "ID" + newNum + "_workRef");
     header.innerHTML = "Job #" + newNum;
-
 
     // Insert the new element after the last "duplicatable" input field
     newElem.after(newElemCloned);
@@ -130,6 +142,8 @@ function addVolunteer() {
     // create new clone and change its ID using the newNum value
     let newElemCloned = newElem.cloneNode(true);
     newElemCloned.setAttribute("id", `volunteerEntry${newNum}`);
+    // update childrens' ids
+    updateIds(newElemCloned, newNum);
 
     // Header Change
     let header = newElemCloned.querySelector(".vol-heading-ref");
@@ -165,6 +179,8 @@ function addEducation() {
     // create new clone and change its ID using the newNum value
     let newElemCloned = newElem.cloneNode(true);
     newElemCloned.setAttribute("id", `educationEntry${newNum}`);
+    // update childrens' ids
+    updateIds(newElemCloned, newNum);
 
     // Header Change
     let header = newElemCloned.querySelector(".edu-heading-ref");
