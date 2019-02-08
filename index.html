@@ -171,37 +171,21 @@
               <form>
                 <div class="row">
                   <div class="col-md-6 mb-3">
-                    <label for="workField">Job Field</label>
-                    <select class="custom-select d-block w-100" id="workField">
-                      <option value="">Choose...</option>
-                      <option value="true" for="inputGroupSelect1">Student</option>
-                      <option value="true" for="inputGroupSelect2">Food Service</option>
-                      <option value="true" for="inputGroupSelect3">Custodial</option>
-                      <option value="true" for="inputGroupSelect4">Landscaping/Agricultural</option>
-                      <option value="true" for="inputGroupSelect2">Factory/Warehouse</option>
-                    </select>
+                    <label for="workTitle">Job Title</label>
+                    <select class="custom-select d-block w-100" id="workTitle" onchange="ChangeExperienceList()"> 
+                      <option value="">Job Title</option> 
+                      <option value="studentWorker">Student</option> 
+                      <option value="custodialWorker">Custodial</option> 
+                      <option value="foodServiceWorker">Food Service</option> 
+                    </select> 
                   </div>
-
                   <div class="col-md-6 mb-3">
                     <label for="workName">Company Name</label>
                     <input type="text" class="form-control" id="workName" placeholder="..." value="">
                   </div>
                 </div>
-
-                <form class="card p-2">
-                  <div class="input-group mb-3">
-                    <select class="custom-select" id="workSkills">
-                      <option value="0">...</option>
-                      <option value="1">a student</option>
-                      <option value="2">b student</option>
-                      <option value="3">c student</option>
-                    </select>
-
-                    <div class="input-group-append">
-                      <label class="input-group-text" for="workSkills">Skills</label>
-                    </div>
-                  </div>
-                </form>
+                <label for="workSkills">Skills and Abilities</label>
+                <select class="custom-select d-block w-100" id="workSkills"></select> 
 
                 <div class="mb-3">
                   <label for="workAddress">Address</label>

@@ -91,3 +91,12 @@ footer{
     padding: 0px;
     color:#f9cf00;
 }
+
+@media only screen and (max-width: 767px) {
+    body {
+      background-color: #4484ce;
+    }
+    label{
+        color: #ffffff;
+    }
+  }

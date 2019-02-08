@@ -28,7 +28,6 @@ function signUp() {
 function workHistory() {
     finalResume.workField = document.querySelector("#workField")[workField.selectedIndex].text;
     finalResume.workName = document.querySelector("#workName").value;
-    finalResume.workSkills = document.querySelector("#workSkills")[workSkills.selectedIndex].text;
     finalResume.workAddress = document.querySelector("#workAddress").value;
     finalResume.workCountry = document.querySelector("#workCountry")[workCountry.selectedIndex].text;
     finalResume.workState = document.querySelector("#workState")[workState.selectedIndex].text;
@@ -50,4 +49,26 @@ function educationHistory() {
     finalResume.educationSchool = document.querySelector("#educationSchool").value;
     finalResume.educationStatus = document.querySelector("#educationStatus")[educationStatus.selectedIndex].text;
     finalResume.educationField = document.querySelector("#educationField").value;
+}
+
+var jobsAndSkills = {};
+jobsAndSkills['studentWorker'] = ['','office skills', 'team leader', 'tech savvy'];
+jobsAndSkills['custodialWorker'] = ['','detail oriented', 'hard working', 'go-getter', 'determined'];
+jobsAndSkills['foodServiceWorker'] = ['','cash management', 'customer service', 'team oreinted'];
+
+function ChangeExperienceList() {
+  var workTitleList = document.getElementById("workTitle");
+  var skillList = document.getElementById("workSkills");
+  var selCar = workTitleList.options[workTitleList.selectedIndex].value;
+  while (skillList.options.length) {
+    skillList.remove(0);
+  }
+  var cars = jobsAndSkills[selCar];
+  if (cars) {
+    var i;
+    for (i = 0; i < cars.length; i++) {
+      var workTitle = new Option(cars[i], i);
+      skillList.options.add(workTitle);
+    }
+  }
 }
