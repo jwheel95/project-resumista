@@ -1,9 +1,3 @@
-// Make sure DOM IS LOADED
-document.addEventListener("DOMContentLoaded", function (event) {
-    console.log("DOM fully loaded and parsed");
-});
-
-
 //JS object to store all resume info
 const finalResume = []
 
@@ -12,7 +6,6 @@ const signUpSubmit = document.querySelector("#signUpSubmit");
 const workSubmit = document.querySelector("#workSubmit");
 const volunteerSubmit = document.querySelector("#volunteerSubmit");
 const educationSubmit = document.querySelector("#educationSubmit");
-
 
 //Event Listeners on buttons to store info
 signUpSubmit.addEventListener('click', signUp);
@@ -26,13 +19,14 @@ function signUp() {
     finalResume.signUpLastName = document.querySelector("#signUpLastName").value;
     finalResume.signUpPhoneNumber = document.querySelector("#signUpPhoneNumber").value;
     finalResume.signUpEmail = document.querySelector("#signUpEmail").value;
-    finalResume.signUpAddress = document.querySelector("#signUpAddress").value;
+    finalResume.signUpAddress = document.querySelector("#signUpAddress").value; 
     finalResume.signUpCountry = document.querySelector("#signUpCountry")[signUpCountry.selectedIndex].text;
     finalResume.signUpState = document.querySelector("#signUpState")[signUpState.selectedIndex].text;
     finalResume.signUpZip = document.querySelector("#signUpZip").value;
 }
 
 function workHistory() {
+
     finalResume.workField1 = document.querySelector("#workField1")[workField1.selectedIndex].text;
     finalResume.workName1 = document.querySelector("#workName1").value;
     finalResume.workSkills1 = document.querySelector("#workSkills1")[workSkills1.selectedIndex].text;
@@ -69,6 +63,7 @@ function updateIds(clone, newNum) {
         }
     });
 }
+
 
 // ----------------- ADD/DELETE DUPLICATE FORM FEATURE ------------------------
 // TODO: Refactor way too much copied code, not sure how....
