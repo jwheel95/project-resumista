@@ -54,20 +54,20 @@ function educationHistory() {
 var jobsAndSkills = {};
 jobsAndSkills['studentWorker'] = ['','office skills', 'team leader', 'tech savvy'];
 jobsAndSkills['custodialWorker'] = ['','detail oriented', 'hard working', 'go-getter', 'determined'];
-jobsAndSkills['foodServiceWorker'] = ['','cash management', 'customer service', 'team oreinted'];
+jobsAndSkills['foodService'] = ['','cash management', 'customer service', 'team oreinted'];
 
 function ChangeExperienceList() {
   var workTitleList = document.getElementById("workTitle");
   var skillList = document.getElementById("workSkills");
-  var selCar = workTitleList.options[workTitleList.selectedIndex].value;
+  var jobTitles = workTitleList.options[workTitleList.selectedIndex].value;
   while (skillList.options.length) {
     skillList.remove(0);
   }
-  var cars = jobsAndSkills[selCar];
-  if (cars) {
+  var jobs = jobsAndSkills[jobTitles];
+  if (jobs) {
     var i;
-    for (i = 0; i < cars.length; i++) {
-      var workTitle = new Option(cars[i], i);
+    for (i = 0; i < jobs.length; i++) {
+      var workTitle = new Option(jobs[i], i);
       skillList.options.add(workTitle);
     }
   }
