@@ -53,16 +53,32 @@ function educationHistory() {
     finalResume.educationField1 = document.querySelector("#educationField1").value;
 }
 
-//Function to Update Ids and onChange of all inputs when forms are cloned
-function updateInputs(clone, newNum) {
+//Function to Update Ids of all inputs when forms are cloned
+function updateIds(clone, newNum) {
     let inputs = clone.querySelectorAll("*");
-    console.log(inputs);
     inputs.forEach(function(input) {
         if (input.id) {
             input.setAttribute("id", input.id.slice(0, -1) + newNum);
         };
+    });
+}
+
+// Updates onChange of work section when forms are cloned
+function updateWorkOnChange(clone, newNum) {
+    let inputs = clone.querySelectorAll("*");
+    inputs.forEach(function(input) {
         if (input.hasAttribute("onchange")) {
             input.setAttribute("onchange", `changeSkillList(${newNum})`);
+        };
+    });
+}
+
+// Updates onChange of volunteer section when forms are cloned
+function updateVolunteerOnChange(clone, newNum) {
+    let inputs = clone.querySelectorAll("*");
+    inputs.forEach(function(input) {
+        if (input.hasAttribute("onchange")) {
+            input.setAttribute("onchange", `changeVolunteerSkillsList(${newNum})`);
         };
     });
 }
@@ -117,7 +133,8 @@ function addWork() {
     // reset input values
     resetInputText(newElemCloned);
     // update childrens' ids
-    updateInputs(newElemCloned, newNum);
+    updateIds(newElemCloned, newNum);
+    updateWorkOnChange(newElemCloned, newNum);
 
     // Header Change
     let header = newElemCloned.querySelector(".heading-ref");
@@ -155,7 +172,8 @@ function addVolunteer() {
     // reset input values
     resetInputText(newElemCloned);
     // update childrens' ids
-    updateInputs(newElemCloned, newNum);
+    updateIds(newElemCloned, newNum);
+    updateVolunteerOnChange(newElemCloned, newNum);
 
     // Header Change
     let header = newElemCloned.querySelector(".vol-heading-ref");
@@ -195,7 +213,7 @@ function addEducation() {
     // reset input values
     resetInputText(newElemCloned);
     // update childrens' ids
-    updateInputs(newElemCloned, newNum);
+    updateIds(newElemCloned, newNum);
 
     // Header Change
     let header = newElemCloned.querySelector(".edu-heading-ref");
@@ -340,6 +358,40 @@ function changeSkillList(num) {
     for (i = 0; i < jobs.length; i++) {
       let workField = new Option(jobs[i], i);
       workSkillList.options.add(workField);
+    }
+  }
+}
+
+
+
+
+var volTitleAndSkills = {};
+// student
+volTitleAndSkills['inputGroupSelect1'] = ['','Communication', 'Ability to work under pressure', 'Decision making', 'Time management','Self-motivating','Conflict resolution', 'Leadership','Adaptability','Teamwork','Creativity'];
+// food service
+volTitleAndSkills['inputGroupSelect2'] = ['','Ability to learn quickly', 'Customer Service', 'Detail oriented', 'Flexible','Food Preparation','Handle cash and credit transactions', 'Multitasking','Adaptability','Team player','Upbeat'];
+// custodial
+volTitleAndSkills['inputGroupSelect3'] = ['','Ability to work quickly', 'Safety Cautious', 'Excellent work ethic', 'Critical thinking','Proficient in using manual and power tools','Self starter', 'Organized','Stock management','Attention to Detail','Reliable'];
+// landscaping-Ag
+volTitleAndSkills['inputGroupSelect4'] = ['','Lawn care', 'Irrigation', 'Ability to operate machinery', 'Livestock upkeep','Harvesting','Inventory control', 'Hard working','Flexible','Project management','Efficient'];
+// factory-warehouse
+volTitleAndSkills['inputGroupSelect5'] = ['','Goal oriented', 'Effective interpersonal Communication', 'Hands on', 'Physical Stamina','Shipping and recieving','Catolog inventory', 'Operates heavy machinery','Reliable','Time mangement','Multitasking'];
+// factory-warehouse
+volTitleAndSkills['inputGroupSelect6'] = ['','Goal oriented', 'Effective interpersonal Communication', 'Hands on', 'Physical Stamina','Shipping and recieving','Catolog inventory', 'Operates heavy machinery','Reliable','Time mangement','Multitasking'];
+
+function changeVolunteerSkillsList(num) {
+  const volunteerTitleList = document.getElementById("volunteerTitle" + num);
+  const volunteerSkillsList = document.getElementById("volunteerSkills" + num);
+  const volTitles = volunteerTitleList.options[volunteerTitleList.selectedIndex].value;
+  while (volunteerSkillsList.options.length) {
+    volunteerSkillsList.remove(0);
+  }
+  let jobs = volTitleAndSkills[volTitles];
+  if (jobs) {
+    var i;
+    for (i = 0; i < jobs.length; i++) {
+      let volunteerTitle = new Option(jobs[i], i);
+      volunteerSkillsList.options.add(volunteerTitle);
     }
   }
 }

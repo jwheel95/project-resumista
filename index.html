@@ -311,14 +311,14 @@
                 <div class="row">
                   <div class="col-md-6 mb-3">
                     <label for="volunteerTitle1">Volunteer</label>
-                    <select class="custom-select d-block w-100" id="volunteerTitle1">
+                    <select class="custom-select d-block w-100" id="volunteerTitle1" onchange="changeVolunteerSkillsList(1)">
                       <option value="">Choose...</option>
-                      <option value="true" for="inputGroupSelect1">Foodbank</option>
-                      <option value="true" for="inputGroupSelect2">Church</option>
-                      <option value="true" for="inputGroupSelect3">Community Service</option>
-                      <option value="true" for="inputGroupSelect4">Mentoring</option>
-                      <option value="true" for="inputGroupSelect4">Teaching, Tutoring</option>
-                      <option value="true" for="inputGroupSelect4">Youth Work</option>
+                      <option value="inputGroupSelect1" for="inputGroupSelect1">Foodbank</option>
+                      <option value="inputGroupSelect2" for="inputGroupSelect2">Church</option>
+                      <option value="inputGroupSelect3" for="inputGroupSelect3">Community Service</option>
+                      <option value="inputGroupSelect4" for="inputGroupSelect4">Mentoring</option>
+                      <option value="inputGroupSelect5" for="inputGroupSelect5">Teaching, Tutoring</option>
+                      <option value="inputGroupSelect6" for="inputGroupSelect6">Youth Work</option>
                     </select>
                   </div>
                   <div class="col-md-6 mb-3">
@@ -326,20 +326,9 @@
                     <input type="text" class="form-control" id="volunteerOrg1" placeholder="..." value="">
                   </div>
                 </div>
-                <form class="card p-2">
-                  <div class="input-group mb-3">
-                    <select class="custom-select" id="volunteerSkills1">
-                      <option value="0">Volunteer Skills</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
-                    </select>
-                    <div class="input-group-append">
-                      <label class="input-group-text" for="volunteerSkills1">Skills</label>
-                    </div>
-                  </div>
-                </form>
-
+                <label for="volunteerSkills1">Skills</label>
+                <select class="custom-select" id="volunteerSkills1"></select>
+                   
                 <div class="mb-3">
                   <label for="volunteerCity1">City</label>
                   <input type="text" class="form-control" id="volunteerCity1" placeholder="Fresno" required="">
