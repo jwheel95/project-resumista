@@ -351,15 +351,15 @@ volAndSkills['inputGroupSelect5'] = ['','Goal oriented', 'Effective interpersona
 function ChangeSkillList() {
   const volunteerTitle1List = document.getElementById("volunteerTitle1");
   const volunteerSkills1List = document.getElementById("volunteerSkills1");
-  const volunteerTitles = volunteerTitle1List.options[volunteerTitle1List.selectedIndex].value;
+  const jobTitles = volunteerTitle1List.options[volunteerTitle1List.selectedIndex].value;
   while (volunteerSkills1List.options.length) {volunteerTitle1List.remove(0);
   }
-  const Volunteer = volAndSkills[VolunteerTitles];
-  if (Volunteer) {
+  const jobs = volAndSkills[jobTitles];
+  if (jobs) {
     var i;
-    for (i = 0; i < Volunteer.length; i++) {
-      const volunteerTitle1 = new Option(Volunteer[i], i);
-      volunteerSkills1List.options.add(Volunteertitle1);
+    for (i = 0; i < jobs.length; i++) {
+      const volunteerTitle1 = new Option(jobs[i], i);
+      volunteerSkills1List.options.add(workField1);
     }
   }
 }
