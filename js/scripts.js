@@ -26,7 +26,6 @@ function signUp() {
 }
 
 function workHistory() {
-
     finalResume.workField1 = document.querySelector("#workField1")[workField1.selectedIndex].text;
     finalResume.workName1 = document.querySelector("#workName1").value;
     finalResume.workSkills1 = document.querySelector("#workSkills1")[workSkills1.selectedIndex].text;
@@ -36,6 +35,32 @@ function workHistory() {
     finalResume.workCity1 = document.querySelector("#workCity1").value;
     finalResume.workZip1 = document.querySelector("#workZip1").value;
     finalResume.workingHere1 = document.querySelector("#workingHere1").checked;
+    
+    let workEntry2 = document.querySelector("#workEntry2");
+    if (workEntry2) {
+        finalResume.workField2 = document.querySelector("#workField2")[workField2.selectedIndex].text;
+        finalResume.workName2 = document.querySelector("#workName2").value;
+        finalResume.workSkills2 = document.querySelector("#workSkills2")[workSkills2.selectedIndex].text;
+        finalResume.workAddress2 = document.querySelector("#workAddress2").value;
+        finalResume.workCountry2 = document.querySelector("#workCountry2")[workCountry2.selectedIndex].text;
+        finalResume.workState2 = document.querySelector("#workState2")[workState2.selectedIndex].text;
+        finalResume.workCity2 = document.querySelector("#workCity2").value;
+        finalResume.workZip2 = document.querySelector("#workZip2").value;
+        finalResume.workingHere2 = document.querySelector("#workingHere2").checked;
+    };
+
+    let workEntry3 = document.querySelector("#workEntry3");
+    if (workEntry3) {
+        finalResume.workField3 = document.querySelector("#workField3")[workField3.selectedIndex].text;
+        finalResume.workName3 = document.querySelector("#workName3").value;
+        finalResume.workSkills3 = document.querySelector("#workSkills3")[workSkills3.selectedIndex].text;
+        finalResume.workAddress3 = document.querySelector("#workAddress3").value;
+        finalResume.workCountry3 = document.querySelector("#workCountry3")[workCountry3.selectedIndex].text;
+        finalResume.workState3 = document.querySelector("#workState3")[workState3.selectedIndex].text;
+        finalResume.workCity3 = document.querySelector("#workCity3").value;
+        finalResume.workZip3 = document.querySelector("#workZip3").value;
+        finalResume.workingHere3 = document.querySelector("#workingHere3").checked;
+    };
 }
 
 function volunteerHistory() {
@@ -44,6 +69,24 @@ function volunteerHistory() {
     finalResume.volunteerSkills1 = document.querySelector("#volunteerSkills1")[volunteerSkills1.selectedIndex].text;
     finalResume.volunteerCity1 = document.querySelector("#volunteerCity1").value;
     finalResume.volunteerYears1 = document.querySelector("#volunteerYears1")[volunteerYears1.selectedIndex].text;
+
+    let volunteerEntry2 = document.querySelector("#volunteerEntry2");
+    if (volunteerEntry2) {
+        finalResume.volunteerTitle2 = document.querySelector("#volunteerTitle2")[volunteerTitle2.selectedIndex].text;
+        finalResume.volunteerOrg2 = document.querySelector("#volunteerOrg2").value;
+        finalResume.volunteerSkills2 = document.querySelector("#volunteerSkills2")[volunteerSkills2.selectedIndex].text;
+        finalResume.volunteerCity2 = document.querySelector("#volunteerCity2").value;
+        finalResume.volunteerYears2 = document.querySelector("#volunteerYears2")[volunteerYears2.selectedIndex].text;
+    };
+
+    let volunteerEntry3 = document.querySelector("#volunteerEntry3");
+    if (volunteerEntry3) {
+        finalResume.volunteerTitle3 = document.querySelector("#volunteerTitle3")[volunteerTitle3.selectedIndex].text;
+        finalResume.volunteerOrg3 = document.querySelector("#volunteerOrg3").value;
+        finalResume.volunteerSkills3 = document.querySelector("#volunteerSkills3")[volunteerSkills3.selectedIndex].text;
+        finalResume.volunteerCity3 = document.querySelector("#volunteerCity3").value;
+        finalResume.volunteerYears3 = document.querySelector("#volunteerYears3")[volunteerYears3.selectedIndex].text;
+    };
 }
 
 function educationHistory() {
@@ -51,6 +94,22 @@ function educationHistory() {
     finalResume.educationSchool1 = document.querySelector("#educationSchool1").value;
     finalResume.educationStatus1 = document.querySelector("#educationStatus1")[educationStatus1.selectedIndex].text;
     finalResume.educationField1 = document.querySelector("#educationField1").value;
+
+    let educationEntry2 = document.querySelector("#educationEntry2");
+    if (educationEntry2) {
+        finalResume.educationLevel2 = document.querySelector("#educationLevel2")[educationLevel2.selectedIndex].text;
+        finalResume.educationSchool2 = document.querySelector("#educationSchool2").value;
+        finalResume.educationStatus2 = document.querySelector("#educationStatus2")[educationStatus2.selectedIndex].text;
+        finalResume.educationField2 = document.querySelector("#educationField2").value;
+    };
+
+    let educationEntry3 = document.querySelector("#educationEntry3");
+    if (educationEntry3) {
+        finalResume.educationLevel3 = document.querySelector("#educationLevel3")[educationLevel2.selectedIndex].text;
+        finalResume.educationSchool3 = document.querySelector("#educationSchool3").value;
+        finalResume.educationStatus3 = document.querySelector("#educationStatus3")[educationStatus2.selectedIndex].text;
+        finalResume.educationField3 = document.querySelector("#educationField3").value;
+    };
 }
 
 //Function to Update Ids of all inputs when forms are cloned
