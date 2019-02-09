@@ -1,10 +1,13 @@
 /* blue = #4484ce;
+   drk blue = #50667F;
    grey = #d9d9d9;
    yellow = #f9cf00;
    orange = #f19f4d; 
+
 */
 body{
     background: #F5F5F5;
+    
 }
 
 nav{
@@ -22,7 +25,9 @@ nav{
 h6{
     color:#999999;
 }
-
+.form-check{
+    padding-left:2.25rem;
+}
 .active{
 color:white;
 }
@@ -39,9 +44,25 @@ label{
     color: #999999;
 }
 
+.btn-info{
+    border: none;
+    box-shadow: 1px 2px #888888;
+}
+.btn-danger{
+    border: none;
+    box-shadow: 1px 2px #888888;
+}
 .btn-warning{
     color:white;
     background-color:#f9cf00 !important; 
+    margin-top:0px; 
+    border: none;
+    box-shadow: 1px 2px #888888;
+}
+.btn-info{
+    color:white;
+    border: none;
+    box-shadow: 1px 2px #50667F;
 }
 
 .lead{
@@ -51,7 +72,7 @@ label{
 
 a {
     color: inherit;
-    text-decoration:none;
+    text-decoration:none !important;
 }
 
 .text-muted{
@@ -99,4 +120,26 @@ footer{
     label{
         color: #ffffff;
     }
+    .lead{
+        color:  #ffffff;
+        margin-top: 3px;
+    }
+    .btn-info{
+        border: none;
+        box-shadow: 1px 2px #50667F;
+    }
+    .btn-danger{
+        border: none;
+        box-shadow: 1px 2px #ffffff;
+    }
   }
+
+
+  
+@media print {
+  @page { 
+    margin: 0; 
+    size: A4;
+   }
+  body  { margin: 1.6cm; }
+}
