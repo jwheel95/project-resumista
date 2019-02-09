@@ -54,22 +54,16 @@ function educationHistory() {
 }
 
 //Function to Update Ids and onChange of all inputs when forms are cloned
-function updateIds(clone, newNum) {
+function updateInputs(clone, newNum) {
     let inputs = clone.querySelectorAll("*");
     console.log(inputs);
     inputs.forEach(function(input) {
         if (input.id) {
             input.setAttribute("id", input.id.slice(0, -1) + newNum);
-        } 
-    });
-}
-
-function updateOnChange(clone, newNum) {
-    let inputs = clone.querySelectorAll("*");
-    inputs.forEach(function(input) {
+        };
         if (input.hasAttribute("onchange")) {
             input.setAttribute("onchange", `changeSkillList(${newNum})`);
-        }
+        };
     });
 }
 
@@ -110,8 +104,7 @@ function addWork() {
     let newElemCloned = newElem.cloneNode(true);
     newElemCloned.setAttribute("id", `workEntry${newNum}`);
     // update childrens' ids
-    updateIds(newElemCloned, newNum);
-    updateOnChange(newElemCloned, newNum);
+    updateInputs(newElemCloned, newNum);
 
     // Header Change
     let header = newElemCloned.querySelector(".heading-ref");
@@ -147,7 +140,7 @@ function addVolunteer() {
     let newElemCloned = newElem.cloneNode(true);
     newElemCloned.setAttribute("id", `volunteerEntry${newNum}`);
     // update childrens' ids
-    updateIds(newElemCloned, newNum);
+    updateInputs(newElemCloned, newNum);
 
     // Header Change
     let header = newElemCloned.querySelector(".vol-heading-ref");
@@ -184,7 +177,7 @@ function addEducation() {
     let newElemCloned = newElem.cloneNode(true);
     newElemCloned.setAttribute("id", `educationEntry${newNum}`);
     // update childrens' ids
-    updateIds(newElemCloned, newNum);
+    updateInputs(newElemCloned, newNum);
 
     // Header Change
     let header = newElemCloned.querySelector(".edu-heading-ref");
