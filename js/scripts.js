@@ -53,17 +53,25 @@ function educationHistory() {
     finalResume.educationField1 = document.querySelector("#educationField1").value;
 }
 
-//Function to Update Ids of all inputs when forms are cloned
+//Function to Update Ids and onChange of all inputs when forms are cloned
 function updateIds(clone, newNum) {
     let inputs = clone.querySelectorAll("*");
     console.log(inputs);
     inputs.forEach(function(input) {
         if (input.id) {
             input.setAttribute("id", input.id.slice(0, -1) + newNum);
-        }
+        } 
     });
 }
 
+function updateOnChange(clone, newNum) {
+    let inputs = clone.querySelectorAll("*");
+    inputs.forEach(function(input) {
+        if (input.hasAttribute("onchange")) {
+            input.setAttribute("onchange", `changeSkillList(${newNum})`);
+        }
+    });
+}
 
 // ----------------- ADD/DELETE DUPLICATE FORM FEATURE ------------------------
 // TODO: Refactor way too much copied code, not sure how....
@@ -103,6 +111,7 @@ function addWork() {
     newElemCloned.setAttribute("id", `workEntry${newNum}`);
     // update childrens' ids
     updateIds(newElemCloned, newNum);
+    updateOnChange(newElemCloned, newNum);
 
     // Header Change
     let header = newElemCloned.querySelector(".heading-ref");
@@ -306,19 +315,19 @@ jobsAndSkills['inputGroupSelect4'] = ['','Lawn care', 'Irrigation', 'Ability to 
 // factory-warehouse
 jobsAndSkills['inputGroupSelect5'] = ['','Goal oriented', 'Effective interpersonal Communication', 'Hands on', 'Physical Stamina','Shipping and recieving','Catolog inventory', 'Operates heavy machinery','Reliable','Time mangement','Multitasking'];
 
-function ChangeSkillList() {
-  var workField1List = document.getElementById("workField1");
-  var workSkillList = document.getElementById("workSkills1");
-  var jobTitles = workField1List.options[workField1List.selectedIndex].value;
+function changeSkillList(num) {
+  const workFieldList = document.getElementById("workField" + num);
+  const workSkillList = document.getElementById("workSkills" + num);
+  const jobTitles = workFieldList.options[workFieldList.selectedIndex].value;
   while (workSkillList.options.length) {
     workSkillList.remove(0);
   }
-  var jobs = jobsAndSkills[jobTitles];
+  let jobs = jobsAndSkills[jobTitles];
   if (jobs) {
     var i;
     for (i = 0; i < jobs.length; i++) {
-      var workField1 = new Option(jobs[i], i);
-      workSkillList.options.add(workField1);
+      let workField = new Option(jobs[i], i);
+      workSkillList.options.add(workField);
     }
   }
 }
