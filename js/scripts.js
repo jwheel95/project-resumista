@@ -67,6 +67,17 @@ function updateInputs(clone, newNum) {
     });
 }
 
+// Function to reset the text input when creating new form
+function resetInputText (newElemCloned) {
+    let initialInputs = newElemCloned.querySelectorAll("input[type=text]");
+    for (let i = 0; i < initialInputs.length; i++){
+        console.log(initialInputs[0].value);
+        initialInputs[i].value = "";
+    }
+}
+
+// 
+
 // ----------------- ADD/DELETE DUPLICATE FORM FEATURE ------------------------
 // TODO: Refactor way too much copied code, not sure how....
 
@@ -103,6 +114,8 @@ function addWork() {
     // create new clone and change its ID using the newNum value
     let newElemCloned = newElem.cloneNode(true);
     newElemCloned.setAttribute("id", `workEntry${newNum}`);
+    // reset input values
+    resetInputText(newElemCloned);
     // update childrens' ids
     updateInputs(newElemCloned, newNum);
 
@@ -139,6 +152,8 @@ function addVolunteer() {
     // create new clone and change its ID using the newNum value
     let newElemCloned = newElem.cloneNode(true);
     newElemCloned.setAttribute("id", `volunteerEntry${newNum}`);
+    // reset input values
+    resetInputText(newElemCloned);
     // update childrens' ids
     updateInputs(newElemCloned, newNum);
 
@@ -165,6 +180,7 @@ function addVolunteer() {
 }
 
 function addEducation() {
+  
     // Checks number of duplicated/form sections
     let num = document.querySelectorAll(".edu-cloned-input").length;
     console.log(`Number of form sections: ${num}`);
@@ -176,6 +192,8 @@ function addEducation() {
     // create new clone and change its ID using the newNum value
     let newElemCloned = newElem.cloneNode(true);
     newElemCloned.setAttribute("id", `educationEntry${newNum}`);
+    // reset input values
+    resetInputText(newElemCloned);
     // update childrens' ids
     updateInputs(newElemCloned, newNum);
 
@@ -196,6 +214,7 @@ function addEducation() {
         btnEducationAdd.disabled = true;
         btnEducationAdd.setAttribute("value", "You've reached the limit");
     }
+
 }
 
 // DELETE DUPLICATE FORM FUNCTIONS
