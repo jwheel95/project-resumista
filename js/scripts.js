@@ -53,17 +53,19 @@ function educationHistory() {
     finalResume.educationField1 = document.querySelector("#educationField1").value;
 }
 
-//Function to Update Ids of all inputs when forms are cloned
-function updateIds(clone, newNum) {
+//Function to Update Ids and onChange of all inputs when forms are cloned
+function updateInputs(clone, newNum) {
     let inputs = clone.querySelectorAll("*");
     console.log(inputs);
     inputs.forEach(function(input) {
         if (input.id) {
             input.setAttribute("id", input.id.slice(0, -1) + newNum);
-        }
+        };
+        if (input.hasAttribute("onchange")) {
+            input.setAttribute("onchange", `changeSkillList(${newNum})`);
+        };
     });
 }
-
 
 // ----------------- ADD/DELETE DUPLICATE FORM FEATURE ------------------------
 // TODO: Refactor way too much copied code, not sure how....
@@ -102,7 +104,7 @@ function addWork() {
     let newElemCloned = newElem.cloneNode(true);
     newElemCloned.setAttribute("id", `workEntry${newNum}`);
     // update childrens' ids
-    updateIds(newElemCloned, newNum);
+    updateInputs(newElemCloned, newNum);
 
     // Header Change
     let header = newElemCloned.querySelector(".heading-ref");
@@ -138,7 +140,7 @@ function addVolunteer() {
     let newElemCloned = newElem.cloneNode(true);
     newElemCloned.setAttribute("id", `volunteerEntry${newNum}`);
     // update childrens' ids
-    updateIds(newElemCloned, newNum);
+    updateInputs(newElemCloned, newNum);
 
     // Header Change
     let header = newElemCloned.querySelector(".vol-heading-ref");
@@ -176,7 +178,7 @@ function addEducation() {
     let newElemCloned = newElem.cloneNode(true);
     newElemCloned.setAttribute("id", `educationEntry${newNum}`);
     // update childrens' ids
-    updateIds(newElemCloned, newNum);
+    updateInputs(newElemCloned, newNum);
 
     // Header Change
     let header = newElemCloned.querySelector(".edu-heading-ref");
@@ -295,3 +297,32 @@ btnEducationDelete.addEventListener(
     "click",
     delEducation
 );
+
+var jobsAndSkills = {};
+// student
+jobsAndSkills['inputGroupSelect1'] = ['','Communication', 'Ability to work under pressure', 'Decision making', 'Time management','Self-motivating','Conflict resolution', 'Leadership','Adaptability','Teamwork','Creativity'];
+// food service
+jobsAndSkills['inputGroupSelect2'] = ['','Ability to learn quickly', 'Customer Service', 'Detail oriented', 'Flexible','Food Preparation','Handle cash and credit transactions', 'Multitasking','Adaptability','Team player','Upbeat'];
+// custodial
+jobsAndSkills['inputGroupSelect3'] = ['','Ability to work quickly', 'Safety Cautious', 'Excellent work ethic', 'Critical thinking','Proficient in using manual and power tools','Self starter', 'Organized','Stock management','Attention to Detail','Reliable'];
+// landscaping-Ag
+jobsAndSkills['inputGroupSelect4'] = ['','Lawn care', 'Irrigation', 'Ability to operate machinery', 'Livestock upkeep','Harvesting','Inventory control', 'Hard working','Flexible','Project management','Efficient'];
+// factory-warehouse
+jobsAndSkills['inputGroupSelect5'] = ['','Goal oriented', 'Effective interpersonal Communication', 'Hands on', 'Physical Stamina','Shipping and recieving','Catolog inventory', 'Operates heavy machinery','Reliable','Time mangement','Multitasking'];
+
+function changeSkillList(num) {
+  const workFieldList = document.getElementById("workField" + num);
+  const workSkillList = document.getElementById("workSkills" + num);
+  const jobTitles = workFieldList.options[workFieldList.selectedIndex].value;
+  while (workSkillList.options.length) {
+    workSkillList.remove(0);
+  }
+  let jobs = jobsAndSkills[jobTitles];
+  if (jobs) {
+    var i;
+    for (i = 0; i < jobs.length; i++) {
+      let workField = new Option(jobs[i], i);
+      workSkillList.options.add(workField);
+    }
+  }
+}
