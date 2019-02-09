@@ -139,7 +139,9 @@
             <div class="col-md-4 order-md-2 mb-4">
               <h4 class="d-flex justify-content-between align-items-center mb-3">
                 <span class="text-muted">Your Progress</span>
-                <span class="badge badge-secondary badge-pill">1</span>
+                <span class="badge badge-secondary badge-pill">
+                    <a href="#carouselControls" role="button" data-slide="next">1</a>
+                  </span>
               </h4>
               <ul class="list-group mb-3">
                 <li class="list-group-item d-flex justify-content-between bg-light">
@@ -246,17 +248,22 @@
               </form>
             </div>
           </div>
-          <div class="row">
-            <button id="btnWorkAddForm" type="submit" class="btn btn-primary">Add Form</button>
-            <button id="btnWorkDeleteForm" type="submit" class="btn btn-primary">Delete Form</button>
-          </div>
           <hr class="mb-4">
+<!---------------- clone form buttons start ------------------------------------>
+          <div class="row">
+            <button id="btnWorkAddForm" type="submit" class="btn btn-primary btn-lg btn-block">Add Form</button>
+            <button id="btnWorkDeleteForm" type="submit" class="btn btn-danger btn-lg btn-block">Delete Form</button>
+<!---------------- clone form buttons end ------------------------------------>
+    <!-- carousel continue button start-------------------------------------------------->
+            <a href="#carouselControls" role="button" data-slide="next">  
+              <button id="workSubmit" class="btn btn-warning btn-lg btn-block" type="submit">
+              Continue
+              </button>
+            </a>
+   <!-- carousel continue button end----------------------------------------------->
+          </div>
+
           <!-- end of work form section-------------------------------------------------->
-          <!-- carousel continue button-------------------------------------------------->
-          <a class=" col-md-12" href="#carouselControls" role="button" data-slide="next"><button id="workSubmit" class="btn btn-warning btn-lg btn-block"
-              type="submit">Continue</button></a>
-          <button class="btn btn-primary btn-lg btn-block" onclick="addJob()">Add</button>
-          <!-- carousel continue button----------------------------------------------->
 
         </div>
 
@@ -278,7 +285,9 @@
             <div class="col-md-4 order-md-2 mb-4">
               <h4 class="d-flex justify-content-between align-items-center mb-3">
                 <span class="text-muted">Your Progress</span>
-                <span class="badge badge-secondary badge-pill">2</span>
+                <span class="badge badge-secondary badge-pill">
+                    <a href="#carouselControls" role="button" data-slide="next">2</a>
+                  </span>
               </h4>
               <ul class="list-group mb-3">
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
@@ -365,16 +374,20 @@
               </form>
             </div>
           </div>
-          <div class="row">
-            <button id="btnVolunteerAddForm" type="submit" class="btn btn-primary">Add Form</button>
-            <button id="btnVolunteerDeleteForm" type="submit" class="btn btn-primary">Delete Form</button>
-          </div>
           <hr class="mb-4">
+          <div class="row">
+<!---------------- clone form buttons start ------------------------------------>
+            <button id="btnVolunteerAddForm" type="submit" class="btn btn-primary btn-lg btn-block">Add Form</button>
+            <button id="btnVolunteerDeleteForm" type="submit" class="btn btn-danger btn-lg btn-block">Delete Form</button>
+<!---------------- clone form buttons End ------------------------------------>
+          <!-- continue button start -->
+          <button id="volunteerSubmit" class="btn btn-warning btn-lg btn-block" type="submit">
+            <a class=" col-md-12" href="#carouselControls" role="button" data-slide="next">Continue</a>
+          </button>
+        <!-- continue button end -->
+          </div>
           <!-- volunteer form end -->
-          <!-- continue button -->
-          <a class=" col-md-12" href="#carouselControls" role="button" data-slide="next"><button id="volunteerSubmit"
-              class="btn btn-warning btn-lg btn-block" type="submit">Continue</button></a>
-          <!-- continue button end -->
+        
           <!-- footer start -->
         </div>
         <!-- Volunteer contianer end------------------------>
@@ -394,7 +407,9 @@
             <div class="col-md-4 order-md-2 mb-4">
               <h4 class="d-flex justify-content-between align-items-center mb-3">
                 <span class="text-muted">Your Progress</span>
-                <span class="badge badge-secondary badge-pill">3</span>
+                <span class="badge badge-secondary badge-pill">
+                    <a href="#carouselControls" role="button" data-slide="next">3</a>
+                </span>
               </h4>
               <ul class="list-group mb-3">
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
@@ -464,16 +479,19 @@
               </form>
             </div>
           </div>
-          <div class="row">
-            <button id="btnEducationAddForm" type="submit" class="btn btn-primary">Add Form</button>
-            <button id="btnEducationDeleteForm" type="submit" class="btn btn-primary">Delete Form</button>
-          </div>
           <hr class="mb-4">
+          <div class="row">
+<!---------------- clone form buttons start ------------------------------------>
+            <button id="btnEducationAddForm" type="submit" class="btn btn-primary btn-lg btn-block">Add Form</button>
+            <button id="btnEducationDeleteForm" type="submit" class="btn btn-danger btn-lg btn-block">Delete Form</button>
+<!---------------- clone form buttons end ------------------------------------>
+        <!-- continue button Start -->
+            <button id="educationSubmit" class="btn btn-warning btn-lg btn-block" type="submit">
+               <a class=" col-md-12" href="#carouselControls" role="button" data-slide="next">Continue</a>
+            </button>
+        <!-- continue button end -->
+          </div>
           <!-- education form end -->
-          <!-- continue button -->
-          <a class=" col-md-12" href="#carouselControls" role="button" data-slide="next"><button id="educationSubmit"
-              class="btn btn-warning btn-lg btn-block" type="submit">Continue</button></a>
-          <!-- continue button end -->
         </div>
         <!-- education contianer end------------------------>
       </div>

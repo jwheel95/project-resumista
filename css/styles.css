@@ -42,6 +42,7 @@ label{
 .btn-warning{
     color:white;
     background-color:#f9cf00 !important; 
+    margin:0px;
 }
 
 .lead{
@@ -98,5 +99,9 @@ footer{
     }
     label{
         color: #ffffff;
+    }
+    .lead{
+        color:  #ffffff;
+        margin-top: 3px;
     }
   }
