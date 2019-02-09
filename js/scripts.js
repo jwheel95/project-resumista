@@ -53,29 +53,13 @@ function educationHistory() {
     finalResume.educationField1 = document.querySelector("#educationField1").value;
 }
 
-<<<<<<< HEAD
-//Function to Update Ids of all inputs when forms are cloned
-function updateIds(clone, newNum) {
-=======
 //Function to Update Ids and onChange of all inputs when forms are cloned
 function updateInputs(clone, newNum) {
->>>>>>> c5b7a2470c3c17d6d62986d19dbfb2f65a43ca21
     let inputs = clone.querySelectorAll("*");
     console.log(inputs);
     inputs.forEach(function(input) {
         if (input.id) {
             input.setAttribute("id", input.id.slice(0, -1) + newNum);
-<<<<<<< HEAD
-        }
-    });
-}
-
-function updateOnChange(clone, newNum) {
-    let inputs = clone.querySelectorAll("*");
-    inputs.forEach(function(input) {
-=======
-        };
->>>>>>> c5b7a2470c3c17d6d62986d19dbfb2f65a43ca21
         if (input.hasAttribute("onchange")) {
             input.setAttribute("onchange", `changeSkillList(${newNum})`);
         };
