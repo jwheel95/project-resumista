@@ -60,6 +60,7 @@ function updateInputs(clone, newNum) {
     inputs.forEach(function(input) {
         if (input.id) {
             input.setAttribute("id", input.id.slice(0, -1) + newNum);
+        };
         if (input.hasAttribute("onchange")) {
             input.setAttribute("onchange", `changeSkillList(${newNum})`);
         };
@@ -314,7 +315,7 @@ btnEducationDelete.addEventListener(
     delEducation
 );
 
-const jobsAndSkills = {};
+var jobsAndSkills = {};
 // student
 jobsAndSkills['inputGroupSelect1'] = ['','Communication', 'Ability to work under pressure', 'Decision making', 'Time management','Self-motivating','Conflict resolution', 'Leadership','Adaptability','Teamwork','Creativity'];
 // food service
@@ -326,51 +327,20 @@ jobsAndSkills['inputGroupSelect4'] = ['','Lawn care', 'Irrigation', 'Ability to 
 // factory-warehouse
 jobsAndSkills['inputGroupSelect5'] = ['','Goal oriented', 'Effective interpersonal Communication', 'Hands on', 'Physical Stamina','Shipping and recieving','Catolog inventory', 'Operates heavy machinery','Reliable','Time mangement','Multitasking'];
 
-function ChangeSkillList() {
-  const workField1List = document.getElementById("workField1");
-  const workSkillList = document.getElementById("workSkills1");
-  const jobTitles = workField1List.options[workField1List.selectedIndex].value;
+function changeSkillList(num) {
+  const workFieldList = document.getElementById("workField" + num);
+  const workSkillList = document.getElementById("workSkills" + num);
+  const jobTitles = workFieldList.options[workFieldList.selectedIndex].value;
   while (workSkillList.options.length) {
     workSkillList.remove(0);
   }
-  const jobs = volAndSkills[jobTitles];
+  let jobs = jobsAndSkills[jobTitles];
   if (jobs) {
     var i;
     for (i = 0; i < jobs.length; i++) {
-      const workField1 = new Option(jobs[i], i);
-      workSkillList.options.add(workField1);
+      let workField = new Option(jobs[i], i);
+      workSkillList.options.add(workField);
     }
   }
 }
 
-
-
-
-ChangeVolunteerSkillList()
-;
-// student
-volAndSkills['inputGroupSelect1'] = ['','Communication', 'Ability to work under pressure', 'Decision making', 'Time management','Self-motivating','Conflict resolution', 'Leadership','Adaptability','Teamwork','Creativity'];
-// food service
-volAndSkills['inputGroupSelect2'] = ['','Ability to learn quickly', 'Customer Service', 'Detail oriented', 'Flexible','Food Preparation','Handle cash and credit transactions', 'Multitasking','Adaptability','Team player','Upbeat'];
-// custodial
-volAndSkills['inputGroupSelect3'] = ['','Ability to work quickly', 'Safety Cautious', 'Excellent work ethic', 'Critical thinking','Proficient in using manual and power tools','Self starter', 'Organized','Stock management','Attention to Detail','Reliable'];
-// landscaping-Ag
-volAndSkills['inputGroupSelect4'] = ['','Lawn care', 'Irrigation', 'Ability to operate machinery', 'Livestock upkeep','Harvesting','Inventory control', 'Hard working','Flexible','Project management','Efficient'];
-// factory-warehouse
-volAndSkills['inputGroupSelect5'] = ['','Goal oriented', 'Effective interpersonal Communication', 'Hands on', 'Physical Stamina','Shipping and recieving','Catolog inventory', 'Operates heavy machinery','Reliable','Time mangement','Multitasking'];
-
-function ChangeSkillList() {
-  const volunteerTitle1List = document.getElementById("volunteerTitle1");
-  const volunteerSkills1List = document.getElementById("volunteerSkills1");
-  const jobTitles = volunteerTitle1List.options[volunteerTitle1List.selectedIndex].value;
-  while (volunteerSkills1List.options.length) {volunteerTitle1List.remove(0);
-  }
-  const jobs = volAndSkills[jobTitles];
-  if (jobs) {
-    var i;
-    for (i = 0; i < jobs.length; i++) {
-      const volunteerTitle1 = new Option(jobs[i], i);
-      volunteerSkills1List.options.add(workField1);
-    }
-  }
-}
