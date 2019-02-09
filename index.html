@@ -174,7 +174,7 @@
                   <div class="col-md-6 mb-3">
 <!-----------------------------  job select connected to skills input start --------------------------------------------------------------->
                     <label for="workField1">Job Field</label>
-                    <select class="custom-select d-block w-100" id="workField1" onchange="ChangeSkillList()">
+                    <select class="custom-select d-block w-100" id="workField1" onchange="changeSkillList(1)">
                       <option value="">Choose...</option>
                       <option value="inputGroupSelect1" for="inputGroupSelect1">Student</option>
                       <option value="inputGroupSelect2" for="inputGroupSelect2">Food Service</option>
@@ -255,7 +255,6 @@
           <!-- carousel continue button-------------------------------------------------->
           <a class=" col-md-12" href="#carouselControls" role="button" data-slide="next"><button id="workSubmit" class="btn btn-warning btn-lg btn-block"
               type="submit">Continue</button></a>
-          <button class="btn btn-primary btn-lg btn-block" onclick="addJob()">Add</button>
           <!-- carousel continue button----------------------------------------------->
 
         </div>
