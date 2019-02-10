@@ -131,11 +131,17 @@ footer {
 }
 
 .copywriteText {
-    padding: 0px;
     color:#ffffff;
     margin-top:20px;
 }
 
+.my-5{
+    margin-bottom: 0px !important;
+}
+.mb-1 {
+    padding: 0px;
+
+}
 
 @media only screen and (max-width: 767px) {
     body {
