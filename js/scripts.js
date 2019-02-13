@@ -13,13 +13,17 @@ workSubmit.addEventListener('click', workHistory);
 volunteerSubmit.addEventListener('click', volunteerHistory);
 educationSubmit.addEventListener('click', educationHistory);
 
+//Event Listener for populating final resume
+educationSubmit.addEventListener('click', resumeGenerate);
+
 //Submit Functions- save info to JS Object
 function signUp() {
     finalResume.signUpFirstName = document.querySelector("#signUpFirstName").value;
     finalResume.signUpLastName = document.querySelector("#signUpLastName").value;
     finalResume.signUpPhoneNumber = document.querySelector("#signUpPhoneNumber").value;
     finalResume.signUpEmail = document.querySelector("#signUpEmail").value;
-    finalResume.signUpAddress = document.querySelector("#signUpAddress").value; 
+    finalResume.signUpAddress = document.querySelector("#signUpAddress").value;
+    finalResume.signUpCity = document.querySelector('#signUpCity').value;
     finalResume.signUpCountry = document.querySelector("#signUpCountry")[signUpCountry.selectedIndex].text;
     finalResume.signUpState = document.querySelector("#signUpState")[signUpState.selectedIndex].text;
     finalResume.signUpZip = document.querySelector("#signUpZip").value;
@@ -110,6 +114,61 @@ function educationHistory() {
         finalResume.educationStatus3 = document.querySelector("#educationStatus3")[educationStatus2.selectedIndex].text;
         finalResume.educationField3 = document.querySelector("#educationField3").value;
     };
+}
+
+//Function to generate resume
+function resumeGenerate() {
+
+    //declaring variables from resume page of html
+    const gName = document.querySelector("#frName");
+    const gPhone = document.querySelector("#frPhone");
+    const gEmail = document.querySelector("#frEmail"); 
+    const gAddress = document.querySelector("#frAddress");
+    const gCity = document.querySelector("#frCity");
+    const gState = document.querySelector("#frState");
+    const gZip = document.querySelector("#frZip");
+    const gCountry = document.querySelector("#frCountry");
+    const gWorkName1 = document.querySelector("#frWorkName1");
+    const gWorkField1 = document.querySelector("#frWorkField1");
+    const gWorkSkills1 = document.querySelector("#frWorkSkills1");
+    const gWorkHere1 = document.querySelector("#frWorkHere1");
+    const gWorkAddress1 = document.querySelector("#frWorkAddress1");
+    const gWorkCity1 = document.querySelector("#frWorkCity1");
+    const gWorkState1 = document.querySelector("#frWorkState1");
+    const gWorkZip1 = document.querySelector("#frWorkZip1");
+    const gWorkCountry1 = document.querySelector("#frWorkCountry1");
+    const gWorkName2 = document.querySelector("#frWorkName2");
+    const gWorkField2 = document.querySelector("#frWorkField2");
+    const gWorkSkills2 = document.querySelector("#frWorkSkills2");
+    const gWorkHere2 = document.querySelector("#frWorkHere2");
+    const gWorkAddress2 = document.querySelector("#frWorkAddress2");
+    const gWorkCity2 = document.querySelector("#frWorkCity2");
+    const gWorkState2 = document.querySelector("#frWorkState2");
+    const gWorkZip2 = document.querySelector("#frWorkZip2");
+    const gWorkCountry2 = document.querySelector("#frWorkCountry2");
+    const gWorkName3 = document.querySelector("#frWorkName3");
+    const gWorkField3 = document.querySelector("#frWorkField3");
+    const gWorkSkills3 = document.querySelector("#frWorkSkills3");
+    const gWorkHere3 = document.querySelector("#frWorkHere3");
+    const gWorkAddress3 = document.querySelector("#frWorkAddress3");
+    const gWorkCity3 = document.querySelector("#frWorkCity3");
+    const gWorkState3 = document.querySelector("#frWorkState3");
+    const gWorkZip3 = document.querySelector("#frWorkZip3");
+    const gWorkCountry3 = document.querySelector("#frWorkCountry3");
+
+    //populating resume
+    gName.textContent = (finalResume.signUpFirstName + " " + finalResume.signUpLastName);
+    gPhone.textContent = finalResume.signUpPhoneNumber;
+    gEmail.textContent = finalResume.signUpEmail;
+    gAddress.textContent = finalResume.signUpAddress;
+    gCity.textContent = finalResume.signUpCity;
+    gState.textContent = finalResume.signUpState;
+    gZip.textContent = finalResume.signUpZip;
+    gCountry.textContent = finalResume.signUpCountry;
+    gWorkName1.textContent = finalResume.workName1;
+    gWorkField1.textContent = finalResume.workField1;
+    gWorkSkills1.textContent = finalResume.workSkills1;
+    
 }
 
 //Function to Update Ids of all inputs when forms are cloned
