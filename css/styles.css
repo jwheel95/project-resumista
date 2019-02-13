@@ -21,6 +21,10 @@ nav {
     color:#f9cf00;
 }
 
+.logo {
+    height: 50px;
+}
+
 .carousel-inner {
     min-height: 750px;
 }
