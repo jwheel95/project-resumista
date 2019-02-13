@@ -156,7 +156,7 @@ function resumeGenerate() {
     const gWorkZip3 = document.querySelector("#frWorkZip3");
     const gWorkCountry3 = document.querySelector("#frWorkCountry3");
 
-    //populating resume
+    //populating resume w/ user input
     gName.textContent = (finalResume.signUpFirstName + " " + finalResume.signUpLastName);
     gPhone.textContent = finalResume.signUpPhoneNumber;
     gEmail.textContent = finalResume.signUpEmail;
@@ -168,6 +168,37 @@ function resumeGenerate() {
     gWorkName1.textContent = finalResume.workName1;
     gWorkField1.textContent = finalResume.workField1;
     gWorkSkills1.textContent = finalResume.workSkills1;
+    gWorkAddress1.textContent = finalResume.workAddress1;
+    gWorkCity1.textContent = finalResume.workCity1;
+    gWorkState1.textContent = finalResume.workState1;
+    gWorkZip1.textContent = finalResume.workZip1;
+    gWorkCountry1.textContent = finalResume.workCountry1;
+
+    //if user has second work experience
+    let workEntry2 = document.querySelector("#workEntry2");
+    if (workEntry2) {
+        gWorkName2.textContent = finalResume.workName2;
+        gWorkField2.textContent = finalResume.workField2;
+        gWorkSkills2.textContent = finalResume.workSkills2;
+        gWorkAddress2.textContent = finalResume.workAddress2;
+        gWorkCity2.textContent = finalResume.workCity2;
+        gWorkState2.textContent = finalResume.workState2;
+        gWorkZip2.textContent = finalResume.workZip2;
+        gWorkCountry2.textContent = finalResume.workCountry2;
+    }
+
+    //if user has third work experience
+    let workEntry3 = document.querySelector("#workEntry2");
+    if (workEntry3) {
+        gWorkName3.textContent = finalResume.workName3;
+        gWorkField3.textContent = finalResume.workField3;
+        gWorkSkills3.textContent = finalResume.workSkills3;
+        gWorkAddress3.textContent = finalResume.workAddress3;
+        gWorkCity3.textContent = finalResume.workCity3;
+        gWorkState3.textContent = finalResume.workState3;
+        gWorkZip3.textContent = finalResume.workZip3;
+        gWorkCountry3.textContent = finalResume.workCountry3;
+    }
     
 }
 
