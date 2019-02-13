@@ -313,7 +313,6 @@ function updateVolunteerOnChange(clone, newNum) {
 function resetInputText (newElemCloned) {
     let initialInputs = newElemCloned.querySelectorAll("input[type=text]");
     for (let i = 0; i < initialInputs.length; i++){
-        console.log(initialInputs[0].value);
         initialInputs[i].value = "";
     }
 }
@@ -347,12 +346,9 @@ btnEducationDelete.disabled = true;
 function addWork() {
     // Checks number of duplicated/form sections
     let num = document.querySelectorAll(".work-cloned-input").length;
-    console.log(`Number of form sections: ${num}`);
     // Incremating the id by 1 for every new duplicate form
     let newNum = num + 1;
-    console.log(`New ID number to be incremated on next dup form: ${newNum}`);
     let newElem = document.querySelector("#workEntry" + num);
-    console.log(`New ID for cloned form: ${newElem}`);
     // create new clone and change its ID using the newNum value
     let newElemCloned = newElem.cloneNode(true);
     newElemCloned.setAttribute("id", `workEntry${newNum}`);
@@ -386,12 +382,9 @@ function addWork() {
 function addVolunteer() {
     // Checks number of duplicated/form sections
     let num = document.querySelectorAll(".vol-cloned-input").length;
-    console.log(`Number of form sections: ${num}`);
     // Incremating the id by 1 for every new duplicate form
     let newNum = num + 1;
-    console.log(`New ID number to be incremated on next dup form: ${newNum}`);
     let newElem = document.querySelector("#volunteerEntry" + num);
-    console.log(`New ID for cloned form: ${newElem}`);
     // create new clone and change its ID using the newNum value
     let newElemCloned = newElem.cloneNode(true);
     newElemCloned.setAttribute("id", `volunteerEntry${newNum}`);
@@ -427,12 +420,9 @@ function addEducation() {
   
     // Checks number of duplicated/form sections
     let num = document.querySelectorAll(".edu-cloned-input").length;
-    console.log(`Number of form sections: ${num}`);
     // Incremating the id by 1 for every new duplicate form
     let newNum = num + 1;
-    console.log(`New ID number to be incremated on next dup form: ${newNum}`);
     let newElem = document.querySelector("#educationEntry" + num);
-    console.log(`New ID for cloned form: ${newElem}`);
     // create new clone and change its ID using the newNum value
     let newElemCloned = newElem.cloneNode(true);
     newElemCloned.setAttribute("id", `educationEntry${newNum}`);
@@ -486,7 +476,6 @@ function delVolunteer() {
     //   console.log(`vol dup sections: ${num}`)
     // check how many duplicated sections we currently have
     let num = document.querySelectorAll(".vol-cloned-input").length;
-    console.log(`vol dup sections: ${num}`)
 
     // Confirmation dialog box
     if (confirm(`Are you sure you wish to remove Volunteer #${num}? This cannot be undone.`)) {
@@ -508,7 +497,6 @@ function delEducation() {
     //   console.log(`vol dup sections: ${num}`)
     // check how many duplicated sections we currently have
     let num = document.querySelectorAll(".edu-cloned-input").length;
-    console.log(`edu dup sections: ${num}`)
 
     // Confirmation dialog box
     if (confirm(`Are you sure you wish to remove Education #${num}? This cannot be undone.`)) {
