@@ -155,6 +155,34 @@ function resumeGenerate() {
     const gWorkState3 = document.querySelector("#frWorkState3");
     const gWorkZip3 = document.querySelector("#frWorkZip3");
     const gWorkCountry3 = document.querySelector("#frWorkCountry3");
+    const gVolTitle1 = document.querySelector("#frVolTitle1");
+    const gVolOrg1 = document.querySelector("#frVolOrg1");
+    const gVolSkills1 = document.querySelector("#frVolSkills1");
+    const gVolCity1 = document.querySelector("#frVolCity1");
+    const gVolYears1 = document.querySelector("#frVolYears1");
+    const gVolTitle2 = document.querySelector("#frVolTitle2");
+    const gVolOrg2 = document.querySelector("#frVolOrg2");
+    const gVolSkills2 = document.querySelector("#frVolSkills2");
+    const gVolCity2 = document.querySelector("#frVolCity2");
+    const gVolYears2 = document.querySelector("#frVolYears2");
+    const gVolTitle3 = document.querySelector("#frVolTitle3");
+    const gVolOrg3 = document.querySelector("#frVolOrg3");
+    const gVolSkills3 = document.querySelector("#frVolSkills3");
+    const gVolCity3 = document.querySelector("#frVolCity3");
+    const gVolYears3 = document.querySelector("#frVolYears3");
+    const gEduSchool1 = document.querySelector("#frEduSchool1");
+    const gEduLevel1 = document.querySelector("#frEduLevel1");
+    const gEduField1 = document.querySelector("#frEduField1");
+    const gEduStatus1 = document.querySelector("#frEduStatus1");
+    const gEduSchool2 = document.querySelector("#frEduSchool2");
+    const gEduLevel2 = document.querySelector("#frEduLevel2");
+    const gEduField2 = document.querySelector("#frEduField2");
+    const gEduStatus2 = document.querySelector("#frEduStatus2");
+    const gEduSchool3 = document.querySelector("#frEduSchool3");
+    const gEduLevel3 = document.querySelector("#frEduLevel3");
+    const gEduField3 = document.querySelector("#frEduField3");
+    const gEduStatus3 = document.querySelector("#frEduStatus3");
+
 
     //populating resume w/ user input
     gName.textContent = (finalResume.signUpFirstName + " " + finalResume.signUpLastName);
@@ -173,6 +201,17 @@ function resumeGenerate() {
     gWorkState1.textContent = finalResume.workState1;
     gWorkZip1.textContent = finalResume.workZip1;
     gWorkCountry1.textContent = finalResume.workCountry1;
+
+    gVolTitle1.textContent = finalResume.volunteerTitle1;
+    gVolOrg1.textContent = finalResume.volunteerOrg1;
+    gVolSkills1.textContent = finalResume.volunteerSkills1;
+    gVolCity1.textContent = finalResume.volunteerCity1;
+    gVolYears1.textContent = finalResume.volunteerYears1;
+
+    gEduSchool1.textContent = finalResume.educationSchool1;
+    gEduLevel1.textContent = finalResume.educationLevel1;
+    gEduField1.textContent = finalResume.educationField1;
+    gEduStatus1.textContent = finalResume.educationStatus1;
 
     //if user has second work experience
     let workEntry2 = document.querySelector("#workEntry2");
@@ -198,6 +237,44 @@ function resumeGenerate() {
         gWorkState3.textContent = finalResume.workState3;
         gWorkZip3.textContent = finalResume.workZip3;
         gWorkCountry3.textContent = finalResume.workCountry3;
+    }
+
+    //if user has second volunteer experience
+    let volunteerEntry2 = document.querySelector("#volunteerEntry2");
+    if (volunteerEntry2) {
+        gVolTitle2.textContent = finalResume.volunteerTitle2;
+        gVolOrg2.textContent = finalResume.volunteerOrg2;
+        gVolSkills2.textContent = finalResume.volunteerSkills2;
+        gVolCity2.textContent = finalResume.volunteerCity2;
+        gVolYears2.textContent = finalResume.volunteerYears2;
+    }
+
+    //if user has third volunteer experience
+    let volunteerEntry3 = document.querySelector("#volunteerEntry3");
+    if (volunteerEntry3) {
+        gVolTitle3.textContent = finalResume.volunteerTitle3;
+        gVolOrg3.textContent = finalResume.volunteerOrg3;
+        gVolSkills3.textContent = finalResume.volunteerSkills3;
+        gVolCity3.textContent = finalResume.volunteerCity3;
+        gVolYears3.textContent = finalResume.volunteerYears3;
+    }
+
+    //if user has second education experience
+    let educationEntry2 = document.querySelector("#educationEntry2");
+    if (educationEntry2) {
+        gEduSchool2.textContent = finalResume.educationSchool2;
+        gEduLevel2.textContent = finalResume.educationLevel2;
+        gEduField2.textContent = finalResume.educationField2;
+        gEduStatus2.textContent = finalResume.educationStatus2;
+    }
+
+    //if user has third education experience
+    let educationEntry3 = document.querySelector("#educationEntry3");
+    if (educationEntry3) {
+        gEduSchool3.textContent = finalResume.educationSchool3;
+        gEduLevel3.textContent = finalResume.educationLevel3;
+        gEduField3.textContent = finalResume.educationField3;
+        gEduStatus3.textContent = finalResume.educationStatus3;
     }
     
 }
