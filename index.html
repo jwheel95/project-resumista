@@ -172,38 +172,28 @@
               <form>
                 <div class="row">
                   <div class="col-md-6 mb-3">
+<!-----------------------------  job select connected to skills input start --------------------------------------------------------------->
                     <label for="workField1">Job Field</label>
-                    <select class="custom-select d-block w-100" id="workField1">
+                    <select class="custom-select d-block w-100" id="workField1" onchange="changeSkillList(1)">
                       <option value="">Choose...</option>
-                      <option value="true" for="inputGroupSelect1">Student</option>
-                      <option value="true" for="inputGroupSelect2">Food Service</option>
-                      <option value="true" for="inputGroupSelect3">Custodial</option>
-                      <option value="true" for="inputGroupSelect4">Landscaping/Agricultural</option>
-                      <option value="true" for="inputGroupSelect2">Factory/Warehouse</option>
+                      <option value="inputGroupSelect1" for="inputGroupSelect1">Student</option>
+                      <option value="inputGroupSelect2" for="inputGroupSelect2">Food Service</option>
+                      <option value="inputGroupSelect3" for="inputGroupSelect3">Custodial</option>
+                      <option value="inputGroupSelect4" for="inputGroupSelect4">Landscaping/Agricultural</option>
+                      <option value="inputGroupSelect5" for="inputGroupSelect5">Factory/Warehouse</option>
                     </select>
                   </div>
+<!-----------------------------  job select connected to skills input end --------------------------------------------------------------->
 
                   <div class="col-md-6 mb-3">
                     <label for="workName1">Company Name</label>
                     <input type="text" class="form-control" id="workName1" placeholder="..." value="">
                   </div>
                 </div>
-
-                <form class="card p-2">
-                  <div class="input-group mb-3">
-                    <select class="custom-select" id="workSkills1">
-                      <option value="0">...</option>
-                      <option value="1">a student</option>
-                      <option value="2">b student</option>
-                      <option value="3">c student</option>
-                    </select>
-
-                    <div class="input-group-append">
-                      <label class="input-group-text" for="workSkills1">Skills</label>
-                    </div>
-                  </div>
-                </form>
-
+<!-----------------------------  second skills input start  --------------------------------------------------------------->
+                  <label for="workSkills1">Skills</label>
+                  <select class="custom-select" id="workSkills1"></select>
+<!-----------------------------  second skills input end  --------------------------------------------------------------->
                 <div class="mb-3">
                   <label for="workAddress1">Address</label>
                   <input type="text" class="form-control" id="workAddress1" placeholder="1234 Main St" required="">
@@ -265,7 +255,6 @@
           <!-- carousel continue button-------------------------------------------------->
           <a class=" col-md-12" href="#carouselControls" role="button" data-slide="next"><button id="workSubmit" class="btn btn-warning btn-lg btn-block"
               type="submit">Continue</button></a>
-          <button class="btn btn-primary btn-lg btn-block" onclick="addJob()">Add</button>
           <!-- carousel continue button----------------------------------------------->
 
         </div>
