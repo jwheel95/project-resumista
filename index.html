@@ -30,8 +30,8 @@
         <!-- sign up header-->
         <div class="container" id="SignUpContainer">
           <div class="py-5 text-center">
-            <h2>Sign Up</h2>
-            <p class="lead">Please fill out to the best of your abilities</p>
+            <h2 class="pageTitle">Sign Up</h2>
+            <p class="pageSubtitle">Please fill out to the best of your abilities</p>
           </div>
           <!-- sign-up header end -->
           <div class="row">
@@ -113,8 +113,8 @@
           <hr class="mb-4">
           <!-- end of sign up form section-------------------------------------------------->
           <!-- carousel continue button-------------------------------------------------->
-          <a class=" col-md-12" href="#carouselControls" role="button" data-slide="next"><button class="btn btn-warning btn-lg btn-block"
-              type="submit" id="signUpSubmit">Sign Up</button></a>
+          <a class=" col-md-12" href="#carouselControls" role="button" data-slide="next">
+            <button id="signUpSubmit" type="submit" class="continue btn-lg btn-block">Sign Up</button></a>
           <!-- carousel continue button----------------------------------------------->
 
         </div>
@@ -130,36 +130,36 @@
         <!-- work history header-->
         <div class="container" id="workContainer">
           <div class="py-5 text-center">
-            <h2>Work History</h2>
-            <p class="lead">Please fill out to the best of your abilities</p>
+            <h2 class="pageTitle">Work History</h2>
+            <p class="pageSubtitle">Please fill out to the best of your abilities</p>
           </div>
           <!-- work wistory header end -->
           <!-- work history progress bar start -->
           <div class="row">
             <div class="col-md-4 order-md-2 mb-4">
               <h4 class="d-flex justify-content-between align-items-center mb-3">
-                <span class="text-muted">Your Progress</span>
+                <span class="progressBarTitle">Your Progress</span>
                 <span class="badge badge-secondary badge-pill">1</span>
               </h4>
               <ul class="list-group mb-3">
-                <li class="list-group-item d-flex justify-content-between bg-light">
-                  <div class="text-success">
-                    <h6 class="my-0 active">Work Experience</h6>
+                <li class="list-group-item d-flex justify-content-between progressBarBackground">
+                  <div>
+                    <h6 class="progressBarActive">Work Experience</h6>
                   </div>
                 </li>
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
                   <div>
-                    <h6 class="my-0"><a href="#carouselControls" data-slide-to="2">Volunteer</a></h6>
+                    <h6 class="progressBarText"><a href="#carouselControls" data-slide-to="2">Volunteer</a></h6>
                   </div>
                 </li>
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
                   <div>
-                    <h6 class="my-0"><a href="#carouselControls" data-slide-to="3">Education</a></h6>
+                    <h6 class="progressBarText"><a href="#carouselControls" data-slide-to="3">Education</a></h6>
                   </div>
                 </li>
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
                   <div>
-                    <h6 class="my-0">View Resume</h6>
+                    <h6 class="progressBarText">View Resume</h6>
                   </div>
                 </li>
               </ul>
@@ -167,7 +167,7 @@
             <!-- Progress bar end -->
             <!-- Work History form -->
             <div class="col-md-8 order-md-1 work-cloned-input" id="workEntry1">
-              <h2 id="workRef" name="reference" class="heading-ref">Job #1</h2>
+              <h2 id="workRef" name="reference" class="heading-ref heading">Job #1</h2>
               <h4 class="mb-3">Company's Info</h4>
               <form>
                 <div class="row">
@@ -247,14 +247,21 @@
             </div>
           </div>
           <div class="row">
-            <button id="btnWorkAddForm" type="submit" class="btn btn-primary">Add Form</button>
-            <button id="btnWorkDeleteForm" type="submit" class="btn btn-primary">Delete Form</button>
+            <button id="btnWorkAddForm" type="submit" class="add btn-lg btn-block">
+              <i class="fa fa-plus" aria-hidden="true"></i>
+            </button>
+            <button id="btnWorkDeleteForm" type="submit" class="delete btn-lg btn-block">
+              <i class="fa fa-minus" aria-hidden="true"></i>
+            </button>
           </div>
           <hr class="mb-4">
           <!-- end of work form section-------------------------------------------------->
           <!-- carousel continue button-------------------------------------------------->
-          <a class=" col-md-12" href="#carouselControls" role="button" data-slide="next"><button id="workSubmit" class="btn btn-warning btn-lg btn-block"
-              type="submit">Continue</button></a>
+          <a class=" col-md-12" href="#carouselControls" role="button" data-slide="next">
+            <button id="workSubmit" type="submit" class="continue btn-lg btn-block">
+              <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </button>
+          </a>
           <!-- carousel continue button----------------------------------------------->
 
         </div>
@@ -268,36 +275,36 @@
         <div class="container">
           <!-- volunteer header -->
           <div class="py-5 text-center">
-            <h2>Volunteer History</h2>
-            <p class="lead">Please fill out to be best of your abilities</p>
+            <h2 class="pageTitle">Volunteer History</h2>
+            <p class="pageSubtitle">Please fill out to be best of your abilities</p>
           </div>
           <!-- volunteer header end -->
           <!--  progress bar start-->
           <div class="row">
             <div class="col-md-4 order-md-2 mb-4">
               <h4 class="d-flex justify-content-between align-items-center mb-3">
-                <span class="text-muted">Your Progress</span>
+                <span class="progressBarTitle">Your Progress</span>
                 <span class="badge badge-secondary badge-pill">2</span>
               </h4>
               <ul class="list-group mb-3">
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
                   <div>
-                    <h6 class="my-0"><a href="#carouselControls" data-slide-to="1">Work Experience</a></h6>
+                    <h6 class="progressBarText"><a href="#carouselControls" data-slide-to="1">Work Experience</a></h6>
                   </div>
                 </li>
-                <li class="list-group-item d-flex justify-content-between bg-light">
-                  <div class="text-success">
-                    <h6 class="my-0 active">Volunteer</h6>
+                <li class="list-group-item d-flex justify-content-between progressBarBackground">
+                  <div>
+                    <h6 class="progressBarActive">Volunteer</h6>
                   </div>
                 </li>
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
                   <div>
-                    <h6 class="my-0"><a href="#carouselControls" data-slide-to="3">Education</a></h6>
+                    <h6 class="progressBarText"><a href="#carouselControls" data-slide-to="3">Education</a></h6>
                   </div>
                 </li>
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
                   <div>
-                    <h6 class="my-0">View Resume</h6>
+                    <h6 class="progressBarText">View Resume</h6>
                   </div>
                 </li>
               </ul>
@@ -305,20 +312,20 @@
             <!-- progress bar end ------------------------>
             <!--  volunteer form start-->
             <div class="col-md-8 order-md-1 vol-cloned-input" id="volunteerEntry1">
-              <h2 id="volunteerRef" name="reference" class="vol-heading-ref">Volunteer #1</h2>
+              <h2 id="volunteerRef" name="reference" class="vol-heading-ref heading">Volunteer #1</h2>
               <h4 class="mb-3">Organization's Info</h4>
               <form>
                 <div class="row">
                   <div class="col-md-6 mb-3">
                     <label for="volunteerTitle1">Volunteer</label>
-                    <select class="custom-select d-block w-100" id="volunteerTitle1">
+                    <select class="custom-select d-block w-100" id="volunteerTitle1" onchange="changeVolunteerSkillsList(1)">
                       <option value="">Choose...</option>
-                      <option value="true" for="inputGroupSelect1">Foodbank</option>
-                      <option value="true" for="inputGroupSelect2">Church</option>
-                      <option value="true" for="inputGroupSelect3">Community Service</option>
-                      <option value="true" for="inputGroupSelect4">Mentoring</option>
-                      <option value="true" for="inputGroupSelect4">Teaching, Tutoring</option>
-                      <option value="true" for="inputGroupSelect4">Youth Work</option>
+                      <option value="inputGroupSelect1" for="inputGroupSelect1">Foodbank</option>
+                      <option value="inputGroupSelect2" for="inputGroupSelect2">Church</option>
+                      <option value="inputGroupSelect3" for="inputGroupSelect3">Community Service</option>
+                      <option value="inputGroupSelect4" for="inputGroupSelect4">Mentoring</option>
+                      <option value="inputGroupSelect5" for="inputGroupSelect5">Teaching, Tutoring</option>
+                      <option value="inputGroupSelect6" for="inputGroupSelect6">Youth Work</option>
                     </select>
                   </div>
                   <div class="col-md-6 mb-3">
@@ -326,20 +333,9 @@
                     <input type="text" class="form-control" id="volunteerOrg1" placeholder="..." value="">
                   </div>
                 </div>
-                <form class="card p-2">
-                  <div class="input-group mb-3">
-                    <select class="custom-select" id="volunteerSkills1">
-                      <option value="0">Volunteer Skills</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
-                    </select>
-                    <div class="input-group-append">
-                      <label class="input-group-text" for="volunteerSkills1">Skills</label>
-                    </div>
-                  </div>
-                </form>
-
+                <label for="volunteerSkills1">Skills</label>
+                <select class="custom-select" id="volunteerSkills1"></select>
+                   
                 <div class="mb-3">
                   <label for="volunteerCity1">City</label>
                   <input type="text" class="form-control" id="volunteerCity1" placeholder="Fresno" required="">
@@ -365,14 +361,21 @@
             </div>
           </div>
           <div class="row">
-            <button id="btnVolunteerAddForm" type="submit" class="btn btn-primary">Add Form</button>
-            <button id="btnVolunteerDeleteForm" type="submit" class="btn btn-primary">Delete Form</button>
+            <button id="btnVolunteerAddForm" type="submit" class="add btn-lg btn-block">
+              <i class="fa fa-plus" aria-hidden="true"></i>
+            </button>
+            <button id="btnVolunteerDeleteForm" type="submit" class="delete btn-lg btn-block">
+              <i class="fa fa-minus" aria-hidden="true"></i>
+            </button>
           </div>
           <hr class="mb-4">
           <!-- volunteer form end -->
           <!-- continue button -->
-          <a class=" col-md-12" href="#carouselControls" role="button" data-slide="next"><button id="volunteerSubmit"
-              class="btn btn-warning btn-lg btn-block" type="submit">Continue</button></a>
+          <a class=" col-md-12" href="#carouselControls" role="button" data-slide="next">
+            <button id="volunteerSubmit" type="submit" class="continue btn-lg btn-block">
+              <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </button>
+          </a>
           <!-- continue button end -->
           <!-- footer start -->
         </div>
@@ -384,36 +387,36 @@
         <div class="container">
           <!-- education header -->
           <div class="py-5 text-center">
-            <h2>Volunteer History</h2>
-            <p class="lead">Please fill out to be best of your abilities</p>
+            <h2 class="pageTitle">Education History</h2>
+            <p class="pageSubtitle">Please fill out to be best of your abilities</p>
           </div>
           <!-- education header end -->
           <!--  progress bar start-->
           <div class="row">
             <div class="col-md-4 order-md-2 mb-4">
               <h4 class="d-flex justify-content-between align-items-center mb-3">
-                <span class="text-muted">Your Progress</span>
+                <span class="progressBarTitle">Your Progress</span>
                 <span class="badge badge-secondary badge-pill">3</span>
               </h4>
               <ul class="list-group mb-3">
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
                   <div>
-                    <h6 class="my-0"><a href="#carouselControls" data-slide-to="1">Work Experience</a></h6>
+                    <h6 class="progressBarText"><a href="#carouselControls" data-slide-to="1">Work Experience</a></h6>
                   </div>
                 </li>
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
                   <div>
-                    <h6 class="my-0"><a href="#carouselControls" data-slide-to="2">Volunteer</a></h6>
+                    <h6 class="progressBarText"><a href="#carouselControls" data-slide-to="2">Volunteer</a></h6>
                   </div>
                 </li>
-                <li class="list-group-item d-flex justify-content-between bg-light">
-                  <div class="text-success">
-                    <h6 class="my-0 active">Education</h6>
+                <li class="list-group-item d-flex justify-content-between progressBarBackground">
+                  <div>
+                    <h6 class="progressBarActive">Education</h6>
                   </div>
                 </li>
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
                   <div>
-                    <h6 class="my-0">View Resume</h6>
+                    <h6 class="progressBarText">View Resume</h6>
                   </div>
                 </li>
               </ul>
@@ -421,7 +424,7 @@
             <!-- progress bar end ------------------------>
             <!--  education form start-->
             <div class="col-md-8 order-md-1 edu-cloned-input" id="educationEntry1">
-              <h2 id="educationRef" name="reference" class="edu-heading-ref">Education #1</h2>
+              <h2 id="educationRef" name="reference" class="edu-heading-ref heading">Education #1</h2>
               <h4 class="mb-3">Education Info</h4>
               <form>
                 <div class="row">
@@ -464,26 +467,32 @@
             </div>
           </div>
           <div class="row">
-            <button id="btnEducationAddForm" type="submit" class="btn btn-primary">Add Form</button>
-            <button id="btnEducationDeleteForm" type="submit" class="btn btn-primary">Delete Form</button>
+            <button id="btnEducationAddForm" type="submit" class="add btn-lg btn-block">
+              <i class="fa fa-plus" aria-hidden="true"></i>
+            </button>
+            <button id="btnEducationDeleteForm" type="submit" class="delete btn-lg btn-block">
+              <i class="fa fa-minus" aria-hidden="true"></i>
+            </button>
           </div>
           <hr class="mb-4">
           <!-- education form end -->
           <!-- continue button -->
-          <a class=" col-md-12" href="#carouselControls" role="button" data-slide="next"><button id="educationSubmit"
-              class="btn btn-warning btn-lg btn-block" type="submit">Continue</button></a>
+          <a class=" col-md-12" href="#carouselControls" role="button" data-slide="next">
+            <button id="educationSubmit" class="continue btn-lg btn-block" type="submit">
+              <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </button>
+          </a>
           <!-- continue button end -->
-        </div>
-        <!-- education contianer end------------------------>
+        </div>    
+        <!--- education contianer end------------------------>
       </div>
 
       <!--next form page end  -->
     </div>
   </div>
   <!-- carousel inner end -->
-  <footer class="d-flex justify-content-center my-5 pt-5 text-muted text-center text-small">
-    <p class="mb-1">© Project Resumista</p>
-
+  <footer class="d-flex justify-content-center text-center text-small my-5 mb-1">
+    <p class="copywriteText">© Project Resumista</p>
   </footer>
 
 

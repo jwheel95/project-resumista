@@ -1,102 +1,180 @@
-/* blue = #4484ce;
+/* main blue = #4484ce;
+   light blue #0076FF;
+   light blue dropshadow = #26507F;
    grey = #d9d9d9;
    yellow = #f9cf00;
+   yellow drop shadow = #CCAA00;
    orange = #f19f4d; 
+   red = #FF2D19;
+   red dropshadow = #7F3933;
+
 */
-body{
-    background: #F5F5F5;
+body {
+    background: #F5F5F5;  
 }
 
-nav{
+nav {
     background-color: #4484ce; 
 }
 
-.navbar-brand{
+.navbar-brand {
     color:#f9cf00;
 }
 
 .carousel-inner {
     min-height: 750px;
 }
-
-h6{
-    color:#999999;
-}
-
-.active{
-color:white;
-}
-
-h4 {
-    color:  #4484ce; 
-}
-
-h2{
+.pageTitle {
     color: #f9cf00;
 }
 
-label{
-    color: #999999;
-}
-
-.btn-warning{
-    color:white;
-    background-color:#f9cf00 !important; 
-}
-
-.lead{
+.pageSubtitle {
     color:  #4484ce; 
     margin-top: 3px;
 }
 
-a {
-    color: inherit;
-    text-decoration:none;
+.heading {
+    color: #f9cf00;
 }
 
-.text-muted{
-    color:  #f9cf00  !important;
+/* smaller headings */
+h4 {
+    color:  #4484ce; 
+}
+/* smaller headings */
+
+.progressBarTitle {
+    color:  #f9cf00;
 }
 
-.text-success{
-    color:  white !important;
-}
-
-.bg-light{
-    background-color: #f9cf00 !important; 
+.progressBarText {
+    color:  #999999;
 }
 
 .badge-secondary { 
     background-color:#f9cf00;
 }
 
-.text-sucess{
-    background-color: #999999;
+.progressBarBackground {
+    background-color: #f9cf00; 
 }
 
-#spacer{
-    height:300px;
+.progressBarActive {
+    color:white;
+    }
+
+/* progress bar text/links */
+h6 {
+    color:#999999;
+}
+/* progress bar text/links */
+
+.form-check {
+    padding-left:2.25rem;
+    padding-bottom: 1.25rem;
 }
 
-footer{
+
+/* all input labels */
+label {
+    color: #999999;
+}
+/* all input labels */
+
+.add {
+    margin: 0px 10px;
+    color: #ffffff;
+    background-color: #0076FF;
+    box-shadow: 1px 2px #26507F;
+    border: none;
+}
+.add:focus {
+    outline: .0;
+}
+
+.delete {
+    margin: 0px 10px;
+    color: #ffffff;
+    background-color: #FF2D19;
+    box-shadow: 1px 2px #7F3933;
+    border: none;
+}
+
+.delete:focus {
+    outline: .0;
+}
+
+.continue {
+    color:white;
+    background-color:#f9cf00; 
+    margin-top:0px; 
+    border: none;
+    box-shadow: 1px 2px #CCAA00;
+}
+
+.continue:focus {
+    outline: .0;
+}
+
+a {
+    color: inherit;
+    text-decoration:none !important;
+}
+/* a:hover {
+    color:;
+} */
+
+footer {
     background-color: #4484ce;
     height: 100px;
-}
-
-.my-5 {
     margin-bottom: 0!important;
 }
 
+.copywriteText {
+    color:#ffffff;
+    margin-top:50px;
+}
+
+.my-5{
+    margin-bottom: 0px !important;
+}
 .mb-1 {
     padding: 0px;
-    color:#f9cf00;
 }
 
 @media only screen and (max-width: 767px) {
     body {
       background-color: #4484ce;
     }
-    label{
+
+    label {
         color: #ffffff;
     }
-  }
+
+    .pageSubtitle{
+        color:  #ffffff;
+        margin-top: 3px;
+    }
+    /* smaller headings */
+    h4 {
+        color:  #f9cf00;
+    }
+/* smaller headings */
+    .copywriteText {
+        color:#f9cf00; 
+        margin-top:30px!important;
+    }
+}
+
+
+
+  
+@media print {
+  @page { 
+    margin: 0; 
+    size: A4;
+   }
+   
+  body{ margin: 1.6cm;
+ }
+}
