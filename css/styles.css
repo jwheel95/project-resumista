@@ -20,6 +20,9 @@ nav {
 .navbar-brand {
     color:#f9cf00;
 }
+ .logo {
+height:50px;
+ }
 
 .logo {
     height: 50px;
@@ -92,8 +95,13 @@ label {
     box-shadow: 1px 2px #26507F;
     border: none;
 }
+.add:hover {
+    background-color:#4C9FFF;
+}
+
 .add:focus {
     outline: .0;
+    background-color: #4C9FFF;
 }
 
 .delete {
@@ -104,8 +112,13 @@ label {
     border: none;
 }
 
+.delete:hover {
+background-color: #FF7365;
+}
+
 .delete:focus {
     outline: .0;
+    background-color: #FF7365;
 }
 
 .continue {
@@ -115,9 +128,13 @@ label {
     border: none;
     box-shadow: 1px 2px #CCAA00;
 }
+.continue:hover {
+background-color: #FFE14C;
+}
 
 .continue:focus {
     outline: .0;
+    background-color: #FFE14C;
 }
 
 a {
@@ -168,7 +185,7 @@ footer {
         color:#f9cf00; 
         margin-top:30px!important;
     }
-}
+    }
 
 
 
