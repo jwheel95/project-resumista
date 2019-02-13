@@ -24,6 +24,10 @@ nav {
 height:50px;
  }
 
+.logo {
+    height: 50px;
+}
+
 .carousel-inner {
     min-height: 750px;
 }
