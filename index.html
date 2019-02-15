@@ -84,7 +84,7 @@
                     <select class="custom-select d-block w-100" id="signUpState" required="">
 
                       <option value="">Choose...</option>
-                      <option>California</option>
+                      <option>CA</option>
                     </select>
 
                     <div class="invalid-feedback">
@@ -149,12 +149,12 @@
                 </li>
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
                   <div>
-                    <h6 class="progressBarText"><a href="#carouselControls" data-slide-to="2">Volunteer</a></h6>
+                    <h6 class="progressBarText"><a href="#carouselControls" data-slide-to="2" class="progress-switch-work">Volunteer</a></h6>
                   </div>
                 </li>
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
                   <div>
-                    <h6 class="progressBarText"><a href="#carouselControls" data-slide-to="3">Education</a></h6>
+                    <h6 class="progressBarText"><a href="#carouselControls" data-slide-to="3" class="progress-switch-work">Education</a></h6>
                   </div>
                 </li>
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
@@ -193,11 +193,20 @@
                 <!-----------------------------  second skills input start  --------------------------------------------------------------->
                 <label for="workSkills1">Skills</label>
                 <select class="custom-select" id="workSkills1"></select>
+                
                 <!-----------------------------  second skills input end  --------------------------------------------------------------->
+                <div class="mb-3">
+                  <label for="workDuties1">Duties:</label>
+                  <input type="text" class="form-control" id="workDuties1" placeholder="..." required="">
+                  <div class="invalid-feedback">Please enter your job duties.
+                  </div>
+                </div>
+                
+                
                 <div class="mb-3">
                   <label for="workAddress1">Address</label>
                   <input type="text" class="form-control" id="workAddress1" placeholder="1234 Main St" required="">
-                  <div class="invalid-feedback">Please enter the asignUpAdress.
+                  <div class="invalid-feedback">Please enter the address.
                   </div>
                 </div>
 
@@ -237,12 +246,6 @@
                     </div>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="workingHere1">
-                    <label class="form-check-label" for="workingHere">I am currently working here</label>
-                  </div>
-                </div>
               </form>
             </div>
           </div>
@@ -276,7 +279,7 @@
           <!-- volunteer header -->
           <div class="py-5 text-center">
             <h2 class="pageTitle">Volunteer History</h2>
-            <p class="pageSubtitle">Please fill out to be best of your abilities</p>
+            <p class="pageSubtitle">Please fill out to the best of your abilities</p>
           </div>
           <!-- volunteer header end -->
           <!--  progress bar start-->
@@ -289,7 +292,7 @@
               <ul class="list-group mb-3">
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
                   <div>
-                    <h6 class="progressBarText"><a href="#carouselControls" data-slide-to="1">Work Experience</a></h6>
+                    <h6 class="progressBarText"><a href="#carouselControls" data-slide-to="1" class="progress-switch-volunteer">Work Experience</a></h6>
                   </div>
                 </li>
                 <li class="list-group-item d-flex justify-content-between progressBarBackground">
@@ -299,7 +302,7 @@
                 </li>
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
                   <div>
-                    <h6 class="progressBarText"><a href="#carouselControls" data-slide-to="3">Education</a></h6>
+                    <h6 class="progressBarText"><a href="#carouselControls" data-slide-to="3" class="progress-switch-volunteer">Education</a></h6>
                   </div>
                 </li>
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
@@ -333,6 +336,13 @@
                     <input type="text" class="form-control" id="volunteerOrg1" placeholder="..." value="">
                   </div>
                 </div>
+                <div class="mb-3">
+                  <label for="volDuties1">Duties:</label>
+                  <input type="text" class="form-control" id="volDuties1" placeholder="..." required="">
+                  <div class="invalid-feedback">Please enter your volunteer duties.
+                  </div>
+                </div>
+
                 <label for="volunteerSkills1">Skills</label>
                 <select class="custom-select" id="volunteerSkills1"></select>
 
@@ -388,7 +398,7 @@
           <!-- education header -->
           <div class="py-5 text-center">
             <h2 class="pageTitle">Education History</h2>
-            <p class="pageSubtitle">Please fill out to be best of your abilities</p>
+            <p class="pageSubtitle">Please fill out to the best of your abilities</p>
           </div>
           <!-- education header end -->
           <!--  progress bar start-->
@@ -401,12 +411,12 @@
               <ul class="list-group mb-3">
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
                   <div>
-                    <h6 class="progressBarText"><a href="#carouselControls" data-slide-to="1">Work Experience</a></h6>
+                    <h6 class="progressBarText"><a href="#carouselControls" data-slide-to="1" class="progress-switch-education">Work Experience</a></h6>
                   </div>
                 </li>
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
                   <div>
-                    <h6 class="progressBarText"><a href="#carouselControls" data-slide-to="2">Volunteer</a></h6>
+                    <h6 class="progressBarText"><a href="#carouselControls" data-slide-to="2" class="progress-switch-education">Volunteer</a></h6>
                   </div>
                 </li>
                 <li class="list-group-item d-flex justify-content-between progressBarBackground">
@@ -416,7 +426,7 @@
                 </li>
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
                   <div>
-                    <h6 class="progressBarText">View Resume</h6>
+                    <h6 class="progressBarText"><a id="viewResume" href="#carouselControls" data-slide-to="4">View Resume</a></h6>
                   </div>
                 </li>
               </ul>
@@ -493,141 +503,152 @@
         <div class="container">
           <!-- resume header/name -->
           <div class="row">
-            <div class="col-9">
+            <div class="col-8">
               <!-- combines finalResume First Name and Last Name -->
               <h2 class="final-resume-name" id="frName">Joe Dundee</h2>
             </div>
-            <div class="col-3">
+            
+            <div class="col-4">
               <!-- finalResume Sign up Data -->
-              <p id="frPhone">(559)800-6968</p>
-              <p id="frEmail">joedundee@gmail</p>
-              <p id="frAddress">1234 N Example Ave</p>
-              <p id="frCity">Fresno</p>
-              <p id="frState">CA</p>
-              <p id="frZip">93619</p>
-              <p id="frCountry">USA</p>
+              <i class="fas fa-mobile-alt icons"></i><span class="" id="frPhone">(559)800-6968</span><br/>
+              <i class="fas fa-home icons"></i><span class="" id="frAddress">1234 N Example Ave</span><br/>
+              <i class="fas fa-city icons"></i><span class="" id="frCity">Fresno</span>
+              <span class="" id="frState">CA</span>
+              <span class="" id="frZip">93619</span><br/>
+              <i class="fas fa-flag icons"></i><span class="" id="frCountry">United States</span><br/>
+              <i class="fas fa-envelope icons"></i><span class="" id="frEmail">joedundee@gmail</span>
             </div>
           </div>
           <!-- resume header end -->
           <!-- resume work section-->
           <div class="final-resume-work">
-            <h2>Work History:</h2>
-            <div class="row frWork1">
-              <div class="col-9">
-                <p id="frWorkName1">Pieology Pizzeria</p>
-                <p id="frWorkField1">Food Service</p>
-                <p id="frWorkSkills1">Da Boss</p>
-                <p id="frWorkHere1">????</p>
+            <h2 class="section-headers">work history</h2>
+                        
+            <div class="row fr-work" id="frWork1">
+              <div class="col-8">
+                <span class="co-title" id="frWorkName1">Pieology Pizzeria</span><br/>
+                <span class="" id="frWorkField1">Food Service</span><br/>
+                <span class="" id="frWorkSkills1">Da Boss</span><br/>
+                <span class="" id="frWorkDuties1"></span>
               </div>
-              <div class="col-3">
-                <p id="frWorkAddress1">870 Herndon Ave</p>
-                <p id="frWorkCity1">Clovis</p>
-                <p id="frWorkState1">CA</p>
-                <p id="frWorkZip1">93612</p>
-                <p id="frWorkCountry1">USA</p>
-              </div>
-            </div>
-            <div class="row frWork2">
-              <div class="col-9">
-                <p id="frWorkName2">Pieology Pizzeria</p>
-                <p id="frWorkField2">Food Service</p>
-                <p id="frWorkSkills2">Da Boss</p>
-                <p id="frWorkHere2">????</p>
-              </div>
-              <div class="col-3">
-                <p id="frWorkAddress2">870 Herndon Ave</p>
-                <p id="frWorkCity2">Clovis</p>
-                <p id="frWorkState2">CA</p>
-                <p id="frWorkZip2">93612</p>
-                <p id="frWorkCountry2">USA</p>
+              <div class="col-4">
+                <span class="" id="frWorkAddress1">870 Herndon Ave</span><br/>
+                <span class="" id="frWorkCity1">Clovis</span>
+                <span class="" id="frWorkState1">CA</span>
+                <span class="" id="frWorkZip1">93612</span><br/>
+                <span class="" id="frWorkCountry1">USA</span>
               </div>
             </div>
-            <div class="row frWork3">
-              <div class="col-9">
-                <p id="frWorkName3">Pieology Pizzeria</p>
-                <p id="frWorkField3">Food Service</p>
-                <p id="frWorkSkills3">Da Boss</p>
-                <p id="frWorkHere3">????</p>
+            <div class="row fr-work" id="frWork2">
+              <div class="col-8">
+                <span class="co-title" id="frWorkName2">Pieology Pizzeria</span><br/>
+                <span class="" id="frWorkField2">Food Service</span><br/>
+                <span class="" id="frWorkSkills2">Da Boss</span><br/>
+                <span class="" id="frWorkDuties2">Get rejected my Debra, Like a Boss. Find a fish in an alley, like a boss. Fuck its brains out, like a Boss!</span>
+
               </div>
-              <div class="col-3">
-                <p id="frWorkAddress3">870 Herndon Ave</p>
-                <p id="frWorkCity3">Clovis</p>
-                <p id="frWorkState3">CA</p>
-                <p id="frWorkZip3">93612</p>
-                <p id="frWorkCountry3">USA</p>
+              <div class="col-4">
+                <span class="" id="frWorkAddress2">870 Herndon Ave</span><br/>
+                <span class="" id="frWorkCity2">Clovis</span>
+                <span class="" id="frWorkState2">CA</span>
+                <span class="" id="frWorkZip2">93612</span><br/>
+                <span class="" id="frWorkCountry2">USA</span>
+              </div>
+            </div>
+            <div class="row fr-work" id="frWork3">
+              <div class="col-8">
+                <span class="co-title" id="frWorkName3">Pieology Pizzeria</span><br/>
+                <span class="" id="frWorkField3">Food Service</span><br/>
+                <span class="" id="frWorkSkills3">Da Boss</span><br/>
+                <span class="" id="frWorkDuties3"></span>
+              </div>
+            
+              <div class="col-4">
+                <span class="" id="frWorkAddress3">870 Herndon Ave</span><br/>
+                <span class="" id="frWorkCity3">Clovis</span>
+                <span class="" id="frWorkState3">CA</span>
+                <span class="" id="frWorkZip3">93612</span><br/>
+                <span class="" id="frWorkCountry3">USA</span>
               </div>
             </div>
           </div>
           <!-- resume work section end-->
           <!-- resume volunteer section -->
           <div class="final-resume-vol">
-            <h2>Volunteer History:</h2>
-            <div class=" row frVol1">
-              <div class="col-9">
-                <p id="frVolTitle1">Mentor</p>
-                <p id="frVolOrg1">GeekWise Academy</p>
-                <p id="frVolSkills1">Effective Comms</p>
+            <h2 class="section-headers">volunteer history</h2>
+            <div class=" row fr-vol" id="frVol1">
+              <div class="col-8">
+                <span class="" id="frVolTitle1">Mentor</span>
+                <span class="" id="frVolOrg1">GeekWise Academy</span>
+                <span class="" id="frVolSkills1">Effective Comms</span>
+                <span class="" id="frVolDuties1"></span>
+
               </div>
-              <div class="col-3">
-                <p id="frVolCity1">Fresno</p>
-                <p id="frVolYears1">3</p>
-              </div>
-            </div>
-            <div class=" row frVol2">
-              <div class="col-9">
-                <p id="frVolTitle2">Menton</p>
-                <p id="frVolOrg2">GeekWise</p>
-                <p id="frVolSkills2">Stuff and more</p>
-              </div>
-              <div class="col-3">
-                <p id="frVolCity2">Clovis</p>
-                <p id="frVolYears2">10</p>
+              <div class="col-4">
+                <span class="" id="frVolCity1">Fresno</span>
+                <span class="" id="frVolYears1">3</span>
               </div>
             </div>
-            <div class=" row frVol3">
-              <div class="col-9">
-                <p id="frVolTitle3">Tutor</p>
-                <p id="frVolOrg3">Bitwise</p>
-                <p id="frVolSkills3">more stuff and more</p>
+            <div class=" row fr-vol" id="frVol2">
+              <div class="col-8">
+                <span class="" id="frVolTitle2">Menton</span>
+                <span class="" id="frVolOrg2">GeekWise</span>
+                <span class="" id="frVolSkills2">Stuff and more</span>
+                <span class="" id="frVolDuties2"></span>
+
+
               </div>
-              <div class="col-3">
-                <p id="frVolCity3">Madera</p>
-                <p id="frVolYears3">8</p>
+              <div class="col-4">
+                <span class="" id="frVolCity2">Clovis</span>
+                <span class="" id="frVolYears2">10</span>
+              </div>
+            </div>
+            <div class=" row fr-vol" id="frVol3">
+              <div class="col-8">
+                <span class="" id="frVolTitle3">Tutor</span>
+                <span class="" id="frVolOrg3">Bitwise</span>
+                <span class="" id="frVolSkills3">more stuff and more</span>
+                <span class="" id="frVolDuties3"></span>
+
+              </div>
+              <div class="col-4">
+                <span class="" id="frVolCity3">Madera</span>
+                <span class="" id="frVolYears3">8</span>
               </div>
             </div>
           </div>
           <!-- resume volunteer section end -->
           <!-- resume education section -->
           <div class="final-resume-edu">
-            <h2>Education History:</h2>
-            <div class="row frEdu1">
-              <div class="col-9">
-                <p id="frEduSchool1">Clovis North High School</p>
-                <p id="frEduLevel1">High School</p>
+            <h2 class="section-headers">education history</h2>
+            <div class="row fr-edu" id="frEdu1">
+              <div class="col-8">
+                <p class="" id="frEduSchool1">Clovis North High School</p>
+                <p class="" id="frEduLevel1">High School</p>
               </div>
-              <div class="col-3">
-                <p id="frEduField1">Computer Science</p>
-                <p id="frEduStatus1">Graduated</p>
+              <div class="col-4">
+                <p class="" id="frEduField1">Computer Science</p>
+                <p class="" id="frEduStatus1">Graduated</p>
               </div>
             </div>
-            <div class="row frEdu2">
-                <div class="col-9">
-                  <p id="frEduSchool2">Institue of Technology</p>
-                  <p id="frEduLevel2">Technical/Trade School</p>
+            <div class="row fr-edu" id="frEdu2">
+                <div class="col-8">
+                  <p class="" id="frEduSchool2">Institue of Technology</p>
+                  <p class="" id="frEduLevel2">Technical/Trade School</p>
                 </div>
-                <div class="col-3">
-                  <p id="frEduField2">HVAC</p>
-                  <p id="frEduStatus2">In Progress</p>
+                <div class="col-4">
+                  <p class="" id="frEduField2">HVAC</p>
+                  <p class="" id="frEduStatus2">In Progress</p>
                 </div>
             </div>
-            <div class="row frEdu3">
-                <div class="col-9">
-                  <p id="frEduSchool3">CSU Fresno</p>
-                  <p id="frEduLevel3">Undergraduate</p>
+            <div class="row fr-edu" id="frEdu3">
+                <div class="col-8">
+                  <p class="" id="frEduSchool3">CSU Fresno</p>
+                  <p class="" id="frEduLevel3">Undergraduate</p>
                 </div>
-                <div class="col-3">
-                  <p id="frEduField3">Biology</p>
-                  <p id="frEduStatus3">In Progress</p>
+                <div class="col-4">
+                  <p class="" id="frEduField3">Biology</p>
+                  <p class="" id="frEduStatus3">In Progress</p>
                 </div>
             </div>
 

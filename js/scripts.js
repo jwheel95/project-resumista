@@ -6,15 +6,29 @@ const signUpSubmit = document.querySelector("#signUpSubmit");
 const workSubmit = document.querySelector("#workSubmit");
 const volunteerSubmit = document.querySelector("#volunteerSubmit");
 const educationSubmit = document.querySelector("#educationSubmit");
+const viewResume = document.querySelector("#viewResume");
+const progressSwitchWork = document.querySelectorAll(".progress-switch-work");
+const progressSwitchVolunteer = document.querySelectorAll(".progress-switch-volunteer");
+const progressSwitchEducation = document.querySelectorAll(".progress-switch-education");
 
 //Event Listeners on buttons to store info
 signUpSubmit.addEventListener('click', signUp);
 workSubmit.addEventListener('click', workHistory);
 volunteerSubmit.addEventListener('click', volunteerHistory);
 educationSubmit.addEventListener('click', educationHistory);
+progressSwitchWork.forEach(function(e) {
+    e.addEventListener('click', workHistory);
+});
+progressSwitchVolunteer.forEach(function(e) {
+    e.addEventListener('click', volunteerHistory);
+});
+progressSwitchEducation.forEach(function(e) {
+    e.addEventListener('click', educationHistory);
+});
 
-//Event Listener for populating final resume
+//Event Listeners for populating final resume
 educationSubmit.addEventListener('click', resumeGenerate);
+viewResume.addEventListener('click', resumeGenerate);
 
 //Submit Functions- save info to JS Object
 function signUp() {
@@ -38,7 +52,8 @@ function workHistory() {
     finalResume.workState1 = document.querySelector("#workState1")[workState1.selectedIndex].text;
     finalResume.workCity1 = document.querySelector("#workCity1").value;
     finalResume.workZip1 = document.querySelector("#workZip1").value;
-    finalResume.workingHere1 = document.querySelector("#workingHere1").checked;
+    finalResume.workDuties1 = document.querySelector("#workDuties1").value;
+    
     
     let workEntry2 = document.querySelector("#workEntry2");
     if (workEntry2) {
@@ -50,7 +65,7 @@ function workHistory() {
         finalResume.workState2 = document.querySelector("#workState2")[workState2.selectedIndex].text;
         finalResume.workCity2 = document.querySelector("#workCity2").value;
         finalResume.workZip2 = document.querySelector("#workZip2").value;
-        finalResume.workingHere2 = document.querySelector("#workingHere2").checked;
+        finalResume.workDuties2 = document.querySelector("#workDuties2").value;
     };
 
     let workEntry3 = document.querySelector("#workEntry3");
@@ -63,13 +78,14 @@ function workHistory() {
         finalResume.workState3 = document.querySelector("#workState3")[workState3.selectedIndex].text;
         finalResume.workCity3 = document.querySelector("#workCity3").value;
         finalResume.workZip3 = document.querySelector("#workZip3").value;
-        finalResume.workingHere3 = document.querySelector("#workingHere3").checked;
+        finalResume.workDuties3 = document.querySelector("#workDuties3").value;
     };
 }
 
 function volunteerHistory() {
     finalResume.volunteerTitle1 = document.querySelector("#volunteerTitle1")[volunteerTitle1.selectedIndex].text;
     finalResume.volunteerOrg1 = document.querySelector("#volunteerOrg1").value;
+    finalResume.volunteerDuties1 = document.querySelector("#volunteerDuties1").value;
     finalResume.volunteerSkills1 = document.querySelector("#volunteerSkills1")[volunteerSkills1.selectedIndex].text;
     finalResume.volunteerCity1 = document.querySelector("#volunteerCity1").value;
     finalResume.volunteerYears1 = document.querySelector("#volunteerYears1")[volunteerYears1.selectedIndex].text;
@@ -78,6 +94,7 @@ function volunteerHistory() {
     if (volunteerEntry2) {
         finalResume.volunteerTitle2 = document.querySelector("#volunteerTitle2")[volunteerTitle2.selectedIndex].text;
         finalResume.volunteerOrg2 = document.querySelector("#volunteerOrg2").value;
+        finalResume.volunteerDuties1 = document.querySelector("#volunteerDuties1").value;
         finalResume.volunteerSkills2 = document.querySelector("#volunteerSkills2")[volunteerSkills2.selectedIndex].text;
         finalResume.volunteerCity2 = document.querySelector("#volunteerCity2").value;
         finalResume.volunteerYears2 = document.querySelector("#volunteerYears2")[volunteerYears2.selectedIndex].text;
@@ -87,6 +104,7 @@ function volunteerHistory() {
     if (volunteerEntry3) {
         finalResume.volunteerTitle3 = document.querySelector("#volunteerTitle3")[volunteerTitle3.selectedIndex].text;
         finalResume.volunteerOrg3 = document.querySelector("#volunteerOrg3").value;
+        finalResume.volunteerDuties1 = document.querySelector("#volunteerDuties1").value;
         finalResume.volunteerSkills3 = document.querySelector("#volunteerSkills3")[volunteerSkills3.selectedIndex].text;
         finalResume.volunteerCity3 = document.querySelector("#volunteerCity3").value;
         finalResume.volunteerYears3 = document.querySelector("#volunteerYears3")[volunteerYears3.selectedIndex].text;
@@ -131,45 +149,48 @@ function resumeGenerate() {
     const gWorkName1 = document.querySelector("#frWorkName1");
     const gWorkField1 = document.querySelector("#frWorkField1");
     const gWorkSkills1 = document.querySelector("#frWorkSkills1");
-    const gWorkHere1 = document.querySelector("#frWorkHere1");
     const gWorkAddress1 = document.querySelector("#frWorkAddress1");
     const gWorkCity1 = document.querySelector("#frWorkCity1");
     const gWorkState1 = document.querySelector("#frWorkState1");
     const gWorkZip1 = document.querySelector("#frWorkZip1");
     const gWorkCountry1 = document.querySelector("#frWorkCountry1");
+    const gWorkDuties1 = document.querySelector("#frWorkDuties1");
     const gWorkName2 = document.querySelector("#frWorkName2");
     const gWorkField2 = document.querySelector("#frWorkField2");
     const gWorkSkills2 = document.querySelector("#frWorkSkills2");
-    const gWorkHere2 = document.querySelector("#frWorkHere2");
     const gWorkAddress2 = document.querySelector("#frWorkAddress2");
     const gWorkCity2 = document.querySelector("#frWorkCity2");
     const gWorkState2 = document.querySelector("#frWorkState2");
     const gWorkZip2 = document.querySelector("#frWorkZip2");
     const gWorkCountry2 = document.querySelector("#frWorkCountry2");
+    const gWorkDuties2 = document.querySelector("#frWorkDuties2");
     const gWorkName3 = document.querySelector("#frWorkName3");
     const gWorkField3 = document.querySelector("#frWorkField3");
     const gWorkSkills3 = document.querySelector("#frWorkSkills3");
-    const gWorkHere3 = document.querySelector("#frWorkHere3");
     const gWorkAddress3 = document.querySelector("#frWorkAddress3");
     const gWorkCity3 = document.querySelector("#frWorkCity3");
     const gWorkState3 = document.querySelector("#frWorkState3");
     const gWorkZip3 = document.querySelector("#frWorkZip3");
     const gWorkCountry3 = document.querySelector("#frWorkCountry3");
+    const gWorkDuties3 = document.querySelector("#frWorkDuties3");
     const gVolTitle1 = document.querySelector("#frVolTitle1");
     const gVolOrg1 = document.querySelector("#frVolOrg1");
     const gVolSkills1 = document.querySelector("#frVolSkills1");
     const gVolCity1 = document.querySelector("#frVolCity1");
     const gVolYears1 = document.querySelector("#frVolYears1");
+    const gVolDuties1 = document.querySelector("#frVolDuties1");
     const gVolTitle2 = document.querySelector("#frVolTitle2");
     const gVolOrg2 = document.querySelector("#frVolOrg2");
     const gVolSkills2 = document.querySelector("#frVolSkills2");
     const gVolCity2 = document.querySelector("#frVolCity2");
     const gVolYears2 = document.querySelector("#frVolYears2");
+    const gVolDuties2 = document.querySelector("#frVolDuties2");
     const gVolTitle3 = document.querySelector("#frVolTitle3");
     const gVolOrg3 = document.querySelector("#frVolOrg3");
     const gVolSkills3 = document.querySelector("#frVolSkills3");
     const gVolCity3 = document.querySelector("#frVolCity3");
     const gVolYears3 = document.querySelector("#frVolYears3");
+    const gVolDuties3 = document.querySelector("#frVolDuties3");
     const gEduSchool1 = document.querySelector("#frEduSchool1");
     const gEduLevel1 = document.querySelector("#frEduLevel1");
     const gEduField1 = document.querySelector("#frEduField1");
@@ -189,7 +210,7 @@ function resumeGenerate() {
     gPhone.textContent = finalResume.signUpPhoneNumber;
     gEmail.textContent = finalResume.signUpEmail;
     gAddress.textContent = finalResume.signUpAddress;
-    gCity.textContent = finalResume.signUpCity;
+    gCity.textContent = finalResume.signUpCity + ",";
     gState.textContent = finalResume.signUpState;
     gZip.textContent = finalResume.signUpZip;
     gCountry.textContent = finalResume.signUpCountry;
@@ -201,12 +222,14 @@ function resumeGenerate() {
     gWorkState1.textContent = finalResume.workState1;
     gWorkZip1.textContent = finalResume.workZip1;
     gWorkCountry1.textContent = finalResume.workCountry1;
+    gWorkDuties1.textContent = finalResume.workDuties1;
 
     gVolTitle1.textContent = finalResume.volunteerTitle1;
     gVolOrg1.textContent = finalResume.volunteerOrg1;
     gVolSkills1.textContent = finalResume.volunteerSkills1;
     gVolCity1.textContent = finalResume.volunteerCity1;
     gVolYears1.textContent = finalResume.volunteerYears1;
+    gVolDuties1.textContent = finalResume.volunteerDuties1;
 
     gEduSchool1.textContent = finalResume.educationSchool1;
     gEduLevel1.textContent = finalResume.educationLevel1;
@@ -224,6 +247,7 @@ function resumeGenerate() {
         gWorkState2.textContent = finalResume.workState2;
         gWorkZip2.textContent = finalResume.workZip2;
         gWorkCountry2.textContent = finalResume.workCountry2;
+        gWorkDuties2.textContent = finalResume.workDuties2;
     }
 
     //if user has third work experience
@@ -237,6 +261,7 @@ function resumeGenerate() {
         gWorkState3.textContent = finalResume.workState3;
         gWorkZip3.textContent = finalResume.workZip3;
         gWorkCountry3.textContent = finalResume.workCountry3;
+        gWorkDuties3.textContent = finalResume.workDuties3;
     }
 
     //if user has second volunteer experience
@@ -247,6 +272,7 @@ function resumeGenerate() {
         gVolSkills2.textContent = finalResume.volunteerSkills2;
         gVolCity2.textContent = finalResume.volunteerCity2;
         gVolYears2.textContent = finalResume.volunteerYears2;
+        gVolDuties2.textContent = finalResume.volunteerDuties2;
     }
 
     //if user has third volunteer experience
@@ -257,6 +283,7 @@ function resumeGenerate() {
         gVolSkills3.textContent = finalResume.volunteerSkills3;
         gVolCity3.textContent = finalResume.volunteerCity3;
         gVolYears3.textContent = finalResume.volunteerYears3;
+        gVolDuties3.textContent = finalResume.volunteerDuties3;
     }
 
     //if user has second education experience
@@ -275,8 +302,7 @@ function resumeGenerate() {
         gEduLevel3.textContent = finalResume.educationLevel3;
         gEduField3.textContent = finalResume.educationField3;
         gEduStatus3.textContent = finalResume.educationStatus3;
-    }
-    
+    }   
 }
 
 //Function to Update Ids of all inputs when forms are cloned
@@ -374,9 +400,6 @@ function addWork() {
         btnWorkAdd.disabled = true;
         btnWorkAdd.setAttribute("value", "You've reached the limit");
     }
-
-
-
 }
 
 function addVolunteer() {
@@ -400,7 +423,6 @@ function addVolunteer() {
     header.setAttribute("name", "ID" + newNum + "_volunteerRef");
     header.innerHTML = "Volunteer #" + newNum;
 
-
     // Insert the new element after the last "duplicatable" input field
     newElem.after(newElemCloned);
 
@@ -411,9 +433,6 @@ function addVolunteer() {
         btnVolunteerAdd.disabled = true;
         btnVolunteerAdd.setAttribute("value", "You've reached the limit");
     }
-
-
-
 }
 
 function addEducation() {
@@ -436,7 +455,6 @@ function addEducation() {
     header.setAttribute("id", "ID" + newNum + "_educationRef");
     header.setAttribute("name", "ID" + newNum + "_educationRef");
     header.innerHTML = "Education #" + newNum;
-
 
     // Insert the new element after the last "duplicatable" input field
     newElem.after(newElemCloned);
@@ -514,7 +532,6 @@ function delEducation() {
     }
 }
 
-
 //ADD DUPLICATE FORM LISTENERs
 btnWorkAdd.addEventListener(
     "click",
@@ -575,9 +592,6 @@ function changeSkillList(num) {
     }
   }
 }
-
-
-
 
 var volTitleAndSkills = {};
 // student
