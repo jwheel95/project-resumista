@@ -192,8 +192,11 @@ footer {
   
 @media print {
   @page { 
-    margin: 0; 
+    margin: 0;
     size: A4;
+   }
+   footer {
+       diplsyisplay: none;
    }
    
   body{ margin: 1.6cm;
