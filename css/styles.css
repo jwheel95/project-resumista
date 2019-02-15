@@ -8,9 +8,14 @@
    red = #FF2D19;
    red dropshadow = #7F3933;
 
+   font-family: 'Open Sans', sans-serif;
 */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 body {
-    background: #F5F5F5;  
+    background: #F5F5F5;
+    font-family: 'Open Sans', sans-serif;
 }
 
 nav {
@@ -20,6 +25,7 @@ nav {
 .navbar-brand {
     color:#f9cf00;
 }
+
  .logo {
 height:50px;
  }
@@ -31,6 +37,7 @@ height:50px;
 .carousel-inner {
     min-height: 750px;
 }
+
 .pageTitle {
     color: #f9cf00;
 }
@@ -68,7 +75,7 @@ h4 {
 
 .progressBarActive {
     color:white;
-    }
+}
 
 /* progress bar text/links */
 h6 {
@@ -95,8 +102,10 @@ label {
     box-shadow: 1px 2px #26507F;
     border: none;
 }
+
 .add:hover {
     background-color:#4C9FFF;
+    cursor: pointer;
 }
 
 .add:focus {
@@ -114,6 +123,7 @@ label {
 
 .delete:hover {
 background-color: #FF7365;
+cursor: pointer;
 }
 
 .delete:focus {
@@ -128,8 +138,10 @@ background-color: #FF7365;
     border: none;
     box-shadow: 1px 2px #CCAA00;
 }
+
 .continue:hover {
 background-color: #FFE14C;
+cursor: pointer;
 }
 
 .continue:focus {
@@ -141,9 +153,6 @@ a {
     color: inherit;
     text-decoration:none !important;
 }
-/* a:hover {
-    color:;
-} */
 
 footer {
     background-color: #4484ce;
@@ -159,6 +168,7 @@ footer {
 .my-5{
     margin-bottom: 0px !important;
 }
+
 .mb-1 {
     padding: 0px;
 }
@@ -185,18 +195,34 @@ footer {
         color:#f9cf00; 
         margin-top:30px!important;
     }
-    }
+}
 
+/* resume styles */
+.section-headers{
+    text-decoration:underline;
+    font-variant:small-caps;
+}
 
+.co-title {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.fr-work {
+    margin-top: 15px;
+}
 
-  
+.icons{
+    margin: .25em;
+    margin-bottom: 0;
+}
+
 @media print {
   @page { 
     margin: 0;
     size: A4;
    }
    footer {
-       diplsyisplay: none;
+       display: none;
    }
    
   body{ margin: 1.6cm;
