@@ -248,10 +248,12 @@ function resumeGenerate() {
         gWorkZip2.textContent = finalResume.workZip2;
         gWorkCountry2.textContent = finalResume.workCountry2;
         gWorkDuties2.textContent = finalResume.workDuties2;
+    } else {
+        document.querySelector("#frWork2").classList.add("hidden");
     }
 
     //if user has third work experience
-    let workEntry3 = document.querySelector("#workEntry2");
+    let workEntry3 = document.querySelector("#workEntry3");
     if (workEntry3) {
         gWorkName3.textContent = finalResume.workName3;
         gWorkField3.textContent = finalResume.workField3;
@@ -262,6 +264,8 @@ function resumeGenerate() {
         gWorkZip3.textContent = finalResume.workZip3;
         gWorkCountry3.textContent = finalResume.workCountry3;
         gWorkDuties3.textContent = finalResume.workDuties3;
+    } else {
+        document.querySelector("#frWork3").classList.add("hidden");
     }
 
     //if user has second volunteer experience
@@ -532,7 +536,7 @@ function delEducation() {
     }
 }
 
-//ADD DUPLICATE FORM LISTENERs
+//ADD DUPLICATE FORM LISTENERS
 btnWorkAdd.addEventListener(
     "click",
     addWork
