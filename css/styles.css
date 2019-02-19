@@ -198,22 +198,32 @@ footer {
 }
 
 /* resume styles */
+
+.final-resume-name {
+    font-size: 3.0em;
+    text-transform: uppercase;
+    color: #4C9FFF; 
+}
+
 .section-headers{
     text-decoration:underline;
     font-variant:small-caps;
+    font-size: 2.5em;
 }
 
 .co-title {
     font-weight: bold;
     font-size: 1.5em;
+    color: #4C9FFF;
 }
-.fr-work {
+.fr-section {
     margin-top: 15px;
 }
 
 .icons{
     margin: .25em;
     margin-bottom: 0;
+    color: #4C9FFF;
 }
 
 .hidden {
