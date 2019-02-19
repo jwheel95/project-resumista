@@ -277,6 +277,8 @@ function resumeGenerate() {
         gVolCity2.textContent = finalResume.volunteerCity2;
         gVolYears2.textContent = finalResume.volunteerYears2;
         gVolDuties2.textContent = finalResume.volunteerDuties2;
+    } else {
+        document.querySelector("#frVol2").classList.add("hidden");
     }
 
     //if user has third volunteer experience
@@ -288,6 +290,8 @@ function resumeGenerate() {
         gVolCity3.textContent = finalResume.volunteerCity3;
         gVolYears3.textContent = finalResume.volunteerYears3;
         gVolDuties3.textContent = finalResume.volunteerDuties3;
+    } else {
+        document.querySelector("#frVol3").classList.add("hidden");
     }
 
     //if user has second education experience
@@ -297,6 +301,8 @@ function resumeGenerate() {
         gEduLevel2.textContent = finalResume.educationLevel2;
         gEduField2.textContent = finalResume.educationField2;
         gEduStatus2.textContent = finalResume.educationStatus2;
+    } else {
+        document.querySelector("#frEdu2").classList.add("hidden");
     }
 
     //if user has third education experience
@@ -306,7 +312,9 @@ function resumeGenerate() {
         gEduLevel3.textContent = finalResume.educationLevel3;
         gEduField3.textContent = finalResume.educationField3;
         gEduStatus3.textContent = finalResume.educationStatus3;
-    }   
+    } else {
+        document.querySelector("#frEdu3").classList.add("hidden");
+    }
 }
 
 //Function to Update Ids of all inputs when forms are cloned
