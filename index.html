@@ -173,7 +173,7 @@
                 <div class="row">
                   <div class="col-md-6 mb-3">
                     <!-----------------------------  job select connected to skills input start --------------------------------------------------------------->
-                    <label for="workField1">Job Field</label>
+                    <label for="workField1">Experience</label>
                     <select class="custom-select d-block w-100" id="workField1" onchange="changeSkillList(1)">
                       <option value="">Choose...</option>
                       <option value="inputGroupSelect1" for="inputGroupSelect1">Student</option>
@@ -196,9 +196,9 @@
                 
                 <!-----------------------------  second skills input end  --------------------------------------------------------------->
                 <div class="mb-3">
-                  <label for="workDuties1">Duties:</label>
-                  <input type="text" class="form-control" id="workDuties1" placeholder="..." required="">
-                  <div class="invalid-feedback">Please enter your job duties.
+                  <label for="workDuties1">Job Description:</label>
+                  <input type="text" class="form-control work-duties" id="workDuties1" placeholder="..." required="">
+                  <div class="invalid-feedback">Please enter your job description.
                   </div>
                 </div>
                 
@@ -249,7 +249,7 @@
               </form>
             </div>
           </div>
-          <div class="row">
+          <div>
             <button id="btnWorkAddForm" type="submit" class="add btn-lg btn-block">
               <i class="fa fa-plus" aria-hidden="true"></i>
             </button>
@@ -370,22 +370,25 @@
               </form>
             </div>
           </div>
-          <div class="row">
-            <button id="btnVolunteerAddForm" type="submit" class="add btn-lg btn-block">
+          <div>
+            <button id="btnVolunteerAddForm" type="submit" class="add btn-lg btn-block col-md-12">
               <i class="fa fa-plus" aria-hidden="true"></i>
             </button>
-            <button id="btnVolunteerDeleteForm" type="submit" class="delete btn-lg btn-block">
+            <button id="btnVolunteerDeleteForm" type="submit" class="delete btn-lg btn-block col-md-12">
               <i class="fa fa-minus" aria-hidden="true"></i>
             </button>
           </div>
           <hr class="mb-4">
           <!-- volunteer form end -->
           <!-- continue button -->
-          <a class=" col-md-12" href="#carouselControls" role="button" data-slide="next">
-            <button id="volunteerSubmit" type="submit" class="continue btn-lg btn-block">
-              <i class="fa fa-arrow-right" aria-hidden="true"></i>
-            </button>
-          </a>
+          <div>
+            <a class="col-md-12" href="#carouselControls" role="button" data-slide="next">
+              <button id="volunteerSubmit" type="submit" class="continue btn-lg btn-block">
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+              </button>
+            </a>
+          </div>
+          
           <!-- continue button end -->
           <!-- footer start -->
         </div>
@@ -476,7 +479,7 @@
               </form>
             </div>
           </div>
-          <div class="row">
+          <div>
             <button id="btnEducationAddForm" type="submit" class="add btn-lg btn-block">
               <i class="fa fa-plus" aria-hidden="true"></i>
             </button>
@@ -528,7 +531,8 @@
               <div class="col-8">
                 <span class="co-title" id="frWorkName1">Pieology Pizzeria</span><br/>
                 <span class="" id="frWorkField1">Food Service</span><br/>
-                <span class="" id="frWorkSkills1">Da Boss</span><br/>
+                <span>Top Skill:</span>
+                <span class="fr-skill" id="frWorkSkills1">Da Boss</span><br/>
                 <span class="" id="frWorkDuties1"></span>
               </div>
               <div class="col-4">
@@ -543,7 +547,8 @@
               <div class="col-8">
                 <span class="co-title" id="frWorkName2">Pieology Pizzeria</span><br/>
                 <span class="" id="frWorkField2">Food Service</span><br/>
-                <span class="" id="frWorkSkills2">Da Boss</span><br/>
+                <span>Top Skill:</span>
+                <span class="fr-skill" id="frWorkSkills2">Da Boss</span><br/>
                 <span class="" id="frWorkDuties2">Get rejected my Debra, Like a Boss. Find a fish in an alley, like a boss. Fuck its brains out, like a Boss!</span>
 
               </div>
@@ -559,7 +564,8 @@
               <div class="col-8">
                 <span class="co-title" id="frWorkName3">Pieology Pizzeria</span><br/>
                 <span class="" id="frWorkField3">Food Service</span><br/>
-                <span class="" id="frWorkSkills3">Da Boss</span><br/>
+                <span>Top Skill:</span>
+                <span class="fr-skill" id="frWorkSkills3">Da Boss</span><br/>
                 <span class="" id="frWorkDuties3"></span>
               </div>
             
@@ -580,12 +586,14 @@
               <div class="col-8">
                 <span class="co-title" id="frVolOrg1">GeekWise Academy</span><br/>
                 <span class="" id="frVolTitle1">Mentor</span><br/>
-                <span class="" id="frVolSkills1">Effective Comms</span><br/>
+                <span>Top Skill:</span>
+                <span class="fr-skill" id="frVolSkills1">Effective Comms</span><br/>
                 <span class="" id="frVolDuties1"></span>
 
               </div>
               <div class="col-4">
                 <span class="" id="frVolCity1">Fresno</span><br/>
+                <span>Years volunteered here: </span>
                 <span class="" id="frVolYears1">3</span>
               </div>
             </div>
@@ -593,13 +601,15 @@
               <div class="col-8">
                 <span class="co-title" id="frVolOrg2">GeekWise</span><br/>
                 <span class="" id="frVolTitle2">Mentor</span><br/>
-                <span class="" id="frVolSkills2">Stuff and more</span><br/>
+                <span>Top Skill:</span>
+                <span class="fr-skill" id="frVolSkills2">Stuff and more</span><br/>
                 <span class="" id="frVolDuties2"></span>
 
 
               </div>
               <div class="col-4">
                 <span class="" id="frVolCity2">Clovis</span><br/>
+                <span>Years volunteered here: </span>
                 <span class="" id="frVolYears2">10</span>
               </div>
             </div>
@@ -607,12 +617,14 @@
               <div class="col-8">
                 <span class="co-title" id="frVolOrg3">Bitwise</span><br/>
                 <span class="" id="frVolTitle3">Tutor</span><br/>
-                <span class="" id="frVolSkills3">more stuff and more</span><br/>
+                <span>Top Skill:</span>
+                <span class="fr-skill" id="frVolSkills3">more stuff and more</span><br/>
                 <span class="" id="frVolDuties3"></span>
 
               </div>
               <div class="col-4">
                 <span class="" id="frVolCity3">Madera</span><br/>
+                <span>Years volunteered here: </span>
                 <span class="" id="frVolYears3">8</span>
               </div>
             </div>
@@ -651,7 +663,14 @@
                   <span class="" id="frEduStatus3">In Progress</span>
                 </div>
             </div>
-
+            <div class="row">
+              <a class="col-md-12" href="#carouselControls" role="button" data-slide-to="0">
+                  <button id="redoBtn" type="submit" class="redo-btn btn-lg btn-block">Edit Info</button>
+              </a>
+              <a class="col-md-12" role="button">
+                <button id="printBtn" type="submit" class="print-btn btn-lg btn-block">Print</button>
+              </a>
+            </div>
           </div>
           <!-- resume education section end-->
 

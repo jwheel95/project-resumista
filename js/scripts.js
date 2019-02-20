@@ -361,6 +361,10 @@ function resetInputText (newElemCloned) {
     }
 }
 
+function printResume () {
+    window.print();
+}
+
 // 
 
 // ----------------- ADD/DELETE DUPLICATE FORM FEATURE ------------------------
@@ -480,7 +484,7 @@ function addEducation() {
     // Enable the "remove" button. This only shows once you have a duplicated section.
     btnEducationDelete.disabled = false;
 
-    if (newNum === 3) {
+    if (newNum === 2) {
         btnEducationAdd.disabled = true;
         btnEducationAdd.setAttribute("value", "You've reached the limit");
     }
@@ -641,3 +645,12 @@ function changeVolunteerSkillsList(num) {
     }
   }
 }
+
+function printResume () {
+    window.print();
+}
+
+let btnPrint = document.querySelector("#printBtn");
+btnPrint.addEventListener(
+    "click",
+    printResume)
