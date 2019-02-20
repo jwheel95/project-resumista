@@ -83,6 +83,13 @@ h6 {
 }
 /* progress bar text/links */
 
+/* input to text area start */
+.work-duties {
+    height:100px;
+    overflow: auto;
+    word-break: break-word;
+}
+/* input area to text area end */
 .form-check {
     padding-left:2.25rem;
     padding-bottom: 1.25rem;
@@ -95,26 +102,24 @@ label {
 }
 /* all input labels */
 
-.add {
-    margin: 0px 10px;
+.add, .print-btn {
     color: #ffffff;
     background-color: #0076FF;
     box-shadow: 1px 2px #26507F;
     border: none;
 }
 
-.add:hover {
+.add:hover, .print-btn:hover {
     background-color:#4C9FFF;
     cursor: pointer;
 }
 
-.add:focus {
+.add:focus, print-btn:focus {
     outline: .0;
     background-color: #4C9FFF;
 }
 
 .delete {
-    margin: 0px 10px;
     color: #ffffff;
     background-color: #FF2D19;
     box-shadow: 1px 2px #7F3933;
@@ -131,20 +136,23 @@ cursor: pointer;
     background-color: #FF7365;
 }
 
-.continue {
+.continue, .redo-btn {
     color:white;
     background-color:#f9cf00; 
-    margin-top:0px; 
     border: none;
     box-shadow: 1px 2px #CCAA00;
 }
 
-.continue:hover {
+.redo-btn {
+    margin: 1em 0em 1em 0em;
+}
+
+.continue:hover, .redo-btn:hover {
 background-color: #FFE14C;
 cursor: pointer;
 }
 
-.continue:focus {
+.continue:focus, .redo-btn:focus {
     outline: .0;
     background-color: #FFE14C;
 }
@@ -220,6 +228,10 @@ footer {
     margin-top: 15px;
 }
 
+.fr-skill { 
+  font-style: italic; 
+}
+
 .icons{
     margin: .25em;
     margin-bottom: 0;
@@ -231,14 +243,15 @@ footer {
 }
 
 @media print {
-  @page { 
-    margin: 0;
-    size: A4;
-   }
-   footer {
-       display: none;
-   }
-   
-  body{ margin: 1.6cm;
- }
-}
+    @page { 
+      margin: 0mm;
+      size: auto;
+        
+     }
+     body { 
+        margin: 1.6cm;
+     }
+     .copywriteText, .print-btn, .redo-btn {
+         display: none;
+     }
+  }
