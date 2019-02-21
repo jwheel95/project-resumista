@@ -247,7 +247,7 @@ function resumeGenerate() {
         gWorkState2.textContent = finalResume.workState2;
         gWorkZip2.textContent = finalResume.workZip2;
         gWorkCountry2.textContent = finalResume.workCountry2;
-        gWorkDuties2.textContent = finalResume.workDuties2;
+        gWorkDuties2.textContent= finalResume.workDuties2;
         document.querySelector("#frWork2").classList.remove("hidden");
     } else {
         document.querySelector("#frWork2").classList.add("hidden");
@@ -360,6 +360,13 @@ function resetInputText (newElemCloned) {
         initialInputs[i].value = "";
     }
 }
+// Function to reset the text input when creating new form
+function resetTextArea (newElemCloned) {
+    let initialInputs = newElemCloned.querySelectorAll("textarea[type=text]");
+    for (let i = 0; i < initialInputs.length; i++){
+        initialInputs[i].value = "";
+    }
+}
 
 function printResume () {
     window.print();
@@ -393,7 +400,7 @@ btnEducationDelete.disabled = true;
 // ADD DUPLICATE FORM FUNCTIONS
 function addWork() {
     // Checks number of duplicated/form sections
-    let num = document.querySelectorAll(".work-cloned-input").length;
+    let num = document.querySelectorAll(".work-cloned-input", ".work-cloned-textarea").length;
     // Incremating the id by 1 for every new duplicate form
     let newNum = num + 1;
     let newElem = document.querySelector("#workEntry" + num);
@@ -401,6 +408,7 @@ function addWork() {
     let newElemCloned = newElem.cloneNode(true);
     newElemCloned.setAttribute("id", `workEntry${newNum}`);
     // reset input values
+    resetTextArea(newElemCloned);
     resetInputText(newElemCloned);
     // update childrens' ids
     updateIds(newElemCloned, newNum);
@@ -426,7 +434,7 @@ function addWork() {
 
 function addVolunteer() {
     // Checks number of duplicated/form sections
-    let num = document.querySelectorAll(".vol-cloned-input").length;
+    let num = document.querySelectorAll(".vol-cloned-input",".vol-cloned-textarea").length;
     // Incremating the id by 1 for every new duplicate form
     let newNum = num + 1;
     let newElem = document.querySelector("#volunteerEntry" + num);
@@ -435,6 +443,7 @@ function addVolunteer() {
     newElemCloned.setAttribute("id", `volunteerEntry${newNum}`);
     // reset input values
     resetInputText(newElemCloned);
+    resetTextArea(newElemCloned);
     // update childrens' ids
     updateIds(newElemCloned, newNum);
     updateVolunteerOnChange(newElemCloned, newNum);
@@ -494,14 +503,14 @@ function addEducation() {
 // DELETE DUPLICATE FORM FUNCTIONS
 function delWork() {
     // check how many duplicated sections we currently have
-    let num = document.querySelectorAll(".work-cloned-input").length;
+    let num = document.querySelectorAll(".work-cloned-input",".work-cloned-textarea").length;
 
     // Confirmation dialog box
     if (confirm(`Are you sure you wish to remove Job #${num}? This cannot be undone.`)) {
         // remove last section
         document.querySelector("#workEntry" + num).remove();
         // update num
-        num = document.querySelectorAll(".work-cloned-input").length;
+        num = document.querySelectorAll(".work-cloned-input",".work-cloned-textarea").length;
         if (num == 1) {
             btnWorkDelete.disabled = true;
         }
@@ -515,14 +524,14 @@ function delWork() {
 function delVolunteer() {
     //   console.log(`vol dup sections: ${num}`)
     // check how many duplicated sections we currently have
-    let num = document.querySelectorAll(".vol-cloned-input").length;
+    let num = document.querySelectorAll(".vol-cloned-input",".vol-cloned-textarea").length;
 
     // Confirmation dialog box
     if (confirm(`Are you sure you wish to remove Volunteer #${num}? This cannot be undone.`)) {
         // remove last section
         document.querySelector("#volunteerEntry" + num).remove();
         // update num
-        num = document.querySelectorAll(".vol-cloned-input").length;
+        num = document.querySelectorAll(".vol-cloned-input",".vol-cloned-textarea").length;
         if (num == 1) {
             btnVolunteerDelete.disabled = true;
         }
