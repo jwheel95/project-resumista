@@ -114,7 +114,7 @@ label {
     cursor: pointer;
 }
 
-.add:focus, print-btn:focus {
+.add:focus, .print-btn:focus {
     outline: .0;
     background-color: #4C9FFF;
 }
@@ -206,6 +206,9 @@ footer {
 }
 
 /* resume styles */
+.card, .card-body {
+    border: 0px;
+}
 
 .final-resume-name {
     font-size: 3.0em;
@@ -254,4 +257,7 @@ footer {
      .copywriteText, .print-btn, .redo-btn {
          display: none;
      }
+     .card, .card-body {
+        background-color:#ffffff; 
+    }
   }
