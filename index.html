@@ -5,142 +5,103 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="img/logo-hex.png">
   <link rel="stylesheet" href="css/all.min.css">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/work.css">
-  <title>Resumista work experience</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" media="all">
+  <link rel="stylesheet" href="css/styles.css" media="all">
+  <title>Resumista</title>
 </head>
 
 <body>
   <!--navbar start  ------------------->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="baseinfo.html">project resumista</a>
+  <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href=""><img src="img/logo.png" alt="project resumista logo" class="logo"></a>
   </nav>
   <!--navbar end--------------->
 
   <!-- body content ----------------------->
 
   <!-- carousel -->
-  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false">
+  <div id="carouselControls" class="carousel slide" data-ride="carousel" data-interval="false">
     <div class="carousel-inner">
       <div class="carousel-item active">
 
-        <!-- work history form container ------------------------>
-        <!-- work history header-->
-        <div class="container">
+        <!-- sign up form container ------------------------>
+        <!-- sign up header-->
+        <div class="container" id="SignUpContainer">
           <div class="py-5 text-center">
-            <h2>Project Resumista</h2>
-            <h2>Work history</h2>
-            <p class="lead">Please fill out to the best of your abilities</p>
+            <h2 class="pageTitle">Sign Up</h2>
+            <p class="pageSubtitle">Please fill out to the best of your abilities</p>
           </div>
-          <!-- work wistory header end -->
-          <!-- work history progress bar start -->
+          <!-- sign-up header end -->
           <div class="row">
-            <div class="col-md-4 order-md-2 mb-4">
-              <h4 class="d-flex justify-content-between align-items-center mb-3">
-                <span class="text-muted">Your Progress</span>
-                <span class="badge badge-secondary badge-pill">1</span>
-              </h4>
-              <ul class="list-group mb-3">
-                <li class="list-group-item d-flex justify-content-between bg-light">
-                  <div class="text-success">
-                    <h6 class="my-0">work experience</h6>
-                  </div>
-                </li>
-                <li class="list-group-item d-flex justify-content-between lh-condensed">
-                  <div>
-                    <h6 class="my-0"><a href="#carouselExampleControls" role="button" data-slide="next">volunteer</a></h6>
-                  </div>
-                </li>
-                <li class="list-group-item d-flex justify-content-between lh-condensed">
-                  <div>
-                    <h6 class="my-0">Education</h6>
-                  </div>
-                </li>
-                <li class="list-group-item d-flex justify-content-between lh-condensed">
-                  <div>
-                    <h6 class="my-0">skills</h6>
-                  </div>
-                </li>
-                <li class="list-group-item d-flex justify-content-between">
-                  <span>View Resume</span>
-                </li>
-              </ul>
-            </div>
-            <!-- Progress bar end -->
-            <!-- Work History form -->
-            <div class="col-md-8 order-md-1">
-              <h4 class="mb-3">company info</h4>
-              <form class="needs-validation was-validated" novalidate="">
+            <!-- sign up form -->
+            <div class="col-md-12" id="logInForm">
+              <h4 class="mb-3">Who are you?</h4>
+              <form>
                 <div class="row">
-                  <div class="col-md-6 mb-3">
-                    <label for="jobTitle">Job field</label>
-                    <select class="custom-select d-block w-100" id="jobTitle" required>
-                      <option value="">Choose...</option>
-                      <option value="true" for="inputGroupSelect1">student</option>
-                      <option value="true" for="inputGroupSelect2">food service</option>
-                      <option value="true" for="inputGroupSelect3">custodial</option>
-                      <option value="true" for="inputGroupSelect4">landscaping/agricultural</option>
-                      <option value="true" for="inputGroupSelect2">factory/warehouse</option>
-                    </select>
+                  <div class="col-md-6 mb-36">
+                    <label for="signUpFirstName">First Name</label>
+                    <input type="text" class="form-control" id="signUpFirstName" placeholder="..." value="">
                   </div>
 
-                  <div class="col-md-6 mb-3">
-                    <label for="companyName">Company Name</label>
-                    <input type="text" class="form-control" id="companyName" placeholder="..." value="" required="">
+                  <div class="col-md-6 mb-6">
+                    <label for="signUpLastName">Last Name</label>
+                    <input type="text" class="form-control" id="signUpLastName" placeholder="..." value="">
+                  </div>
+                  <div class="col-md-6 mb-6">
+                    <label for="signUpPhoneNumber">Phone Number</label>
+                    <input type="text" class="form-control" id="signUpPhoneNumber" placeholder="..." value="">
+                  </div>
+                  <div class="col-md-6 mb-6">
+                    <label for="signUpEmail">E-mail</label>
+                    <input type="text" class="form-control" id="signUpEmail" placeholder="..." value="">
                   </div>
                 </div>
-
-                <form class="card p-2">
-                  <div class="input-group mb-3">
-                    <select class="custom-select" id="inputWorkSkillSelect">
-                      <option value="0">...</option>
-                      <option value="1">a student</option>
-                      <option value="2">b student</option>
-                      <option value="3">c student</option>
-                    </select>
-
-                    <div class="input-group-append">
-                      <label class="input-group-text" for="inputSkillSelect">skills</label>
-                    </div>
-                  </div>
-                </form>
 
                 <div class="mb-3">
-                  <label for="address">Address</label>
-                  <input type="text" class="form-control" id="workAddress" placeholder="1234 Main St" required="">
-                  <div class="invalid-feedback">Please enter the address.
+                  <label for="signUpAddress">Address</label>
+                  <input type="text" class="form-control" id="signUpAddress" placeholder="1234 Main St" required="">
+                  <div class="invalid-feedback">Please enter the asignUpAdress.
                   </div>
                 </div>
 
                 <div class="row">
-                  <div class="col-md-5 mb-3">
-                    <label for="country">Country</label>
-                    <select class="custom-select d-block w-100" id="country" required="">
+                  <div class="col-md-4 mb-3">
+                    <label for="signUpCountry">Country</label>
+                    <select class="custom-select d-block w-100" id="signUpCountry" required="">
                       <option value="">Choose...</option>
                       <option>United States</option>
                     </select>
 
                     <div class="invalid-feedback">
-                      Please select a valid country.
+                      Please select a valid Country
                     </div>
                   </div>
 
-                  <div class="col-md-4 mb-3">
-                    <label for="state">State</label>
-                    <select class="custom-select d-block w-100" id="state" required="">
+                  <div class="col-md-2 mb-3">
+                    <label for="signUpState">State</label>
+                    <select class="custom-select d-block w-100" id="signUpState" required="">
+
                       <option value="">Choose...</option>
-                      <option>California</option>
+                      <option>CA</option>
                     </select>
 
                     <div class="invalid-feedback">
                       Please provide a valid state.
                     </div>
                   </div>
+                  <div class="col-md-4 mb-3">
+                    <label for="city">City</label>
+                    <input type="text" class="form-control" id="signUpCity" placeholder="" required="">
+                    <div class="invalid-feedback">
+                      City required.
+                    </div>
+                  </div>
 
-                  <div class="col-md-3 mb-3">
-                    <label for="zip">Zip</label>
-                    <input type="text" class="form-control" id="zip" placeholder="" required="">
+                  <div class="col-md-2 mb-3">
+                    <label for="signUpZip">Zip</label>
+                    <input type="text" class="form-control" id="signUpZip" placeholder="" required="">
                     <div class="invalid-feedback">
                       Zip code required.
                     </div>
@@ -149,28 +110,164 @@
               </form>
             </div>
           </div>
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="workingHere">
-            <label class="form-check-label" for="exampleCheck1">I am currently working here</label>
+          <hr class="mb-4">
+          <!-- end of sign up form section-------------------------------------------------->
+          <!-- carousel continue button-------------------------------------------------->
+          <a class=" col-md-12" href="#carouselControls" role="button" data-slide="next">
+            <button id="signUpSubmit" type="submit" class="continue btn-lg btn-block">Sign Up</button></a>
+          <!-- carousel continue button----------------------------------------------->
+
+        </div>
+
+      </div>
+
+
+
+
+      <div class="carousel-item">
+
+        <!-- work history form container ------------------------>
+        <!-- work history header-->
+        <div class="container" id="workContainer">
+          <div class="py-5 text-center">
+            <h2 class="pageTitle">Work History</h2>
+            <p class="pageSubtitle">Please fill out to the best of your abilities</p>
+          </div>
+          <!-- work wistory header end -->
+          <!-- work history progress bar start -->
+          <div class="row">
+            <div class="col-md-4 order-md-2 mb-4">
+              <h4 class="d-flex justify-content-between align-items-center mb-3">
+                <span class="progressBarTitle">Your Progress</span>
+                <span class="badge badge-secondary badge-pill">1</span>
+              </h4>
+              <ul class="list-group mb-3">
+                <li class="list-group-item d-flex justify-content-between progressBarBackground">
+                  <div>
+                    <h6 class="progressBarActive">Work Experience</h6>
+                  </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between lh-condensed">
+                  <div>
+                    <h6 class="progressBarText"><a href="#carouselControls" data-slide-to="2" class="progress-switch-work">Volunteer</a></h6>
+                  </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between lh-condensed">
+                  <div>
+                    <h6 class="progressBarText"><a href="#carouselControls" data-slide-to="3" class="progress-switch-work">Education</a></h6>
+                  </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between lh-condensed">
+                  <div>
+                    <h6 class="progressBarText">View Resume</h6>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- Progress bar end -->
+            <!-- Work History form -->
+            <div class="col-md-8 order-md-1 work-cloned-input" id="workEntry1">
+              <h2 id="workRef" name="reference" class="heading-ref heading">Job #1</h2>
+              <h4 class="mb-3">Company's Info</h4>
+              <form>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <!-----------------------------  job select connected to skills input start --------------------------------------------------------------->
+                    <label for="workField1">Experience</label>
+                    <select class="custom-select d-block w-100" id="workField1" onchange="changeSkillList(1)">
+                      <option value="">Choose...</option>
+                      <option value="inputGroupSelect1" for="inputGroupSelect1">Student</option>
+                      <option value="inputGroupSelect2" for="inputGroupSelect2">Food Service</option>
+                      <option value="inputGroupSelect3" for="inputGroupSelect3">Custodial</option>
+                      <option value="inputGroupSelect4" for="inputGroupSelect4">Landscaping/Agricultural</option>
+                      <option value="inputGroupSelect5" for="inputGroupSelect5">Factory/Warehouse</option>
+                    </select>
+                  </div>
+                  <!-----------------------------  job select connected to skills input end --------------------------------------------------------------->
+
+                  <div class="col-md-6 mb-3">
+                    <label for="workName1">Company Name</label>
+                    <input type="text" class="form-control" id="workName1" placeholder="..." value="">
+                  </div>
+                </div>
+                <!-----------------------------  second skills input start  --------------------------------------------------------------->
+                <label for="workSkills1">Skills</label>
+                <select class="custom-select" id="workSkills1"></select>
+                
+                <!-----------------------------  second skills input end  --------------------------------------------------------------->
+                <div class="mb-3">
+                  <label for="workDuties1">Job Description:</label>
+                  <textarea  type="text" class="form-control work-duties" id="workDuties1" placeholder="Please enter your job description." required=""></textarea>
+                  <div class="invalid-feedback">Please enter your job description.
+                  </div>
+                </div>
+                
+                
+                <div class="mb-3">
+                  <label for="workAddress1">Address</label>
+                  <input type="text" class="form-control" id="workAddress1" placeholder="1234 Main St" required="">
+                  <div class="invalid-feedback">Please enter the address.
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-5 mb-3">
+                    <label for="workCountry1">Country</label>
+                    <select class="custom-select d-block w-100" id="workCountry1" required="">
+                      <option value="">Choose...</option>
+                      <option>United States</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select a valid country
+                    </div>
+                  </div>
+                  <div class="col-md-2 mb-3">
+                    <label for="workState1">State</label>
+                    <select class="custom-select d-block w-100" id="workState1" required="">
+                      <option value="">Choose...</option>
+                      <option>California</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please provide a valid state.
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-3">
+                    <label for="workCity1">City</label>
+                    <input type="text" class="form-control" id="workCity1" placeholder="" required="">
+                    <div class="invalid-feedback">
+                      City required.
+                    </div>
+                  </div>
+                  <div class="col-md-2 mb-3">
+                    <label for="workZip1">Zip</label>
+                    <input type="text" class="form-control" id="workZip1" placeholder="" required="">
+                    <div class="invalid-feedback">
+                      Zip code required.
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div>
+            <button id="btnWorkAddForm" type="submit" class="add btn-lg btn-block">
+              <i class="fa fa-plus" aria-hidden="true"></i>
+            </button>
+            <button id="btnWorkDeleteForm" type="submit" class="delete btn-lg btn-block">
+              <i class="fa fa-minus" aria-hidden="true"></i>
+            </button>
           </div>
           <hr class="mb-4">
           <!-- end of work form section-------------------------------------------------->
           <!-- carousel continue button-------------------------------------------------->
-          <a class=" col-md-12" href="#carouselExampleControls" role="button" data-slide="next"><button class="btn btn-primary btn-lg btn-block"
-              type="submit">Continue</button></a>
-          <!-- carousel continue button-------------------------------------------------->
+          <a class=" col-md-12" href="#carouselControls" role="button" data-slide="next">
+            <button id="workSubmit" type="submit" class="continue btn-lg btn-block">
+              <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </button>
+          </a>
+          <!-- carousel continue button----------------------------------------------->
 
-          <!-- footer-------------------------------------------------->
-          <footer class="my-5 pt-5 text-muted text-center text-small">
-            <p class="mb-1">© Project Resumista</p>
-            <ul class="list-inline">
-              <li class="list-inline-item"><a href="#">Privacy</a></li>
-              <li class="list-inline-item"><a href="#">Terms</a></li>
-              <li class="list-inline-item"><a href="#">Support</a></li>
-            </ul>
-          </footer>
         </div>
-        <!-- footer end ------------------------>
 
       </div>
       <!-- carousel end -------------------------------->
@@ -181,84 +278,77 @@
         <div class="container">
           <!-- volunteer header -->
           <div class="py-5 text-center">
-            <h2>Project Resumista</h2>
-            <h2>Volunteer History</h2>
-            <p class="lead">Please fill out to be best of your abilities</p>
+            <h2 class="pageTitle">Volunteer History</h2>
+            <p class="pageSubtitle">Please fill out to the best of your abilities</p>
           </div>
           <!-- volunteer header end -->
           <!--  progress bar start-->
           <div class="row">
             <div class="col-md-4 order-md-2 mb-4">
               <h4 class="d-flex justify-content-between align-items-center mb-3">
-                <span class="text-muted">Your Progress</span>
+                <span class="progressBarTitle">Your Progress</span>
                 <span class="badge badge-secondary badge-pill">2</span>
               </h4>
               <ul class="list-group mb-3">
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
                   <div>
-                    <h6 class="my-0"><a href="#carouselExampleControls" role="button" data-slide="prev">work experience</a></h6>
+                    <h6 class="progressBarText"><a href="#carouselControls" data-slide-to="1" class="progress-switch-volunteer">Work Experience</a></h6>
                   </div>
                 </li>
-                <li class="list-group-item d-flex justify-content-between bg-light">
-                  <div class="text-success">
-                    <h6 class="my-0">volunteer</h6>
+                <li class="list-group-item d-flex justify-content-between progressBarBackground">
+                  <div>
+                    <h6 class="progressBarActive">Volunteer</h6>
                   </div>
                 </li>
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
                   <div>
-                    <h6 class="my-0"><a href="#carouselExampleControls" role="button" data-slide="next">Education</a></h6>
+                    <h6 class="progressBarText"><a href="#carouselControls" data-slide-to="3" class="progress-switch-volunteer">Education</a></h6>
                   </div>
                 </li>
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
                   <div>
-                    <h6 class="my-0">skills</h6>
+                    <h6 class="progressBarText">View Resume</h6>
                   </div>
-                </li>
-                <li class="list-group-item d-flex justify-content-between">
-                  <span>View Resume</span>
                 </li>
               </ul>
             </div>
             <!-- progress bar end ------------------------>
             <!--  volunteer form start-->
-            <div class="col-md-8 order-md-1">
-              <h4 class="mb-3">company info</h4>
-              <form class="needs-validation was-validated" novalidate="">
+            <div class="col-md-8 order-md-1 vol-cloned-input" id="volunteerEntry1">
+              <h2 id="volunteerRef" name="reference" class="vol-heading-ref heading">Volunteer #1</h2>
+              <h4 class="mb-3">Organization's Info</h4>
+              <form>
                 <div class="row">
                   <div class="col-md-6 mb-3">
-                    <label for="volunteerTitle">volunteer</label>
-                    <select class="custom-select d-block w-100" id="volunteerTitle" onchange="skillList();" required="">
+                    <label for="volunteerTitle1">Volunteer</label>
+                    <select class="custom-select d-block w-100" id="volunteerTitle1" onchange="changeVolunteerSkillsList(1)">
                       <option value="">Choose...</option>
-                      <option value="true" for="inputGroupSelect1">foodbank</option>
-                      <option value="true" for="inputGroupSelect2">church</option>
-                      <option value="true" for="inputGroupSelect3">community service</option>
-                      <option value="true" for="inputGroupSelect4">mentoring</option>
-                      <option value="true" for="inputGroupSelect4">teaching, tutoring</option>
-                      <option value="true" for="inputGroupSelect4">youth work</option>
+                      <option value="inputGroupSelect1" for="inputGroupSelect1">Foodbank</option>
+                      <option value="inputGroupSelect2" for="inputGroupSelect2">Church</option>
+                      <option value="inputGroupSelect3" for="inputGroupSelect3">Community Service</option>
+                      <option value="inputGroupSelect4" for="inputGroupSelect4">Mentoring</option>
+                      <option value="inputGroupSelect5" for="inputGroupSelect5">Teaching, Tutoring</option>
+                      <option value="inputGroupSelect6" for="inputGroupSelect6">Youth Work</option>
                     </select>
                   </div>
                   <div class="col-md-6 mb-3">
-                    <label for="organizationName">Organization's Name</label>
-                    <input type="text" class="form-control" id="organizationName" placeholder="..." value="" required="">
+                    <label for="volunteerOrg1">Organization's Name</label>
+                    <input type="text" class="form-control" id="volunteerOrg1" placeholder="..." value="">
                   </div>
                 </div>
-                <form class="card p-2">
-                  <div class="input-group mb-3">
-                    <select class="custom-select" id="inputSkillSelect">
-                      <option value="0">volunteer skills</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
-                    </select>
-                    <div class="input-group-append">
-                      <label class="input-group-text" for="inputVolunteerSkillSelect">skills</label>
-                    </div>
+                <div class="mb-3">
+                  <label for="volDuties1">Duties:</label>
+                  <textarea type="text" class="form-control" id="volunteerDuties1" placeholder="..." required=""></textarea>
+                  <div class="invalid-feedback">Please enter your volunteer duties.
                   </div>
-                </form>
+                </div>
+
+                <label for="volunteerSkills1">Skills</label>
+                <select class="custom-select" id="volunteerSkills1"></select>
 
                 <div class="mb-3">
-                  <label for="city">City</label>
-                  <input type="text" class="form-control" id="volunteerLocation" placeholder="Fresno" required="">
+                  <label for="volunteerCity1">City</label>
+                  <input type="text" class="form-control" id="volunteerCity1" placeholder="Fresno" required="">
                   <div class="invalid-feedback">
                     Please enter the city name.
                   </div>
@@ -266,8 +356,8 @@
 
                 <div class="row">
                   <div class="col-md-5 mb-3">
-                    <label for="years">years there?</label>
-                    <select class="custom-select d-block w-100" id="years" required="">
+                    <label for="volunterYears1">Years volunteered there</label>
+                    <select class="custom-select d-block w-100" id="volunteerYears1" required="">
                       <option value="">Choose...</option>
                       <option>1</option>
                       <option>2</option>
@@ -280,33 +370,327 @@
               </form>
             </div>
           </div>
+          <div>
+            <button id="btnVolunteerAddForm" type="submit" class="add btn-lg btn-block col-md-12">
+              <i class="fa fa-plus" aria-hidden="true"></i>
+            </button>
+            <button id="btnVolunteerDeleteForm" type="submit" class="delete btn-lg btn-block col-md-12">
+              <i class="fa fa-minus" aria-hidden="true"></i>
+            </button>
+          </div>
           <hr class="mb-4">
           <!-- volunteer form end -->
           <!-- continue button -->
-          <a class=" col-md-12" href="#carouselExampleControls" role="button" data-slide="next"><button class="btn btn-primary btn-lg btn-block"
-              type="submit">Continue</button></a>
+          <div>
+            <a class="col-md-12" href="#carouselControls" role="button" data-slide="next">
+              <button id="volunteerSubmit" type="submit" class="continue btn-lg btn-block">
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+              </button>
+            </a>
+          </div>
+          
           <!-- continue button end -->
           <!-- footer start -->
-          <footer class="my-5 pt-5 text-muted text-center text-small">
-            <p class="mb-1">© Project Resumista</p>
-            <ul class="list-inline">
-              <li class="list-inline-item"><a href="#">Privacy</a></li>
-              <li class="list-inline-item"><a href="#">Terms</a></li>
-              <li class="list-inline-item"><a href="#">Support</a></li>
-            </ul>
-          </footer>
-          <!-- footer end -->
         </div>
         <!-- Volunteer contianer end------------------------>
       </div>
-    </div>
-    <!-- carousel inner end -->
-    <div class="carousel-item">
       <!-- next form page  -->
-      <img class="d-block w-100" src="..." alt="Third slide">
+      <div class="carousel-item">
+        <!-- education history container ------------------------>
+        <div class="container">
+          <!-- education header -->
+          <div class="py-5 text-center">
+            <h2 class="pageTitle">Education History</h2>
+            <p class="pageSubtitle">Please fill out to the best of your abilities</p>
+          </div>
+          <!-- education header end -->
+          <!--  progress bar start-->
+          <div class="row">
+            <div class="col-md-4 order-md-2 mb-4">
+              <h4 class="d-flex justify-content-between align-items-center mb-3">
+                <span class="progressBarTitle">Your Progress</span>
+                <span class="badge badge-secondary badge-pill">3</span>
+              </h4>
+              <ul class="list-group mb-3">
+                <li class="list-group-item d-flex justify-content-between lh-condensed">
+                  <div>
+                    <h6 class="progressBarText"><a href="#carouselControls" data-slide-to="1" class="progress-switch-education">Work Experience</a></h6>
+                  </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between lh-condensed">
+                  <div>
+                    <h6 class="progressBarText"><a href="#carouselControls" data-slide-to="2" class="progress-switch-education">Volunteer</a></h6>
+                  </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between progressBarBackground">
+                  <div>
+                    <h6 class="progressBarActive">Education</h6>
+                  </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between lh-condensed">
+                  <div>
+                    <h6 class="progressBarText"><a id="viewResume" href="#carouselControls" data-slide-to="4" class="progress-switch-education">View Resume</a></h6>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- progress bar end ------------------------>
+            <!--  education form start-->
+            <div class="col-md-8 order-md-1 edu-cloned-input" id="educationEntry1">
+              <h2 id="educationRef" name="reference" class="edu-heading-ref heading">Education #1</h2>
+              <h4 class="mb-3">Education Info</h4>
+              <form>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="educationLevel1">Education Level</label>
+                    <select class="custom-select d-block w-100" id="educationLevel1" required="">
+                      <option value="true" for="inputGroupSelect0">Highschool</option>
+                      <option value="true" for="inputGroupSelect1">Undergraduate</option>
+                      <option value="true" for="inputGroupSelect2">Masters</option>
+                      <option value="true" for="inputGroupSelect3">Doctorate</option>
+                      <option value="true" for="inputGroupSelect4">Technical/Trade School</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="educationSchool1">Institution's Name</label>
+                    <input type="text" class="form-control" id="educationSchool1" placeholder="..." value="">
+                  </div>
+                </div>
+                <form class="card p-2">
+                  <div class="input-group mb-3">
+                    <select class="custom-select" id="educationStatus1">
+                      <option value="0">In Progress</option>
+                      <option value="1">Graduated</option>
+                    </select>
+                    <div class="input-group-append">
+                      <label class="input-group-text" for="educationStatus1">Status</label>
+                    </div>
+                  </div>
+                </form>
+
+                <div class="mb-3">
+                  <label for="educationField1">Field of Study</label>
+                  <input type="text" class="form-control" id="educationField1" placeholder="e.g. computer science"
+                    required="">
+                  <div class="invalid-feedback">
+                    Please enter the field of study.
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div>
+            <button id="btnEducationAddForm" type="submit" class="add btn-lg btn-block">
+              <i class="fa fa-plus" aria-hidden="true"></i>
+            </button>
+            <button id="btnEducationDeleteForm" type="submit" class="delete btn-lg btn-block">
+              <i class="fa fa-minus" aria-hidden="true"></i>
+            </button>
+          </div>
+          <hr class="mb-4">
+          <!-- education form end -->
+          <!-- continue button -->
+          <a class=" col-md-12" href="#carouselControls" role="button" data-slide="next">
+            <button id="educationSubmit" class="continue btn-lg btn-block" type="submit">
+              <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </button>
+          </a>
+          <!-- continue button end -->
+        </div>
+        <!--- education contianer end------------------------>
+      </div>
       <!--next form page end  -->
+      <!-------- resume section start----------->
+      <div class="carousel-item">
+        <!-- resume container ------------------------>
+        <div class="container card card-body">
+          <!-- resume header/name -->
+          <div class="row">
+            <div class="col-8">
+              <!-- combines finalResume First Name and Last Name -->
+              <h2 class="final-resume-name" id="frName">Joe Dundee</h2>
+            </div>
+            
+            <div class="col-4">
+              <!-- finalResume Sign up Data -->
+              <i class="fas fa-mobile-alt icons"></i><span class="" id="frPhone">(559)800-6968</span><br/>
+              <i class="fas fa-home icons"></i><span class="" id="frAddress">1234 N Example Ave</span><br/>
+              <i class="fas fa-city icons"></i><span class="" id="frCity">Fresno</span>
+              <span class="" id="frState">CA</span>
+              <span class="" id="frZip">93619</span><br/>
+              <i class="fas fa-flag icons"></i><span class="" id="frCountry">United States</span><br/>
+              <i class="fas fa-envelope icons"></i><span class="" id="frEmail">joedundee@gmail</span>
+            </div>
+          </div>
+          <!-- resume header end -->
+          <!-- resume work section-->
+          <div class="final-resume-work">
+            <h2 class="section-headers">work history</h2>
+                        
+            <div class="row fr-section" id="frWork1">
+              <div class="col-8">
+                <span class="co-title" id="frWorkName1">Pieology Pizzeria</span><br/>
+                <span class="" id="frWorkField1">Food Service</span><br/>
+                <span>Top Skill:</span>
+                <span class="fr-skill" id="frWorkSkills1">Da Boss</span><br/>
+                <span class="" id="frWorkDuties1"></span>
+              </div>
+              <div class="col-4">
+                <span class="" id="frWorkAddress1">870 Herndon Ave</span><br/>
+                <span class="" id="frWorkCity1">Clovis</span>
+                <span class="" id="frWorkState1">CA</span>
+                <span class="" id="frWorkZip1">93612</span><br/>
+                <span class="" id="frWorkCountry1">USA</span>
+              </div>
+            </div>
+            <div class="row fr-section" id="frWork2">
+              <div class="col-8">
+                <span class="co-title" id="frWorkName2">Pieology Pizzeria</span><br/>
+                <span class="" id="frWorkField2">Food Service</span><br/>
+                <span>Top Skill:</span>
+                <span class="fr-skill" id="frWorkSkills2">Da Boss</span><br/>
+                <span class="" id="frWorkDuties2">Get rejected my Debra, Like a Boss. Find a fish in an alley, like a boss. Fuck its brains out, like a Boss!</span>
+
+              </div>
+              <div class="col-4">
+                <span class="" id="frWorkAddress2">870 Herndon Ave</span><br/>
+                <span class="" id="frWorkCity2">Clovis</span>
+                <span class="" id="frWorkState2">CA</span>
+                <span class="" id="frWorkZip2">93612</span><br/>
+                <span class="" id="frWorkCountry2">USA</span>
+              </div>
+            </div>
+            <div class="row fr-section" id="frWork3">
+              <div class="col-8">
+                <span class="co-title" id="frWorkName3">Pieology Pizzeria</span><br/>
+                <span class="" id="frWorkField3">Food Service</span><br/>
+                <span>Top Skill:</span>
+                <span class="fr-skill" id="frWorkSkills3">Da Boss</span><br/>
+                <span class="" id="frWorkDuties3"></span>
+              </div>
+            
+              <div class="col-4">
+                <span class="" id="frWorkAddress3">870 Herndon Ave</span><br/>
+                <span class="" id="frWorkCity3">Clovis</span>
+                <span class="" id="frWorkState3">CA</span>
+                <span class="" id="frWorkZip3">93612</span><br/>
+                <span class="" id="frWorkCountry3">USA</span>
+              </div>
+            </div>
+          </div>
+          <!-- resume work section end-->
+          <!-- resume volunteer section -->
+          <div class="final-resume-vol">
+            <h2 class="section-headers">volunteer history</h2>
+            <div class="row fr-section" id="frVol1">
+              <div class="col-8">
+                <span class="co-title" id="frVolOrg1">GeekWise Academy</span><br/>
+                <span class="" id="frVolTitle1">Mentor</span><br/>
+                <span>Top Skill:</span>
+                <span class="fr-skill" id="frVolSkills1">Effective Comms</span><br/>
+                <span class="" id="frVolDuties1"></span>
+
+              </div>
+              <div class="col-4">
+                <span class="" id="frVolCity1">Fresno</span><br/>
+                <span>Years volunteered here: </span>
+                <span class="" id="frVolYears1">3</span>
+              </div>
+            </div>
+            <div class="row fr-section" id="frVol2">
+              <div class="col-8">
+                <span class="co-title" id="frVolOrg2">GeekWise</span><br/>
+                <span class="" id="frVolTitle2">Mentor</span><br/>
+                <span>Top Skill:</span>
+                <span class="fr-skill" id="frVolSkills2">Stuff and more</span><br/>
+                <span class="" id="frVolDuties2"></span>
+
+
+              </div>
+              <div class="col-4">
+                <span class="" id="frVolCity2">Clovis</span><br/>
+                <span>Years volunteered here: </span>
+                <span class="" id="frVolYears2">10</span>
+              </div>
+            </div>
+            <div class="row fr-section" id="frVol3">
+              <div class="col-8">
+                <span class="co-title" id="frVolOrg3">Bitwise</span><br/>
+                <span class="" id="frVolTitle3">Tutor</span><br/>
+                <span>Top Skill:</span>
+                <span class="fr-skill" id="frVolSkills3">more stuff and more</span><br/>
+                <span class="" id="frVolDuties3"></span>
+
+              </div>
+              <div class="col-4">
+                <span class="" id="frVolCity3">Madera</span><br/>
+                <span>Years volunteered here: </span>
+                <span class="" id="frVolYears3">8</span>
+              </div>
+            </div>
+          </div>
+          <!-- resume volunteer section end -->
+          <!-- resume education section -->
+          <div class="final-resume-edu">
+            <h2 class="section-headers">education history</h2>
+            <div class="row fr-section" id="frEdu1">
+              <div class="col-8">
+                <span class="co-title" id="frEduSchool1">Clovis North High School</span><br/>
+                <span class="" id="frEduLevel1">High School</span>
+              </div>
+              <div class="col-4">
+                <span class="" id="frEduField1">Computer Science</span><br/>
+                <span class="" id="frEduStatus1">Graduated</span>
+              </div>
+            </div>
+            <div class="row fr-section" id="frEdu2">
+                <div class="col-8">
+                  <span class="co-title" id="frEduSchool2">Institue of Technology</span><br/>
+                  <span class="" id="frEduLevel2">Technical/Trade School</span>
+                </div>
+                <div class="col-4">
+                  <span class="" id="frEduField2">HVAC</span><br/>
+                  <span class="" id="frEduStatus2">In Progress</span>
+                </div>
+            </div>
+            <div class="row fr-section" id="frEdu3">
+                <div class="col-8">
+                  <span class="co-title" id="frEduSchool3">CSU Fresno</span><br/>
+                  <span class="" id="frEduLevel3">Undergraduate</span>
+                </div>
+                <div class="col-4">
+                  <span class="" id="frEduField3">Biology</span><br/>
+                  <span class="" id="frEduStatus3">In Progress</span>
+                </div>
+            </div>
+            <div class="row">
+              <a class="col-md-12" href="#carouselControls" role="button" data-slide-to="0">
+                  <button id="redoBtn" type="submit" class="redo-btn btn-lg btn-block">Edit Info</button>
+              </a>
+              <a class="col-md-12" role="button">
+                <button id="printBtn" type="submit" class="print-btn btn-lg btn-block">Print</button>
+              </a>
+            </div>
+          </div>
+          <!-- resume education section end-->
+
+        </div>
+        <!--- resume contianer end------------------------>
+      </div>
+      <!-------- resume section end  ----------->
     </div>
   </div>
+  <!-- carousel inner end -->
+  <footer class="d-flex justify-content-center text-center text-small my-5 mb-1">
+    <p class="copywriteText">© Project Resumista</p>
+  </footer>
+
+
+
+
+
+
+
   <!--  body content ---------------------->
   <!-- section cards end -------------------------------------->
   <script src="js/all.min.js"></script>

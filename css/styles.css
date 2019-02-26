@@ -1,0 +1,263 @@
+/* main blue = #4484ce;
+   light blue #0076FF;
+   light blue dropshadow = #26507F;
+   grey = #d9d9d9;
+   yellow = #f9cf00;
+   yellow drop shadow = #CCAA00;
+   orange = #f19f4d; 
+   red = #FF2D19;
+   red dropshadow = #7F3933;
+
+   font-family: 'Open Sans', sans-serif;
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+    background: #F5F5F5;
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav {
+    background-color: #4484ce; 
+}
+
+.navbar-brand {
+    color:#f9cf00;
+}
+
+ .logo {
+height:50px;
+ }
+
+.logo {
+    height: 50px;
+}
+
+.carousel-inner {
+    min-height: 750px;
+}
+
+.pageTitle {
+    color: #f9cf00;
+}
+
+.pageSubtitle {
+    color:  #4484ce; 
+    margin-top: 3px;
+}
+
+.heading {
+    color: #f9cf00;
+}
+
+/* smaller headings */
+h4 {
+    color:  #4484ce; 
+}
+/* smaller headings */
+
+.progressBarTitle {
+    color:  #f9cf00;
+}
+
+.progressBarText {
+    color:  #999999;
+}
+
+.badge-secondary { 
+    background-color:#f9cf00;
+}
+
+.progressBarBackground {
+    background-color: #f9cf00; 
+}
+
+.progressBarActive {
+    color:white;
+}
+
+/* progress bar text/links */
+h6 {
+    color:#999999;
+}
+/* progress bar text/links */
+
+/* input to text area start */
+.work-duties {
+    height:100px;
+    overflow: auto;
+    word-break: break-word;
+}
+/* input area to text area end */
+.form-check {
+    padding-left:2.25rem;
+    padding-bottom: 1.25rem;
+}
+
+
+/* all input labels */
+label {
+    color: #999999;
+}
+/* all input labels */
+
+.add, .print-btn {
+    color: #ffffff;
+    background-color: #0076FF;
+    box-shadow: 1px 2px #26507F;
+    border: none;
+}
+
+.add:hover, .print-btn:hover {
+    background-color:#4C9FFF;
+    cursor: pointer;
+}
+
+.add:focus, .print-btn:focus {
+    outline: .0;
+    background-color: #4C9FFF;
+}
+
+.delete {
+    color: #ffffff;
+    background-color: #FF2D19;
+    box-shadow: 1px 2px #7F3933;
+    border: none;
+}
+
+.delete:hover {
+background-color: #FF7365;
+cursor: pointer;
+}
+
+.delete:focus {
+    outline: .0;
+    background-color: #FF7365;
+}
+
+.continue, .redo-btn {
+    color:white;
+    background-color:#f9cf00; 
+    border: none;
+    box-shadow: 1px 2px #CCAA00;
+}
+
+.redo-btn {
+    margin: 1em 0em 1em 0em;
+}
+
+.continue:hover, .redo-btn:hover {
+background-color: #FFE14C;
+cursor: pointer;
+}
+
+.continue:focus, .redo-btn:focus {
+    outline: .0;
+    background-color: #FFE14C;
+}
+
+a {
+    color: inherit;
+    text-decoration:none !important;
+}
+
+footer {
+    background-color: #4484ce;
+    height: 100px;
+    margin-bottom: 0!important;
+}
+
+.copywriteText {
+    color:#ffffff;
+    margin-top:50px;
+}
+
+.my-5{
+    margin-bottom: 0px !important;
+}
+
+.mb-1 {
+    padding: 0px;
+}
+
+@media only screen and (max-width: 767px) {
+    body {
+      background-color: #4484ce;
+    }
+
+    label {
+        color: #ffffff;
+    }
+
+    .pageSubtitle{
+        color:  #ffffff;
+        margin-top: 3px;
+    }
+    /* smaller headings */
+    h4 {
+        color:  #f9cf00;
+    }
+/* smaller headings */
+    .copywriteText {
+        color:#f9cf00; 
+        margin-top:30px!important;
+    }
+}
+
+/* resume styles */
+.card, .card-body {
+    border: 0px;
+}
+
+.final-resume-name {
+    font-size: 3.0em;
+    text-transform: uppercase;
+    color: #4C9FFF; 
+}
+
+.section-headers{
+    text-decoration:underline;
+    font-variant:small-caps;
+    font-size: 2.5em;
+}
+
+.co-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #4C9FFF;
+}
+.fr-section {
+    margin-top: 15px;
+}
+
+.fr-skill { 
+  font-style: italic; 
+}
+
+.icons{
+    margin: .25em;
+    margin-bottom: 0;
+    color: #4C9FFF;
+}
+
+.hidden {
+    display: none;
+}
+
+@media print {
+    @page { 
+      margin: 0mm;
+      size: auto;
+        
+     }
+     body { 
+        margin: 1.6cm;
+     }
+     .copywriteText, .print-btn, .redo-btn {
+         display: none;
+     }
+     .card, .card-body {
+        background-color:#ffffff; 
+    }
+  }
