@@ -1,3 +1,14 @@
+
+/*
+TODO: 
+1) refactor addWork/delWork, addVolunteer/delVolunteer, addEducation/delEducation functions
+2) Work/Vol/edu history sections can probably be redone as well
+3) 
+
+*/
+
+
+
 //JS object to store all resume info
 const finalResume = []
 
