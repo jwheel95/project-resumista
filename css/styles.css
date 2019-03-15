@@ -247,8 +247,9 @@ footer {
 
 @media print {
     @page { 
-      margin: 0mm;
-      size: auto;
+    size: auto;
+    margin: 0 !important;
+      
         
      }
      body { 
