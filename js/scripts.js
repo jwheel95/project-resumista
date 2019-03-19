@@ -72,7 +72,7 @@ function submitWork(num) {
     finalResume[`workDuties${num}`] = document.querySelector(`#workDuties${num}`).value;
 }
 
-//passes in #s for IDs based on # of work entries
+//passes in #s for IDs and keys based on # of work entries
 function workHistory() {
     submitWork(1);
     
@@ -87,55 +87,49 @@ function workHistory() {
     };
 }
 
+function submitVolunteer (num) {
+    let titleSelect = document.querySelector(`#volunteerTitle${num}`);
+    finalResume[`volunteerTitle${num}`] = titleSelect.options[titleSelect.selectedIndex].text;
+    finalResume[`volunteerOrg${num}`] = document.querySelector(`#volunteerOrg${num}`).value;
+    finalResume[`volunteerDuties${num}`] = document.querySelector(`#volunteerDuties${num}`).value;
+    let skillsSelect = document.querySelector(`#volunteerSkills${num}`);
+    finalResume[`volunteerSkills${num}`] = skillsSelect.options[skillsSelect.selectedIndex].text;
+    finalResume[`volunteerCity${num}`] = document.querySelector(`#volunteerCity${num}`).value;
+    let yearsSelect = document.querySelector(`#volunteerYears${num}`);
+    finalResume[`volunteerYears${num}`] = yearsSelect.options[yearsSelect.selectedIndex].text;
+}
+
+//passes in #s for IDs and keys based on # of volunteer entries
 function volunteerHistory() {
-    finalResume.volunteerTitle1 = document.querySelector("#volunteerTitle1")[volunteerTitle1.selectedIndex].text;
-    finalResume.volunteerOrg1 = document.querySelector("#volunteerOrg1").value;
-    finalResume.volunteerDuties1 = document.querySelector("#volunteerDuties1").value;
-    finalResume.volunteerSkills1 = document.querySelector("#volunteerSkills1")[volunteerSkills1.selectedIndex].text;
-    finalResume.volunteerCity1 = document.querySelector("#volunteerCity1").value;
-    finalResume.volunteerYears1 = document.querySelector("#volunteerYears1")[volunteerYears1.selectedIndex].text;
+    submitVolunteer(1);
 
     let volunteerEntry2 = document.querySelector("#volunteerEntry2");
     if (volunteerEntry2) {
-        finalResume.volunteerTitle2 = document.querySelector("#volunteerTitle2")[volunteerTitle2.selectedIndex].text;
-        finalResume.volunteerOrg2 = document.querySelector("#volunteerOrg2").value;
-        finalResume.volunteerDuties1 = document.querySelector("#volunteerDuties1").value;
-        finalResume.volunteerSkills2 = document.querySelector("#volunteerSkills2")[volunteerSkills2.selectedIndex].text;
-        finalResume.volunteerCity2 = document.querySelector("#volunteerCity2").value;
-        finalResume.volunteerYears2 = document.querySelector("#volunteerYears2")[volunteerYears2.selectedIndex].text;
+        submitVolunteer(2);
     };
 
     let volunteerEntry3 = document.querySelector("#volunteerEntry3");
     if (volunteerEntry3) {
-        finalResume.volunteerTitle3 = document.querySelector("#volunteerTitle3")[volunteerTitle3.selectedIndex].text;
-        finalResume.volunteerOrg3 = document.querySelector("#volunteerOrg3").value;
-        finalResume.volunteerDuties1 = document.querySelector("#volunteerDuties1").value;
-        finalResume.volunteerSkills3 = document.querySelector("#volunteerSkills3")[volunteerSkills3.selectedIndex].text;
-        finalResume.volunteerCity3 = document.querySelector("#volunteerCity3").value;
-        finalResume.volunteerYears3 = document.querySelector("#volunteerYears3")[volunteerYears3.selectedIndex].text;
+        submitVolunteer(3);
     };
 }
 
+function submitEducation(num) {
+    let levelSelect = document.querySelector(`#educationLevel${num}`);
+    finalResume[`educationLevel${num}`] = levelSelect.options[levelSelect.selectedIndex].text;
+    finalResume[`educationSchool${num}`] = document.querySelector(`#educationSchool${num}`).value;
+    let statusSelect = document.querySelector(`#educationStatus${num}`);
+    finalResume[`educationStatus${num}`] = statusSelect.options[statusSelect.selectedIndex].text;
+    finalResume[`educationField${num}`] = document.querySelector(`#educationField${num}`).value;
+}
+
+//passes in #s for IDs and keys based on # of education entries
 function educationHistory() {
-    finalResume.educationLevel1 = document.querySelector("#educationLevel1")[educationLevel1.selectedIndex].text;
-    finalResume.educationSchool1 = document.querySelector("#educationSchool1").value;
-    finalResume.educationStatus1 = document.querySelector("#educationStatus1")[educationStatus1.selectedIndex].text;
-    finalResume.educationField1 = document.querySelector("#educationField1").value;
+    submitEducation(1);
 
     let educationEntry2 = document.querySelector("#educationEntry2");
     if (educationEntry2) {
-        finalResume.educationLevel2 = document.querySelector("#educationLevel2")[educationLevel2.selectedIndex].text;
-        finalResume.educationSchool2 = document.querySelector("#educationSchool2").value;
-        finalResume.educationStatus2 = document.querySelector("#educationStatus2")[educationStatus2.selectedIndex].text;
-        finalResume.educationField2 = document.querySelector("#educationField2").value;
-    };
-
-    let educationEntry3 = document.querySelector("#educationEntry3");
-    if (educationEntry3) {
-        finalResume.educationLevel3 = document.querySelector("#educationLevel3")[educationLevel2.selectedIndex].text;
-        finalResume.educationSchool3 = document.querySelector("#educationSchool3").value;
-        finalResume.educationStatus3 = document.querySelector("#educationStatus3")[educationStatus2.selectedIndex].text;
-        finalResume.educationField3 = document.querySelector("#educationField3").value;
+        submitEducation(2);
     };
 }
 
