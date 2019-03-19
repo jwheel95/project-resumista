@@ -49,47 +49,41 @@ function signUp() {
     finalResume.signUpEmail = document.querySelector("#signUpEmail").value;
     finalResume.signUpAddress = document.querySelector("#signUpAddress").value;
     finalResume.signUpCity = document.querySelector('#signUpCity').value;
-    finalResume.signUpCountry = document.querySelector("#signUpCountry")[signUpCountry.selectedIndex].text;
-    finalResume.signUpState = document.querySelector("#signUpState")[signUpState.selectedIndex].text;
+    let countrySelect = document.querySelector("#signUpCountry");
+    finalResume.signUpCountry = countrySelect.options[countrySelect.selectedIndex].text;
+    let stateSelect = document.querySelector("#signUpState");
+    finalResume.signUpState = stateSelect.options[stateSelect.selectedIndex].text;
     finalResume.signUpZip = document.querySelector("#signUpZip").value;
 }
 
+function submitWork(num) {
+    let fieldSelect = document.querySelector(`#workField${num}`);
+    finalResume[`workField${num}`] = fieldSelect.options[fieldSelect.selectedIndex].text;
+    finalResume[`workName${num}`] = document.querySelector(`#workName${num}`).value;
+    let skillsSelect = document.querySelector(`#workSkills${num}`);
+    finalResume[`workSkills${num}`] = skillsSelect.options[skillsSelect.selectedIndex].text;
+    finalResume[`workAddress${num}`] = document.querySelector(`#workAddress${num}`).value;
+    let countrySelect = document.querySelector(`#workCountry${num}`);
+    finalResume[`workCountry${num}`] = countrySelect.options[countrySelect.selectedIndex].text;
+    let stateSelect = document.querySelector(`#workState${num}`);
+    finalResume[`workState${num}`] = stateSelect.options[stateSelect.selectedIndex].text;
+    finalResume[`workCity${num}`] = document.querySelector(`#workCity${num}`).value;
+    finalResume[`workZip${num}`] = document.querySelector(`#workZip${num}`).value;
+    finalResume[`workDuties${num}`] = document.querySelector(`#workDuties${num}`).value;
+}
+
+//passes in #s for IDs based on # of work entries
 function workHistory() {
-    finalResume.workField1 = document.querySelector("#workField1")[workField1.selectedIndex].text;
-    finalResume.workName1 = document.querySelector("#workName1").value;
-    finalResume.workSkills1 = document.querySelector("#workSkills1")[workSkills1.selectedIndex].text;
-    finalResume.workAddress1 = document.querySelector("#workAddress1").value;
-    finalResume.workCountry1 = document.querySelector("#workCountry1")[workCountry1.selectedIndex].text;
-    finalResume.workState1 = document.querySelector("#workState1")[workState1.selectedIndex].text;
-    finalResume.workCity1 = document.querySelector("#workCity1").value;
-    finalResume.workZip1 = document.querySelector("#workZip1").value;
-    finalResume.workDuties1 = document.querySelector("#workDuties1").value;
-    
+    submitWork(1);
     
     let workEntry2 = document.querySelector("#workEntry2");
     if (workEntry2) {
-        finalResume.workField2 = document.querySelector("#workField2")[workField2.selectedIndex].text;
-        finalResume.workName2 = document.querySelector("#workName2").value;
-        finalResume.workSkills2 = document.querySelector("#workSkills2")[workSkills2.selectedIndex].text;
-        finalResume.workAddress2 = document.querySelector("#workAddress2").value;
-        finalResume.workCountry2 = document.querySelector("#workCountry2")[workCountry2.selectedIndex].text;
-        finalResume.workState2 = document.querySelector("#workState2")[workState2.selectedIndex].text;
-        finalResume.workCity2 = document.querySelector("#workCity2").value;
-        finalResume.workZip2 = document.querySelector("#workZip2").value;
-        finalResume.workDuties2 = document.querySelector("#workDuties2").value;
+        submitWork(2);
     };
 
     let workEntry3 = document.querySelector("#workEntry3");
     if (workEntry3) {
-        finalResume.workField3 = document.querySelector("#workField3")[workField3.selectedIndex].text;
-        finalResume.workName3 = document.querySelector("#workName3").value;
-        finalResume.workSkills3 = document.querySelector("#workSkills3")[workSkills3.selectedIndex].text;
-        finalResume.workAddress3 = document.querySelector("#workAddress3").value;
-        finalResume.workCountry3 = document.querySelector("#workCountry3")[workCountry3.selectedIndex].text;
-        finalResume.workState3 = document.querySelector("#workState3")[workState3.selectedIndex].text;
-        finalResume.workCity3 = document.querySelector("#workCity3").value;
-        finalResume.workZip3 = document.querySelector("#workZip3").value;
-        finalResume.workDuties3 = document.querySelector("#workDuties3").value;
+        submitWork(3);
     };
 }
 
