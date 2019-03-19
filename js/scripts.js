@@ -10,7 +10,7 @@ TODO:
 
 
 //JS object to store all resume info
-const finalResume = []
+const finalResume = {};
 
 //Query selectors for buttons
 const signUpSubmit = document.querySelector("#signUpSubmit");
